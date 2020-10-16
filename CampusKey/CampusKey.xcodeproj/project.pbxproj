@@ -7,86 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B97976CA2537B35700768674 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97976C92537B35700768674 /* Register.storyboard */; };
-		B97976CF2537B5AB00768674 /* Student Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97976CE2537B5AB00768674 /* Student Register.storyboard */; };
-		B97976D42537B5BC00768674 /* Guest Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97976D32537B5BC00768674 /* Guest Register.storyboard */; };
-		B97976D92537B7E700768674 /* Confirm Student Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97976D82537B7E700768674 /* Confirm Student Registration.storyboard */; };
-		B97976DE2537B98C00768674 /* Finish Student Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97976DD2537B98C00768674 /* Finish Student Registration.storyboard */; };
-		B98B951F2535C0A40066BA57 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98B951E2535C0A40066BA57 /* Profile.storyboard */; };
-		B98B95282535C7080066BA57 /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98B95272535C7080066BA57 /* Locations.storyboard */; };
-		B9C804402523A0810073818E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C8043F2523A0810073818E /* AppDelegate.swift */; };
-		B9C804422523A0810073818E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9C804412523A0810073818E /* GameScene.sks */; };
-		B9C804442523A0810073818E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9C804432523A0810073818E /* Actions.sks */; };
-		B9C804462523A0820073818E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C804452523A0820073818E /* GameScene.swift */; };
-		B9C804482523A0820073818E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C804472523A0820073818E /* GameViewController.swift */; };
-		B9C8044B2523A0820073818E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C804492523A0820073818E /* Main.storyboard */; };
-		B9C8044D2523A0880073818E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C8044C2523A0880073818E /* Assets.xcassets */; };
-		B9C804582523A0890073818E /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C804572523A0890073818E /* TestTests.swift */; };
-		B9C804632523A0890073818E /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C804622523A0890073818E /* TestUITests.swift */; };
-		B9F8BDFA253846FA00154FCB /* FAQS Page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F8BDF9253846FA00154FCB /* FAQS Page.storyboard */; };
-		B9F8BE0225384CE200154FCB /* Home Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F8BE0125384CE200154FCB /* Home Screen.storyboard */; };
+		B964026F253A5DE5003A0306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B964026E253A5DE5003A0306 /* AppDelegate.swift */; };
+		B9640271253A5DE5003A0306 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9640270253A5DE5003A0306 /* GameScene.sks */; };
+		B9640273253A5DE5003A0306 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9640272253A5DE5003A0306 /* Actions.sks */; };
+		B9640275253A5DE5003A0306 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9640274253A5DE5003A0306 /* GameScene.swift */; };
+		B9640277253A5DE5003A0306 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9640276253A5DE5003A0306 /* GameViewController.swift */; };
+		B964027A253A5DE5003A0306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9640278253A5DE5003A0306 /* Main.storyboard */; };
+		B964027C253A5DE6003A0306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B964027B253A5DE6003A0306 /* Assets.xcassets */; };
+		B9640287253A5DE6003A0306 /* CampusKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9640286253A5DE6003A0306 /* CampusKeyTests.swift */; };
+		B9640292253A5DE6003A0306 /* CampusKeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9640291253A5DE6003A0306 /* CampusKeyUITests.swift */; };
+		B96402A3253A5F21003A0306 /* Student Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402A2253A5F21003A0306 /* Student Register.storyboard */; };
+		B96402AF253A5F3B003A0306 /* Home Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402A7253A5F3A003A0306 /* Home Screen.storyboard */; };
+		B96402B0253A5F3B003A0306 /* Finish Student Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402A8253A5F3A003A0306 /* Finish Student Registration.storyboard */; };
+		B96402B1253A5F3B003A0306 /* Guest Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402A9253A5F3A003A0306 /* Guest Register.storyboard */; };
+		B96402B2253A5F3B003A0306 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AA253A5F3A003A0306 /* Profile.storyboard */; };
+		B96402B3253A5F3B003A0306 /* Confirm Student Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AB253A5F3A003A0306 /* Confirm Student Registration.storyboard */; };
+		B96402B4253A5F3B003A0306 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AC253A5F3A003A0306 /* Register.storyboard */; };
+		B96402B5253A5F3B003A0306 /* FAQS Page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AD253A5F3A003A0306 /* FAQS Page.storyboard */; };
+		B96402B6253A5F3B003A0306 /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AE253A5F3A003A0306 /* Locations.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B9C804542523A0890073818E /* PBXContainerItemProxy */ = {
+		B9640283253A5DE6003A0306 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9C804342523A0810073818E /* Project object */;
+			containerPortal = B9640263253A5DE5003A0306 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B9C8043B2523A0810073818E;
-			remoteInfo = Test;
+			remoteGlobalIDString = B964026A253A5DE5003A0306;
+			remoteInfo = CampusKey;
 		};
-		B9C8045F2523A0890073818E /* PBXContainerItemProxy */ = {
+		B964028E253A5DE6003A0306 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9C804342523A0810073818E /* Project object */;
+			containerPortal = B9640263253A5DE5003A0306 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B9C8043B2523A0810073818E;
-			remoteInfo = Test;
+			remoteGlobalIDString = B964026A253A5DE5003A0306;
+			remoteInfo = CampusKey;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B97976C92537B35700768674 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
-		B97976CE2537B5AB00768674 /* Student Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Student Register.storyboard"; sourceTree = "<group>"; };
-		B97976D32537B5BC00768674 /* Guest Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Guest Register.storyboard"; sourceTree = "<group>"; };
-		B97976D82537B7E700768674 /* Confirm Student Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Confirm Student Registration.storyboard"; sourceTree = "<group>"; };
-		B97976DD2537B98C00768674 /* Finish Student Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Finish Student Registration.storyboard"; sourceTree = "<group>"; };
-		B98B951E2535C0A40066BA57 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		B98B95272535C7080066BA57 /* Locations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
-		B9C8043C2523A0810073818E /* CampusKey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusKey.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9C8043F2523A0810073818E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9C804412523A0810073818E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		B9C804432523A0810073818E /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		B9C804452523A0820073818E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		B9C804472523A0820073818E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		B9C8044A2523A0820073818E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B9C8044C2523A0880073818E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B9C8044E2523A0880073818E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9C804532523A0890073818E /* CampusKeyCampusKeys.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusKeyCampusKeys.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9C804572523A0890073818E /* TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTests.swift; sourceTree = "<group>"; };
-		B9C804592523A0890073818E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9C8045E2523A0890073818E /* CampusKeyUICampusKeys.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusKeyUICampusKeys.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9C804622523A0890073818E /* TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITests.swift; sourceTree = "<group>"; };
-		B9C804642523A0890073818E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9F8BDF9253846FA00154FCB /* FAQS Page.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "FAQS Page.storyboard"; sourceTree = "<group>"; };
-		B9F8BE0125384CE200154FCB /* Home Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Home Screen.storyboard"; sourceTree = "<group>"; };
+		B964026B253A5DE5003A0306 /* CampusKey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusKey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B964026E253A5DE5003A0306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B9640270253A5DE5003A0306 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B9640272253A5DE5003A0306 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		B9640274253A5DE5003A0306 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B9640276253A5DE5003A0306 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B9640279253A5DE5003A0306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B964027B253A5DE6003A0306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B964027D253A5DE6003A0306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9640282253A5DE6003A0306 /* CampusKeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusKeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9640286253A5DE6003A0306 /* CampusKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusKeyTests.swift; sourceTree = "<group>"; };
+		B9640288253A5DE6003A0306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B964028D253A5DE6003A0306 /* CampusKeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusKeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9640291253A5DE6003A0306 /* CampusKeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusKeyUITests.swift; sourceTree = "<group>"; };
+		B9640293253A5DE6003A0306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B96402A2253A5F21003A0306 /* Student Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Student Register.storyboard"; sourceTree = "<group>"; };
+		B96402A7253A5F3A003A0306 /* Home Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Home Screen.storyboard"; sourceTree = "<group>"; };
+		B96402A8253A5F3A003A0306 /* Finish Student Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Finish Student Registration.storyboard"; sourceTree = "<group>"; };
+		B96402A9253A5F3A003A0306 /* Guest Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Guest Register.storyboard"; sourceTree = "<group>"; };
+		B96402AA253A5F3A003A0306 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		B96402AB253A5F3A003A0306 /* Confirm Student Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Confirm Student Registration.storyboard"; sourceTree = "<group>"; };
+		B96402AC253A5F3A003A0306 /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		B96402AD253A5F3A003A0306 /* FAQS Page.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "FAQS Page.storyboard"; sourceTree = "<group>"; };
+		B96402AE253A5F3A003A0306 /* Locations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B9C804392523A0810073818E /* Frameworks */ = {
+		B9640268253A5DE5003A0306 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9C804502523A0890073818E /* Frameworks */ = {
+		B964027F253A5DE6003A0306 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9C8045B2523A0890073818E /* Frameworks */ = {
+		B964028A253A5DE6003A0306 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,147 +96,147 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B9C804332523A0810073818E = {
+		B9640262253A5DE5003A0306 = {
 			isa = PBXGroup;
 			children = (
-				B9C8043E2523A0810073818E /* Test */,
-				B9C804562523A0890073818E /* TestTests */,
-				B9C804612523A0890073818E /* TestUITests */,
-				B9C8043D2523A0810073818E /* Products */,
+				B964026D253A5DE5003A0306 /* CampusKey */,
+				B9640285253A5DE6003A0306 /* CampusKeyTests */,
+				B9640290253A5DE6003A0306 /* CampusKeyUITests */,
+				B964026C253A5DE5003A0306 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B9C8043D2523A0810073818E /* Products */ = {
+		B964026C253A5DE5003A0306 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9C8043C2523A0810073818E /* CampusKey.app */,
-				B9C804532523A0890073818E /* CampusKeyCampusKeys.xctest */,
-				B9C8045E2523A0890073818E /* CampusKeyUICampusKeys.xctest */,
+				B964026B253A5DE5003A0306 /* CampusKey.app */,
+				B9640282253A5DE6003A0306 /* CampusKeyTests.xctest */,
+				B964028D253A5DE6003A0306 /* CampusKeyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9C8043E2523A0810073818E /* Test */ = {
+		B964026D253A5DE5003A0306 /* CampusKey */ = {
 			isa = PBXGroup;
 			children = (
-				B9C8043F2523A0810073818E /* AppDelegate.swift */,
-				B9C804412523A0810073818E /* GameScene.sks */,
-				B9C804432523A0810073818E /* Actions.sks */,
-				B9C804452523A0820073818E /* GameScene.swift */,
-				B9C804472523A0820073818E /* GameViewController.swift */,
-				B9C804492523A0820073818E /* Main.storyboard */,
-				B97976C92537B35700768674 /* Register.storyboard */,
-				B97976CE2537B5AB00768674 /* Student Register.storyboard */,
-				B97976D82537B7E700768674 /* Confirm Student Registration.storyboard */,
-				B97976DD2537B98C00768674 /* Finish Student Registration.storyboard */,
-				B97976D32537B5BC00768674 /* Guest Register.storyboard */,
-				B9F8BE0125384CE200154FCB /* Home Screen.storyboard */,
-				B98B951E2535C0A40066BA57 /* Profile.storyboard */,
-				B98B95272535C7080066BA57 /* Locations.storyboard */,
-				B9F8BDF9253846FA00154FCB /* FAQS Page.storyboard */,
-				B9C8044C2523A0880073818E /* Assets.xcassets */,
-				B9C8044E2523A0880073818E /* Info.plist */,
+				B964026E253A5DE5003A0306 /* AppDelegate.swift */,
+				B9640270253A5DE5003A0306 /* GameScene.sks */,
+				B9640272253A5DE5003A0306 /* Actions.sks */,
+				B9640274253A5DE5003A0306 /* GameScene.swift */,
+				B9640276253A5DE5003A0306 /* GameViewController.swift */,
+				B9640278253A5DE5003A0306 /* Main.storyboard */,
+				B96402AC253A5F3A003A0306 /* Register.storyboard */,
+				B96402A2253A5F21003A0306 /* Student Register.storyboard */,
+				B96402AB253A5F3A003A0306 /* Confirm Student Registration.storyboard */,
+				B96402A8253A5F3A003A0306 /* Finish Student Registration.storyboard */,
+				B96402A9253A5F3A003A0306 /* Guest Register.storyboard */,
+				B96402A7253A5F3A003A0306 /* Home Screen.storyboard */,
+				B96402AA253A5F3A003A0306 /* Profile.storyboard */,
+				B96402AE253A5F3A003A0306 /* Locations.storyboard */,
+				B96402AD253A5F3A003A0306 /* FAQS Page.storyboard */,
+				B964027B253A5DE6003A0306 /* Assets.xcassets */,
+				B964027D253A5DE6003A0306 /* Info.plist */,
 			);
-			path = Test;
+			path = CampusKey;
 			sourceTree = "<group>";
 		};
-		B9C804562523A0890073818E /* TestTests */ = {
+		B9640285253A5DE6003A0306 /* CampusKeyTests */ = {
 			isa = PBXGroup;
 			children = (
-				B9C804572523A0890073818E /* TestTests.swift */,
-				B9C804592523A0890073818E /* Info.plist */,
+				B9640286253A5DE6003A0306 /* CampusKeyTests.swift */,
+				B9640288253A5DE6003A0306 /* Info.plist */,
 			);
-			path = TestTests;
+			path = CampusKeyTests;
 			sourceTree = "<group>";
 		};
-		B9C804612523A0890073818E /* TestUITests */ = {
+		B9640290253A5DE6003A0306 /* CampusKeyUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B9C804622523A0890073818E /* TestUITests.swift */,
-				B9C804642523A0890073818E /* Info.plist */,
+				B9640291253A5DE6003A0306 /* CampusKeyUITests.swift */,
+				B9640293253A5DE6003A0306 /* Info.plist */,
 			);
-			path = TestUITests;
+			path = CampusKeyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9C8043B2523A0810073818E /* CampusKey */ = {
+		B964026A253A5DE5003A0306 /* CampusKey */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9C804672523A0890073818E /* Build configuration list for PBXNativeTarget "CampusKey" */;
+			buildConfigurationList = B9640296253A5DE6003A0306 /* Build configuration list for PBXNativeTarget "CampusKey" */;
 			buildPhases = (
-				B9C804382523A0810073818E /* Sources */,
-				B9C804392523A0810073818E /* Frameworks */,
-				B9C8043A2523A0810073818E /* Resources */,
+				B9640267253A5DE5003A0306 /* Sources */,
+				B9640268253A5DE5003A0306 /* Frameworks */,
+				B9640269253A5DE5003A0306 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CampusKey;
-			productName = Test;
-			productReference = B9C8043C2523A0810073818E /* CampusKey.app */;
+			productName = CampusKey;
+			productReference = B964026B253A5DE5003A0306 /* CampusKey.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B9C804522523A0890073818E /* CampusKeyCampusKeys */ = {
+		B9640281253A5DE6003A0306 /* CampusKeyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9C8046A2523A0890073818E /* Build configuration list for PBXNativeTarget "CampusKeyCampusKeys" */;
+			buildConfigurationList = B9640299253A5DE6003A0306 /* Build configuration list for PBXNativeTarget "CampusKeyTests" */;
 			buildPhases = (
-				B9C8044F2523A0890073818E /* Sources */,
-				B9C804502523A0890073818E /* Frameworks */,
-				B9C804512523A0890073818E /* Resources */,
+				B964027E253A5DE6003A0306 /* Sources */,
+				B964027F253A5DE6003A0306 /* Frameworks */,
+				B9640280253A5DE6003A0306 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B9C804552523A0890073818E /* PBXTargetDependency */,
+				B9640284253A5DE6003A0306 /* PBXTargetDependency */,
 			);
-			name = CampusKeyCampusKeys;
-			productName = TestTests;
-			productReference = B9C804532523A0890073818E /* CampusKeyCampusKeys.xctest */;
+			name = CampusKeyTests;
+			productName = CampusKeyTests;
+			productReference = B9640282253A5DE6003A0306 /* CampusKeyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B9C8045D2523A0890073818E /* CampusKeyUICampusKeys */ = {
+		B964028C253A5DE6003A0306 /* CampusKeyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9C8046D2523A0890073818E /* Build configuration list for PBXNativeTarget "CampusKeyUICampusKeys" */;
+			buildConfigurationList = B964029C253A5DE6003A0306 /* Build configuration list for PBXNativeTarget "CampusKeyUITests" */;
 			buildPhases = (
-				B9C8045A2523A0890073818E /* Sources */,
-				B9C8045B2523A0890073818E /* Frameworks */,
-				B9C8045C2523A0890073818E /* Resources */,
+				B9640289253A5DE6003A0306 /* Sources */,
+				B964028A253A5DE6003A0306 /* Frameworks */,
+				B964028B253A5DE6003A0306 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B9C804602523A0890073818E /* PBXTargetDependency */,
+				B964028F253A5DE6003A0306 /* PBXTargetDependency */,
 			);
-			name = CampusKeyUICampusKeys;
-			productName = TestUITests;
-			productReference = B9C8045E2523A0890073818E /* CampusKeyUICampusKeys.xctest */;
+			name = CampusKeyUITests;
+			productName = CampusKeyUITests;
+			productReference = B964028D253A5DE6003A0306 /* CampusKeyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B9C804342523A0810073818E /* Project object */ = {
+		B9640263253A5DE5003A0306 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					B9C8043B2523A0810073818E = {
-						CreatedOnToolsVersion = 12.0;
+					B964026A253A5DE5003A0306 = {
+						CreatedOnToolsVersion = 12.0.1;
 					};
-					B9C804522523A0890073818E = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = B9C8043B2523A0810073818E;
+					B9640281253A5DE6003A0306 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = B964026A253A5DE5003A0306;
 					};
-					B9C8045D2523A0890073818E = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = B9C8043B2523A0810073818E;
+					B964028C253A5DE6003A0306 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = B964026A253A5DE5003A0306;
 					};
 				};
 			};
-			buildConfigurationList = B9C804372523A0810073818E /* Build configuration list for PBXProject "CampusKey" */;
+			buildConfigurationList = B9640266253A5DE5003A0306 /* Build configuration list for PBXProject "CampusKey" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -244,47 +244,47 @@
 				en,
 				Base,
 			);
-			mainGroup = B9C804332523A0810073818E;
-			productRefGroup = B9C8043D2523A0810073818E /* Products */;
+			mainGroup = B9640262253A5DE5003A0306;
+			productRefGroup = B964026C253A5DE5003A0306 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9C8043B2523A0810073818E /* CampusKey */,
-				B9C804522523A0890073818E /* CampusKeyCampusKeys */,
-				B9C8045D2523A0890073818E /* CampusKeyUICampusKeys */,
+				B964026A253A5DE5003A0306 /* CampusKey */,
+				B9640281253A5DE6003A0306 /* CampusKeyTests */,
+				B964028C253A5DE6003A0306 /* CampusKeyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B9C8043A2523A0810073818E /* Resources */ = {
+		B9640269253A5DE5003A0306 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C8044B2523A0820073818E /* Main.storyboard in Resources */,
-				B9C804422523A0810073818E /* GameScene.sks in Resources */,
-				B97976D92537B7E700768674 /* Confirm Student Registration.storyboard in Resources */,
-				B9F8BE0225384CE200154FCB /* Home Screen.storyboard in Resources */,
-				B97976CA2537B35700768674 /* Register.storyboard in Resources */,
-				B97976D42537B5BC00768674 /* Guest Register.storyboard in Resources */,
-				B98B951F2535C0A40066BA57 /* Profile.storyboard in Resources */,
-				B9C8044D2523A0880073818E /* Assets.xcassets in Resources */,
-				B97976DE2537B98C00768674 /* Finish Student Registration.storyboard in Resources */,
-				B9C804442523A0810073818E /* Actions.sks in Resources */,
-				B97976CF2537B5AB00768674 /* Student Register.storyboard in Resources */,
-				B98B95282535C7080066BA57 /* Locations.storyboard in Resources */,
-				B9F8BDFA253846FA00154FCB /* FAQS Page.storyboard in Resources */,
+				B964027A253A5DE5003A0306 /* Main.storyboard in Resources */,
+				B9640271253A5DE5003A0306 /* GameScene.sks in Resources */,
+				B96402B3253A5F3B003A0306 /* Confirm Student Registration.storyboard in Resources */,
+				B964027C253A5DE6003A0306 /* Assets.xcassets in Resources */,
+				B9640273253A5DE5003A0306 /* Actions.sks in Resources */,
+				B96402AF253A5F3B003A0306 /* Home Screen.storyboard in Resources */,
+				B96402B4253A5F3B003A0306 /* Register.storyboard in Resources */,
+				B96402B1253A5F3B003A0306 /* Guest Register.storyboard in Resources */,
+				B96402B2253A5F3B003A0306 /* Profile.storyboard in Resources */,
+				B96402B6253A5F3B003A0306 /* Locations.storyboard in Resources */,
+				B96402B0253A5F3B003A0306 /* Finish Student Registration.storyboard in Resources */,
+				B96402A3253A5F21003A0306 /* Student Register.storyboard in Resources */,
+				B96402B5253A5F3B003A0306 /* FAQS Page.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9C804512523A0890073818E /* Resources */ = {
+		B9640280253A5DE6003A0306 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9C8045C2523A0890073818E /* Resources */ = {
+		B964028B253A5DE6003A0306 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -294,52 +294,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B9C804382523A0810073818E /* Sources */ = {
+		B9640267253A5DE5003A0306 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C804462523A0820073818E /* GameScene.swift in Sources */,
-				B9C804482523A0820073818E /* GameViewController.swift in Sources */,
-				B9C804402523A0810073818E /* AppDelegate.swift in Sources */,
+				B9640275253A5DE5003A0306 /* GameScene.swift in Sources */,
+				B9640277253A5DE5003A0306 /* GameViewController.swift in Sources */,
+				B964026F253A5DE5003A0306 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9C8044F2523A0890073818E /* Sources */ = {
+		B964027E253A5DE6003A0306 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C804582523A0890073818E /* TestTests.swift in Sources */,
+				B9640287253A5DE6003A0306 /* CampusKeyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9C8045A2523A0890073818E /* Sources */ = {
+		B9640289253A5DE6003A0306 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C804632523A0890073818E /* TestUITests.swift in Sources */,
+				B9640292253A5DE6003A0306 /* CampusKeyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B9C804552523A0890073818E /* PBXTargetDependency */ = {
+		B9640284253A5DE6003A0306 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B9C8043B2523A0810073818E /* CampusKey */;
-			targetProxy = B9C804542523A0890073818E /* PBXContainerItemProxy */;
+			target = B964026A253A5DE5003A0306 /* CampusKey */;
+			targetProxy = B9640283253A5DE6003A0306 /* PBXContainerItemProxy */;
 		};
-		B9C804602523A0890073818E /* PBXTargetDependency */ = {
+		B964028F253A5DE6003A0306 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B9C8043B2523A0810073818E /* CampusKey */;
-			targetProxy = B9C8045F2523A0890073818E /* PBXContainerItemProxy */;
+			target = B964026A253A5DE5003A0306 /* CampusKey */;
+			targetProxy = B964028E253A5DE6003A0306 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B9C804492523A0820073818E /* Main.storyboard */ = {
+		B9640278253A5DE5003A0306 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B9C8044A2523A0820073818E /* Base */,
+				B9640279253A5DE5003A0306 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -347,7 +347,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B9C804652523A0890073818E /* Debug */ = {
+		B9640294253A5DE6003A0306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -408,7 +408,7 @@
 			};
 			name = Debug;
 		};
-		B9C804662523A0890073818E /* Release */ = {
+		B9640295253A5DE6003A0306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -463,56 +463,56 @@
 			};
 			name = Release;
 		};
-		B9C804682523A0890073818E /* Debug */ = {
+		B9640297253A5DE6003A0306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Test/Info.plist;
+				INFOPLIST_FILE = CampusKey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Tony.CampusKey;
+				PRODUCT_BUNDLE_IDENTIFIER = Comp490.CampusKey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B9C804692523A0890073818E /* Release */ = {
+		B9640298253A5DE6003A0306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Test/Info.plist;
+				INFOPLIST_FILE = CampusKey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Tony.CampusKey;
+				PRODUCT_BUNDLE_IDENTIFIER = Comp490.CampusKey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		B9C8046B2523A0890073818E /* Debug */ = {
+		B964029A253A5DE6003A0306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TestTests/Info.plist;
+				INFOPLIST_FILE = CampusKeyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Tony.TestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = Comp490.CampusKeyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -520,20 +520,20 @@
 			};
 			name = Debug;
 		};
-		B9C8046C2523A0890073818E /* Release */ = {
+		B964029B253A5DE6003A0306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TestTests/Info.plist;
+				INFOPLIST_FILE = CampusKeyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Tony.TestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = Comp490.CampusKeyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -541,84 +541,84 @@
 			};
 			name = Release;
 		};
-		B9C8046E2523A0890073818E /* Debug */ = {
+		B964029D253A5DE6003A0306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TestUITests/Info.plist;
+				INFOPLIST_FILE = CampusKeyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Tony.TestUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = Comp490.CampusKeyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Test;
+				TEST_TARGET_NAME = CampusKey;
 			};
 			name = Debug;
 		};
-		B9C8046F2523A0890073818E /* Release */ = {
+		B964029E253A5DE6003A0306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TestUITests/Info.plist;
+				INFOPLIST_FILE = CampusKeyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Tony.TestUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = Comp490.CampusKeyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Test;
+				TEST_TARGET_NAME = CampusKey;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9C804372523A0810073818E /* Build configuration list for PBXProject "CampusKey" */ = {
+		B9640266253A5DE5003A0306 /* Build configuration list for PBXProject "CampusKey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9C804652523A0890073818E /* Debug */,
-				B9C804662523A0890073818E /* Release */,
+				B9640294253A5DE6003A0306 /* Debug */,
+				B9640295253A5DE6003A0306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9C804672523A0890073818E /* Build configuration list for PBXNativeTarget "CampusKey" */ = {
+		B9640296253A5DE6003A0306 /* Build configuration list for PBXNativeTarget "CampusKey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9C804682523A0890073818E /* Debug */,
-				B9C804692523A0890073818E /* Release */,
+				B9640297253A5DE6003A0306 /* Debug */,
+				B9640298253A5DE6003A0306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9C8046A2523A0890073818E /* Build configuration list for PBXNativeTarget "CampusKeyCampusKeys" */ = {
+		B9640299253A5DE6003A0306 /* Build configuration list for PBXNativeTarget "CampusKeyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9C8046B2523A0890073818E /* Debug */,
-				B9C8046C2523A0890073818E /* Release */,
+				B964029A253A5DE6003A0306 /* Debug */,
+				B964029B253A5DE6003A0306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9C8046D2523A0890073818E /* Build configuration list for PBXNativeTarget "CampusKeyUICampusKeys" */ = {
+		B964029C253A5DE6003A0306 /* Build configuration list for PBXNativeTarget "CampusKeyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9C8046E2523A0890073818E /* Debug */,
-				B9C8046F2523A0890073818E /* Release */,
+				B964029D253A5DE6003A0306 /* Debug */,
+				B964029E253A5DE6003A0306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B9C804342523A0810073818E /* Project object */;
+	rootObject = B9640263253A5DE5003A0306 /* Project object */;
 }
