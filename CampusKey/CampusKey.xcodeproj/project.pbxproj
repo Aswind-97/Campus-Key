@@ -16,13 +16,9 @@
 		B964027C253A5DE6003A0306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B964027B253A5DE6003A0306 /* Assets.xcassets */; };
 		B9640287253A5DE6003A0306 /* CampusKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9640286253A5DE6003A0306 /* CampusKeyTests.swift */; };
 		B9640292253A5DE6003A0306 /* CampusKeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9640291253A5DE6003A0306 /* CampusKeyUITests.swift */; };
-		B96402A3253A5F21003A0306 /* Student Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402A2253A5F21003A0306 /* Student Register.storyboard */; };
 		B96402AF253A5F3B003A0306 /* Home Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402A7253A5F3A003A0306 /* Home Screen.storyboard */; };
-		B96402B0253A5F3B003A0306 /* Finish Student Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402A8253A5F3A003A0306 /* Finish Student Registration.storyboard */; };
-		B96402B1253A5F3B003A0306 /* Guest Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402A9253A5F3A003A0306 /* Guest Register.storyboard */; };
 		B96402B2253A5F3B003A0306 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AA253A5F3A003A0306 /* Profile.storyboard */; };
-		B96402B3253A5F3B003A0306 /* Confirm Student Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AB253A5F3A003A0306 /* Confirm Student Registration.storyboard */; };
-		B96402B4253A5F3B003A0306 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AC253A5F3A003A0306 /* Register.storyboard */; };
+		B96402B4253A5F3B003A0306 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AC253A5F3A003A0306 /* Registration.storyboard */; };
 		B96402B5253A5F3B003A0306 /* FAQS Page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AD253A5F3A003A0306 /* FAQS Page.storyboard */; };
 		B96402B6253A5F3B003A0306 /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96402AE253A5F3A003A0306 /* Locations.storyboard */; };
 /* End PBXBuildFile section */
@@ -60,13 +56,9 @@
 		B964028D253A5DE6003A0306 /* CampusKeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusKeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9640291253A5DE6003A0306 /* CampusKeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusKeyUITests.swift; sourceTree = "<group>"; };
 		B9640293253A5DE6003A0306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B96402A2253A5F21003A0306 /* Student Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Student Register.storyboard"; sourceTree = "<group>"; };
 		B96402A7253A5F3A003A0306 /* Home Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Home Screen.storyboard"; sourceTree = "<group>"; };
-		B96402A8253A5F3A003A0306 /* Finish Student Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Finish Student Registration.storyboard"; sourceTree = "<group>"; };
-		B96402A9253A5F3A003A0306 /* Guest Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Guest Register.storyboard"; sourceTree = "<group>"; };
 		B96402AA253A5F3A003A0306 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		B96402AB253A5F3A003A0306 /* Confirm Student Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Confirm Student Registration.storyboard"; sourceTree = "<group>"; };
-		B96402AC253A5F3A003A0306 /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		B96402AC253A5F3A003A0306 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		B96402AD253A5F3A003A0306 /* FAQS Page.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "FAQS Page.storyboard"; sourceTree = "<group>"; };
 		B96402AE253A5F3A003A0306 /* Locations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,11 +117,7 @@
 				B9640274253A5DE5003A0306 /* GameScene.swift */,
 				B9640276253A5DE5003A0306 /* GameViewController.swift */,
 				B9640278253A5DE5003A0306 /* Main.storyboard */,
-				B96402AC253A5F3A003A0306 /* Register.storyboard */,
-				B96402A2253A5F21003A0306 /* Student Register.storyboard */,
-				B96402AB253A5F3A003A0306 /* Confirm Student Registration.storyboard */,
-				B96402A8253A5F3A003A0306 /* Finish Student Registration.storyboard */,
-				B96402A9253A5F3A003A0306 /* Guest Register.storyboard */,
+				B96402AC253A5F3A003A0306 /* Registration.storyboard */,
 				B96402A7253A5F3A003A0306 /* Home Screen.storyboard */,
 				B96402AA253A5F3A003A0306 /* Profile.storyboard */,
 				B96402AE253A5F3A003A0306 /* Locations.storyboard */,
@@ -263,16 +251,12 @@
 			files = (
 				B964027A253A5DE5003A0306 /* Main.storyboard in Resources */,
 				B9640271253A5DE5003A0306 /* GameScene.sks in Resources */,
-				B96402B3253A5F3B003A0306 /* Confirm Student Registration.storyboard in Resources */,
 				B964027C253A5DE6003A0306 /* Assets.xcassets in Resources */,
 				B9640273253A5DE5003A0306 /* Actions.sks in Resources */,
 				B96402AF253A5F3B003A0306 /* Home Screen.storyboard in Resources */,
-				B96402B4253A5F3B003A0306 /* Register.storyboard in Resources */,
-				B96402B1253A5F3B003A0306 /* Guest Register.storyboard in Resources */,
+				B96402B4253A5F3B003A0306 /* Registration.storyboard in Resources */,
 				B96402B2253A5F3B003A0306 /* Profile.storyboard in Resources */,
 				B96402B6253A5F3B003A0306 /* Locations.storyboard in Resources */,
-				B96402B0253A5F3B003A0306 /* Finish Student Registration.storyboard in Resources */,
-				B96402A3253A5F21003A0306 /* Student Register.storyboard in Resources */,
 				B96402B5253A5F3B003A0306 /* FAQS Page.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
