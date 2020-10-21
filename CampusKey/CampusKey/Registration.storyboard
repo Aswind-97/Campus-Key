@@ -200,6 +200,9 @@
                                 <state key="normal" title="REGISTER">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="6xp-M0-yxG" kind="presentation" id="bDO-jq-Qzx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(STUDENT EMAIL PLACEHOLDER)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reR-i9-LJp">
                                 <rect key="frame" x="12" y="365" width="392" height="56"/>
@@ -263,6 +266,9 @@
                                 <state key="normal" title="REGISTER">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="6xp-M0-yxG" kind="presentation" id="3sz-o2-shp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZU5-bR-Dhm"/>
@@ -274,7 +280,18 @@
             </objects>
             <point key="canvasLocation" x="871" y="396"/>
         </scene>
+        <!--Home Screen-->
+        <scene sceneID="QCx-HE-Cug">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home Screen" id="6xp-M0-yxG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ng6-yy-3nZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2912" y="396"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3sz-o2-shp"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="612" height="792"/>
         <systemColor name="systemBackgroundColor">
