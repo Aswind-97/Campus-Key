@@ -7,15 +7,18 @@
 
 import UIKit
 
-class RegSecond: UIViewController {
+class RegSecond: UIViewController{
 
-    @IBOutlet weak var showEmail: UILabel!
     var email = ""
+    @IBOutlet weak var showEmail: UILabel!
+    @IBOutlet weak var codeInput: UITextField!
+    
 
     
     
     @IBAction func VerifyButton(_ sender: Any) {
     }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

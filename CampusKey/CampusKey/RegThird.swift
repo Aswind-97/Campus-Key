@@ -7,18 +7,19 @@
 
 import UIKit
 
-class RegThird: UIViewController {
+class RegThird: UIViewController, UITextFieldDelegate {
 
     
     var email = ""
     @IBOutlet weak var showEmail: UILabel!
+    @IBOutlet weak var enterPassword: UITextField!
     
     
     
     
-    
-    
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return enterPassword.resignFirstResponder()
+    }
     
     
     
@@ -26,6 +27,7 @@ class RegThird: UIViewController {
         super.viewDidLoad()
         
         showEmail?.text = email
+        self.enterPassword.delegate = self
         // Do any additional setup after loading the view.
     }
     

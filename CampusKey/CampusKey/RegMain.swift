@@ -7,15 +7,25 @@
 
 import UIKit
 
-class RegMain: UIViewController {
+class RegMain: UIViewController, UITextFieldDelegate {
     
     var email = ""
     
     @IBOutlet weak var emailHolder: UITextField!
     
-    
-    @IBAction func Continue(_ sender: Any) {
+    @IBAction func ContinueButton(_ sender: Any) {
     }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return emailHolder.resignFirstResponder()
+    }
+    
+    
+    
+    
+    
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -40,7 +50,7 @@ class RegMain: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.emailHolder.delegate = self
         // Do any additional setup after loading the view.
     }
     
