@@ -7,10 +7,43 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    
+    @IBOutlet weak var emailHolder: UITextField!
+    
+    @IBOutlet weak var passwordHolder: UITextField!
+    
+    @IBAction func signInButton(_ sender: Any) {
+    }
+    
+    @IBAction func forgotPasswordButton(_ sender: Any) {
+    }
+    
+    @IBAction func registerButton(_ sender: Any) {
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == emailHolder
+            {return emailHolder.resignFirstResponder()}
+        else if textField == passwordHolder
+            {return passwordHolder.resignFirstResponder()}
+        
+        return true
+        
+    }
+    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        
+        self.emailHolder.delegate = self
+        self.passwordHolder.delegate = self
+        
         // Do any additional setup after loading the view.
     }
 
