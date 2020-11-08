@@ -15,13 +15,18 @@ class ProfessorDetail: UIViewController, UITextFieldDelegate, UIImagePickerContr
     
     @IBOutlet weak var ProfessorInfo: UILabel!
     
-    
+    var image = UIImage()
+    var name = ""
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        professorName.text = name
+        professorImage.image = image
+        
         // Do any additional setup after loading the view.
     }
     

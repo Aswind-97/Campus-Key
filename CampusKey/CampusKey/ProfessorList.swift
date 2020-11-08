@@ -27,6 +27,9 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let vc = storyboard?.instantiateViewController(identifier: "ProfessorDetail") as? ProfessorDetail
     
         self.navigationController?.pushViewController(vc!, animated: true)
+        
+        vc?.image = UIImage(named: professors[indexPath.row])!
+        vc?.name = professors[indexPath.row]
     
     }
     
