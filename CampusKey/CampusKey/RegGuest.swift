@@ -17,7 +17,7 @@ class RegGuest: UIViewController, UITextFieldDelegate {
     @IBAction func RegisterButton(_ sender: Any) {
     }
     
-    
+    //Lowers keyboard when return button in clicked on
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField == emailHolder

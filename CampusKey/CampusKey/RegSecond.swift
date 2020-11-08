@@ -19,7 +19,7 @@ class RegSecond: UIViewController{
     }
     
     
-    
+    //Prepares info for next view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.destination is RegThird
@@ -34,6 +34,7 @@ class RegSecond: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Grabs info from previous view
         showEmail?.text = email
         // Do any additional setup after loading the view.
     }

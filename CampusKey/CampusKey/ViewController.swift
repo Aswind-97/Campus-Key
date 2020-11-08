@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    //Closes keyboard when return button is pushed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField == emailHolder

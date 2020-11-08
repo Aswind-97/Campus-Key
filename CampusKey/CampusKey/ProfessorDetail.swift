@@ -23,7 +23,7 @@ class ProfessorDetail: UIViewController, UITextFieldDelegate, UIImagePickerContr
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        //Gets images and names from previous view
         professorName.text = name
         professorImage.image = image
         

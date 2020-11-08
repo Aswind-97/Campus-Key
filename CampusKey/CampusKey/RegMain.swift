@@ -16,12 +16,12 @@ class RegMain: UIViewController, UITextFieldDelegate {
     @IBAction func ContinueButton(_ sender: Any) {
     }
     
-    
+    //Closes keyboard when return button is pushed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return emailHolder.resignFirstResponder()
     }
     
-    
+    //Prepares info for next view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.destination is RegSecond
@@ -36,6 +36,7 @@ class RegMain: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.emailHolder.delegate = self
         // Do any additional setup after loading the view.
     }

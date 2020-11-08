@@ -18,7 +18,7 @@ class RegThird: UIViewController, UITextFieldDelegate {
     
     
     
-    
+    //Closes keyboard when return button is clicked on
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return enterPassword.resignFirstResponder()
     }
@@ -28,7 +28,9 @@ class RegThird: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Info gathered from previous view
         showEmail?.text = email
+        
         self.enterPassword.delegate = self
         // Do any additional setup after loading the view.
     }
