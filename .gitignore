@@ -7,3 +7,5 @@ Pods/
 !Pods/Target Support Files/Pods-CampusKeyTest
 
 CampusKey.xcworkspace
+
+.DS_Store
