@@ -1,11 +1,23 @@
 Pods/
 
-!Pods/Target Support Files/Pods-CampusKey
+Pods/GoogleMaps
 
-!Pods/Target Support Files/Pods-CampusKeyUITests
+Pods/GooglePlaces
 
-!Pods/Target Support Files/Pods-CampusKeyTest
+Pods/Headers
 
-CampusKey.xcworkspace
+Pods/Local Podspecs
 
-.DS_Store
+Manifest.lock
+
+Pods.xcodeproj
+
+Pods/Realm
+
+Pods/RealmSwift
+
+*.xcworkspace
+
+*.DS_Store
+
+Podfile.lock
