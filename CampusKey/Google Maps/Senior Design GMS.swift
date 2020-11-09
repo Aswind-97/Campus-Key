@@ -3,8 +3,9 @@
 //Add your API key to your AppDelegate.swift
 import GooglePlaces
 import GoogleMaps
-GMSPlacesClient.provideAPIKey("YOUR_API_KEY") //Replace with given API key
-GMSServices.provideAPIKey("YOUR_API_KEY") //Replace with given API key
+var key = AIzaSyBiW7YzKUkewqZVkKoB01xYcaLz3U49z7Y;
+GMSPlacesClient.provideAPIKey(key) //Replace with given API key
+GMSServices.provideAPIKey(key) //Replace with given API key
 
 //Declare variables for user's location
 var locationManager: CLLocationManager!

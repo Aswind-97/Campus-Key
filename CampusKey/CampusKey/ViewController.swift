@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
+    let locationManager = CLLocationManager()
     
     @IBOutlet weak var emailHolder: UITextField!
     
@@ -37,17 +39,35 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    override func viewDidLoad() {
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            // Do any additional setup after loading the view.
+            getCurrentLocation()
+            self.emailHolder.delegate = self
+            self.passwordHolder.delegate = self
+        }
         
-        super.viewDidLoad()
-        
-        
-        self.emailHolder.delegate = self
-        self.passwordHolder.delegate = self
-        
-        // Do any additional setup after loading the view.
+        func getCurrentLocation() {
+            // Ask for Authorisation from the User.
+            self.locationManager.requestAlwaysAuthorization()
+
+            // For use in foreground
+            self.locationManager.requestWhenInUseAuthorization()
+
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager.delegate = self
+                locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                locationManager.startUpdatingLocation()
+            }
+        }
+
     }
 
+    extension ViewController: CLLocationManagerDelegate {
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+               guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+               print("locations = \(locValue.latitude) \(locValue.longitude)")
+            //lblLocation.text = "latitude = \(locValue.latitude), longitude = \(locValue.longitude)"
+        }
 
 }
-
