@@ -1,0 +1,9 @@
+Pods/
+
+!Pods/Target Support Files/Pods-CampusKey
+
+!Pods/Target Support Files/Pods-CampusKeyUITests
+
+!Pods/Target Support Files/Pods-CampusKeyTest
+
+CampusKey.xcworkspace
