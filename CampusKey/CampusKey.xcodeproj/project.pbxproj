@@ -30,7 +30,6 @@
 		B949222325416EC30085D1E9 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B949221E25416EC30085D1E9 /* Registration.storyboard */; };
 		B949222425416EC30085D1E9 /* Home Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B949221F25416EC30085D1E9 /* Home Screen.storyboard */; };
 		B94D3A0E2551D7BE00BF84F8 /* Food.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D3A0D2551D7BE00BF84F8 /* Food.storyboard */; };
-		B9956F1A2557FA2600AE9562 /* Professor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9956F192557FA2600AE9562 /* Professor.storyboard */; };
 		B9956F1F2557FBA600AE9562 /* ProfessorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F1E2557FBA600AE9562 /* ProfessorList.swift */; };
 		B9956F2625580A7A00AE9562 /* ProfessorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */; };
 		B9956F2B255812F700AE9562 /* ProfessorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2A255812F700AE9562 /* ProfessorCell.swift */; };
@@ -92,7 +91,6 @@
 		B949221E25416EC30085D1E9 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		B949221F25416EC30085D1E9 /* Home Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Home Screen.storyboard"; sourceTree = "<group>"; };
 		B94D3A0D2551D7BE00BF84F8 /* Food.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Food.storyboard; sourceTree = "<group>"; };
-		B9956F192557FA2600AE9562 /* Professor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Professor.storyboard; sourceTree = "<group>"; };
 		B9956F1E2557FBA600AE9562 /* ProfessorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorList.swift; sourceTree = "<group>"; };
 		B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorDetail.swift; sourceTree = "<group>"; };
 		B9956F2A255812F700AE9562 /* ProfessorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorCell.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				B91742FE254AC6E2008A1715 /* RegThird.swift */,
 				B943D3CE2553C3A60054FE6D /* RegGuest.swift */,
 				B949221F25416EC30085D1E9 /* Home Screen.storyboard */,
-				B9956F192557FA2600AE9562 /* Professor.storyboard */,
 				B9956F1E2557FBA600AE9562 /* ProfessorList.swift */,
 				B9956F2A255812F700AE9562 /* ProfessorCell.swift */,
 				B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */,
@@ -340,7 +337,6 @@
 				B94921F225416DB20085D1E9 /* Assets.xcassets in Resources */,
 				B94921F025416DAD0085D1E9 /* Main.storyboard in Resources */,
 				B949222425416EC30085D1E9 /* Home Screen.storyboard in Resources */,
-				B9956F1A2557FA2600AE9562 /* Professor.storyboard in Resources */,
 				B949222025416EC30085D1E9 /* FAQS Page.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
