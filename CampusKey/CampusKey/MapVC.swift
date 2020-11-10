@@ -106,6 +106,8 @@ class MapVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    getCurrentLocation()
+    
     // Initialize the location manager.
     locationManager = CLLocationManager()
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -136,6 +138,20 @@ class MapVC: UIViewController {
 
     listLikelyPlaces()
   }
+    
+    func getCurrentLocation() {
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
 
   // Populate the array with the list of likely places.
   func listLikelyPlaces() {

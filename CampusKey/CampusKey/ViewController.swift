@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
-            getCurrentLocation()
+            //getCurrentLocation()
             self.emailHolder.delegate = self
             self.passwordHolder.delegate = self
         }
