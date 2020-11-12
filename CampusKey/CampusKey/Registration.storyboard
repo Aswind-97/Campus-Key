@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cmc-5F-d5c">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -96,7 +96,6 @@
                                 </state>
                                 <connections>
                                     <action selector="ContinueButton:" destination="phP-CE-D2c" eventType="touchUpInside" id="nEu-be-xqX"/>
-                                    <segue destination="vKX-VZ-BJi" kind="show" id="Ok1-fh-XSU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,6 +105,7 @@
                     <navigationItem key="navigationItem" id="eLf-T2-Xqn"/>
                     <connections>
                         <outlet property="emailHolder" destination="2Sd-9m-o4K" id="avc-TM-hOE"/>
+                        <segue destination="vKX-VZ-BJi" kind="show" identifier="Verify info" id="hlp-7z-M6R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLR-oT-cDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

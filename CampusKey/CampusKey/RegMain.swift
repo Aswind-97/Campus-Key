@@ -11,6 +11,7 @@ class RegMain: UIViewController, UITextFieldDelegate {
     
     var email:String?
     var firstName:String = "Javier"
+    var verified:Bool = false
     
     @IBOutlet weak var emailHolder: UITextField!
     
@@ -37,13 +38,15 @@ class RegMain: UIViewController, UITextFieldDelegate {
                 do{
 
                     let members = try decoder.decode(Members.self, from: data!)
-                    print(members)//.people?.first_name ?? ""
-//                    if(members.people?.first_name == self.firstName){
-//                        print("first name matches")
-//                    }
-//                    else{
-//                        return print("Error first name does not match")
-//                    }
+                    print(members.people?.first_name ?? "")//.people?.first_name ?? ""
+                    if(members.people?.first_name == self.firstName){
+                        print("first name matches")
+                        self.verified = true
+//                        performSegue(withIdentifier: "Verify info", sender: self)
+                    }
+                    else{
+                        return print("Error first name does not match")
+                    }
                 }
                 catch{
                     print("Error  in JSON parsing")
@@ -53,7 +56,16 @@ class RegMain: UIViewController, UITextFieldDelegate {
 
         //Make API call
         dataTask.resume()
-    }
+        if verified{
+            let firstNameAlert = UIAlertController(title: "First Name did not match", message: "Please correct first name.",       preferredStyle: .alert)
+            firstNameAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(firstNameAlert, animated: true, completion: nil)
+        }else{
+
+            performSegue(withIdentifier: "Verify info", sender: self)
+        }
     
     //Closes keyboard when return button is pushed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -62,7 +74,7 @@ class RegMain: UIViewController, UITextFieldDelegate {
     
     
     //Prepares info for next view
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+        func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.destination is RegSecond
         {
@@ -74,7 +86,7 @@ class RegMain: UIViewController, UITextFieldDelegate {
     
     
     
-    override func viewDidLoad() {
+        func viewDidLoad() {
         super.viewDidLoad()
         
         self.emailHolder.delegate = self
@@ -112,4 +124,5 @@ class RegMain: UIViewController, UITextFieldDelegate {
     }
     
 
+}
 }
