@@ -23,11 +23,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="arrow.uturn.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="v1z-CQ-ZLi">
-                                <rect key="frame" x="38" y="61" width="44" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kl8-uE-DME">
                                 <rect key="frame" x="111" y="564" width="193" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -79,16 +74,6 @@
                                 <color key="textColor" red="1" green="0.98899913669999995" blue="0.99791799299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sL7-8T-5TD">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.98899913669999995" blue="0.99791799299999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="4Mu-sl-c2f"/>
-                                    <tabBarItem title="Home" image="house.fill" catalog="system" id="olt-H7-wGS"/>
-                                    <tabBarItem title="Profile" image="person.fill" catalog="system" id="zKC-xl-qwV"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hd7-jB-C4x"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -100,12 +85,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
