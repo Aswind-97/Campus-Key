@@ -66,6 +66,9 @@
                                 <state key="normal" title="FAQS">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="G0P-z0-Jmg" kind="show" id="O1C-s9-MPc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CAMPUS KEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kru-Uc-3Ij">
                                 <rect key="frame" x="20" y="96" width="339" height="61"/>
@@ -317,7 +320,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3YT-x7-rua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="781"/>
+            <point key="canvasLocation" x="814" y="520"/>
+        </scene>
+        <!--FAQS-->
+        <scene sceneID="Sf7-98-be9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FAQS" id="G0P-z0-Jmg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wqa-OM-FgM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5I-my-oLS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="795" y="1002"/>
         </scene>
         <!--HOME-->
         <scene sceneID="wFL-V7-qCL">

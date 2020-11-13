@@ -24,7 +24,6 @@
 		B94921F525416DB20085D1E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94921F325416DB20085D1E9 /* LaunchScreen.storyboard */; };
 		B949220025416DB20085D1E9 /* CampusKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94921FF25416DB20085D1E9 /* CampusKeyTests.swift */; };
 		B949220B25416DB30085D1E9 /* CampusKeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949220A25416DB30085D1E9 /* CampusKeyUITests.swift */; };
-		B949222025416EC30085D1E9 /* FAQS Page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B949221B25416EC20085D1E9 /* FAQS Page.storyboard */; };
 		B949222125416EC30085D1E9 /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B949221C25416EC20085D1E9 /* Locations.storyboard */; };
 		B949222225416EC30085D1E9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B949221D25416EC30085D1E9 /* Profile.storyboard */; };
 		B949222325416EC30085D1E9 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B949221E25416EC30085D1E9 /* Registration.storyboard */; };
@@ -34,6 +33,7 @@
 		B9956F2625580A7A00AE9562 /* ProfessorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */; };
 		B9956F2B255812F700AE9562 /* ProfessorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2A255812F700AE9562 /* ProfessorCell.swift */; };
 		B9D973C35C60EB90AC27112F /* Pods_CampusKey_CampusKeyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BEEAADE45EE3782AB47A71 /* Pods_CampusKey_CampusKeyUITests.framework */; };
+		B9F5F808255E0FD8002BC034 /* FAQS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F5F807255E0FD8002BC034 /* FAQS.storyboard */; };
 		F500F6414464D524DF77E5F3 /* Pods_CampusKeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E2274AFEB9B4AFBF577953 /* Pods_CampusKeyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +85,6 @@
 		B949220625416DB20085D1E9 /* CampusKeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusKeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B949220A25416DB30085D1E9 /* CampusKeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusKeyUITests.swift; sourceTree = "<group>"; };
 		B949220C25416DB30085D1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B949221B25416EC20085D1E9 /* FAQS Page.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "FAQS Page.storyboard"; sourceTree = "<group>"; };
 		B949221C25416EC20085D1E9 /* Locations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
 		B949221D25416EC30085D1E9 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B949221E25416EC30085D1E9 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		B9956F1E2557FBA600AE9562 /* ProfessorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorList.swift; sourceTree = "<group>"; };
 		B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorDetail.swift; sourceTree = "<group>"; };
 		B9956F2A255812F700AE9562 /* ProfessorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorCell.swift; sourceTree = "<group>"; };
+		B9F5F807255E0FD8002BC034 /* FAQS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FAQS.storyboard; sourceTree = "<group>"; };
 		FC6A6451C833BBF2679ADE43 /* Pods-CampusKeyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusKeyTests.debug.xcconfig"; path = "Target Support Files/Pods-CampusKeyTests/Pods-CampusKeyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +193,7 @@
 				B94D3A0D2551D7BE00BF84F8 /* Food.storyboard */,
 				B949221C25416EC20085D1E9 /* Locations.storyboard */,
 				B949221D25416EC30085D1E9 /* Profile.storyboard */,
-				B949221B25416EC20085D1E9 /* FAQS Page.storyboard */,
+				B9F5F807255E0FD8002BC034 /* FAQS.storyboard */,
 				B94921F125416DB20085D1E9 /* Assets.xcassets */,
 				B94921F325416DB20085D1E9 /* LaunchScreen.storyboard */,
 				B94921F625416DB20085D1E9 /* Info.plist */,
@@ -330,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94D3A0E2551D7BE00BF84F8 /* Food.storyboard in Resources */,
+				B9F5F808255E0FD8002BC034 /* FAQS.storyboard in Resources */,
 				B949222225416EC30085D1E9 /* Profile.storyboard in Resources */,
 				B94921F525416DB20085D1E9 /* LaunchScreen.storyboard in Resources */,
 				B949222125416EC30085D1E9 /* Locations.storyboard in Resources */,
@@ -337,7 +338,6 @@
 				B94921F225416DB20085D1E9 /* Assets.xcassets in Resources */,
 				B94921F025416DAD0085D1E9 /* Main.storyboard in Resources */,
 				B949222425416EC30085D1E9 /* Home Screen.storyboard in Resources */,
-				B949222025416EC30085D1E9 /* FAQS Page.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
