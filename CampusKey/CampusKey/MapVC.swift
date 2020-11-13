@@ -76,8 +76,8 @@ class MapVC: UIViewController {
     
     
     
-    @IBOutlet var mapView: GMSMapView!
-    var placesClient: GMSPlacesClient!
+  @IBOutlet var mapView: GMSMapView!
+  var placesClient: GMSPlacesClient!
   var preciseLocationZoomLevel: Float = 15.0
   var approximateLocationZoomLevel: Float = 10.0
 
@@ -88,25 +88,25 @@ class MapVC: UIViewController {
   var selectedPlace: GMSPlace?
 
   // Update the map once the user has made their selection.
-//  @IBAction func unwindToMain(segue: UIStoryboardSegue) {
-//    // Clear the map.
-//    mapView.clear()
-//
-//    // Add a marker to the map.
-//    if let place = selectedPlace {
-//      let marker = GMSMarker(position: place.coordinate)
-//      marker.title = selectedPlace?.name
-//      marker.snippet = selectedPlace?.formattedAddress
-//      marker.map = mapView
-//    }
-//
-//    listLikelyPlaces()
-//  }
+  @IBAction func unwindToMain(segue: UIStoryboardSegue) {
+    // Clear the map.
+    mapView.clear()
+
+    // Add a marker to the map.
+    if let place = selectedPlace {
+      let marker = GMSMarker(position: place.coordinate)
+      marker.title = selectedPlace?.name
+      marker.snippet = selectedPlace?.formattedAddress
+      marker.map = mapView
+    }
+
+    listLikelyPlaces()
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    getCurrentLocation()
+    //getCurrentLocation()
     
     // Initialize the location manager.
     locationManager = CLLocationManager()
@@ -139,19 +139,19 @@ class MapVC: UIViewController {
     listLikelyPlaces()
   }
     
-    func getCurrentLocation() {
-        // Ask for Authorisation from the User.
-        self.locationManager.requestAlwaysAuthorization()
-
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
-    }
+//    func getCurrentLocation() {
+//        // Ask for Authorisation from the User.
+//        self.locationManager.requestAlwaysAuthorization()
+//
+//        // For use in foreground
+//        self.locationManager.requestWhenInUseAuthorization()
+//
+//        if CLLocationManager.locationServicesEnabled() {
+//            locationManager.delegate = self
+//            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+//            locationManager.startUpdatingLocation()
+//        }
+//    }
 
   // Populate the array with the list of likely places.
   func listLikelyPlaces() {

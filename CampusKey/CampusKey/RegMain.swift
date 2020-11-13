@@ -45,13 +45,9 @@ class RegMain: UIViewController, UITextFieldDelegate {
             print(members.people?.individuals_id ?? "")
             print(members.people?.first_name ?? "")
             print(members.people?.last_name ?? "")
-        }
+            }
         }
         
-
-
-        //print("before resume ",  verified)
-        //dataTask.resume()
         spinner.startAnimating()
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
             // your code here
@@ -104,19 +100,8 @@ class RegMain: UIViewController, UITextFieldDelegate {
                             DispatchQueue.main.async {
                             self.updateVerified()
                             }
-                                                   
                         }
-//                        else{
-//                            let firstNameAlert = UIAlertController(title: "Information did not match", message: "Please correct, then try again.",       preferredStyle: .alert)
-//                            firstNameAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-//                            NSLog("The \"OK\" alert occured.")
-//                            }))
-//                            self.present(firstNameAlert, animated: true, completion: nil)
-//                        }
-                    //}
-                    
                     completionHandler(members)
-                    
                 }
                 catch{
                     let error = error
@@ -157,9 +142,6 @@ class RegMain: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -170,35 +152,6 @@ class RegMain: UIViewController, UITextFieldDelegate {
         self.idNumber.delegate = self
         // Do any additional setup after loading the view.
         
-        //Hit the API endpoint
-//        print(email)
-//        let urlString = "https://api.metalab.csun.edu/directory/api/members?email=" + email //javier.aguayo.882@my.csun.edu
-//        print(urlString)
-//
-//        let url = URL(string: urlString)
-//
-//        guard url != nil else {
-//            return
-//        }
-//        let session = URLSession.shared
-//
-//        let dataTask = session.dataTask(with: url!) { (data, response, error) in
-//
-//            if error == nil && data != nil{
-//                //pasre JSON
-//                let decoder = JSONDecoder()
-//                do{
-//
-//                    let members = try decoder.decode(Members.self, from: data!)
-//                    print(members)
-//                }
-//                catch{
-//                    print("Error  in JSON parsing")
-//                }
-//            }
-//        }
-//        //Make API call
-//        dataTask.resume()
     }
     
 
