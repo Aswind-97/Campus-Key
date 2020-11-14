@@ -15,8 +15,11 @@ class ProfessorDetail: UIViewController, UITextFieldDelegate, UIImagePickerContr
     
     @IBOutlet weak var ProfessorInfo: UILabel!
     
+    @IBOutlet weak var professorRating: UILabel!
+    
     var image = UIImage()
     var name = ""
+    var rating = ""
     
     
     
@@ -26,6 +29,8 @@ class ProfessorDetail: UIViewController, UITextFieldDelegate, UIImagePickerContr
         //Gets images and names from previous view
         professorName.text = name
         professorImage.image = image
+        professorRating.text = rating
+        
         
         // Do any additional setup after loading the view.
     }

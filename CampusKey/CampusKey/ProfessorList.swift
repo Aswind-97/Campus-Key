@@ -13,7 +13,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     
     let professors = ["John Doe", "Jane Doe", "Alex Smith"]
-    
+    let ratings = ["9.5", "9.8", "8.2"]
     
     
     
@@ -34,6 +34,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         //allows for trasnferring data to next view
         vc?.image = UIImage(named: professors[indexPath.row])!
         vc?.name = professors[indexPath.row]
+        vc?.rating = ratings[indexPath.row]
     
     }
     

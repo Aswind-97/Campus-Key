@@ -436,20 +436,23 @@
                                     <constraint firstAttribute="height" constant="320" id="SFm-cO-ZBs"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChR-Q3-0q3">
-                                <rect key="frame" x="16" y="484" width="382" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="cJ3-26-fBT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfD-Yu-SNs">
                                 <rect key="frame" x="16" y="84" width="382" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2yV-kU-mkp"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1T-vO-hgc">
+                                <rect key="frame" x="179" y="452" width="56.5" height="24"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChR-Q3-0q3">
+                                <rect key="frame" x="192.5" y="613" width="29" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -458,27 +461,28 @@
                         <viewLayoutGuide key="safeArea" id="QWd-6g-Twb"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="f1T-vO-hgc" firstAttribute="centerX" secondItem="BQl-RI-v0p" secondAttribute="centerX" id="0i8-sH-nsS"/>
                             <constraint firstItem="QWd-6g-Twb" firstAttribute="trailing" secondItem="sfD-Yu-SNs" secondAttribute="trailing" constant="16" id="5Je-3W-MYL"/>
                             <constraint firstItem="sfD-Yu-SNs" firstAttribute="leading" secondItem="QWd-6g-Twb" secondAttribute="leading" constant="16" id="9Ay-KZ-QuE"/>
-                            <constraint firstItem="ChR-Q3-0q3" firstAttribute="leading" secondItem="QWd-6g-Twb" secondAttribute="leading" constant="16" id="F6B-xz-Y0p"/>
                             <constraint firstItem="QWd-6g-Twb" firstAttribute="trailing" secondItem="7j5-J2-HCO" secondAttribute="trailing" constant="16" id="Huy-On-4eK"/>
                             <constraint firstItem="7j5-J2-HCO" firstAttribute="top" secondItem="sfD-Yu-SNs" secondAttribute="bottom" constant="10" id="Weu-T0-mOO"/>
+                            <constraint firstItem="f1T-vO-hgc" firstAttribute="top" secondItem="QWd-6g-Twb" secondAttribute="top" constant="408" id="bmd-la-eBJ"/>
                             <constraint firstItem="7j5-J2-HCO" firstAttribute="leading" secondItem="QWd-6g-Twb" secondAttribute="leading" constant="16" id="c2a-hK-czK"/>
-                            <constraint firstItem="ChR-Q3-0q3" firstAttribute="top" secondItem="7j5-J2-HCO" secondAttribute="bottom" constant="195" id="c8E-e7-rzQ"/>
-                            <constraint firstItem="QWd-6g-Twb" firstAttribute="trailing" secondItem="ChR-Q3-0q3" secondAttribute="trailing" constant="16" id="kxU-6O-p5r"/>
+                            <constraint firstItem="ChR-Q3-0q3" firstAttribute="centerX" secondItem="BQl-RI-v0p" secondAttribute="centerX" id="fAH-iO-Xdv"/>
                             <constraint firstItem="sfD-Yu-SNs" firstAttribute="top" secondItem="QWd-6g-Twb" secondAttribute="top" constant="40" id="nBf-qn-xSy"/>
-                            <constraint firstItem="ChR-Q3-0q3" firstAttribute="top" secondItem="7j5-J2-HCO" secondAttribute="bottom" constant="40" id="sMn-u5-LSA"/>
+                            <constraint firstItem="QWd-6g-Twb" firstAttribute="bottom" secondItem="ChR-Q3-0q3" secondAttribute="bottom" constant="228.5" id="v3c-fr-TW2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ProfessorInfo" destination="ChR-Q3-0q3" id="vSH-eT-g2t"/>
                         <outlet property="professorImage" destination="7j5-J2-HCO" id="0L2-4G-1Qm"/>
                         <outlet property="professorName" destination="sfD-Yu-SNs" id="WAM-Cr-hz8"/>
+                        <outlet property="professorRating" destination="f1T-vO-hgc" id="NMT-qg-Ua0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3Q-ch-LQ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="1531"/>
+            <point key="canvasLocation" x="1195.6521739130435" y="1530.8035714285713"/>
         </scene>
     </scenes>
     <resources>
