@@ -8,6 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Professor-->
+        <scene sceneID="x5l-ve-jgH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Professor" id="2SY-xV-gkq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2Rv-uS-cDm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCH-Lg-yQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="781"/>
+        </scene>
         <!--HomeScreen-->
         <scene sceneID="aAh-Ce-cNY">
             <objects>
@@ -37,7 +47,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ogq-wW-ixc" kind="show" id="eJH-85-WII"/>
+                                    <segue destination="2SY-xV-gkq" kind="show" id="JWK-Hr-qzX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcQ-el-YH1">
@@ -320,7 +330,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3YT-x7-rua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="520"/>
+            <point key="canvasLocation" x="814" y="490"/>
         </scene>
         <!--FAQS-->
         <scene sceneID="Sf7-98-be9">
@@ -330,7 +340,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5I-my-oLS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795" y="1002"/>
+            <point key="canvasLocation" x="795" y="1072"/>
         </scene>
         <!--HOME-->
         <scene sceneID="wFL-V7-qCL">
@@ -351,143 +361,9 @@
             </objects>
             <point key="canvasLocation" x="280" y="-52"/>
         </scene>
-        <!--Professor List-->
-        <scene sceneID="qpa-BJ-i5X">
-            <objects>
-                <viewController id="ogq-wW-ixc" customClass="ProfessorList" customModule="CampusKey" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7n0-kl-uig">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yGP-8H-guV">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="116" id="JSZ-vE-6Ra" customClass="ProfessorCell" customModule="CampusKey" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="116"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JSZ-vE-6Ra" id="alL-Kq-FVZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Kcg-ep-oGI">
-                                                    <rect key="frame" x="16" y="8" width="100" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="2np-fC-Zlo"/>
-                                                        <constraint firstAttribute="width" constant="100" id="aX7-oR-K1b"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lt-cp-kPE">
-                                                    <rect key="frame" x="10" y="43" width="388" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="umd-ob-l5z"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Kcg-ep-oGI" firstAttribute="leading" secondItem="alL-Kq-FVZ" secondAttribute="leading" constant="16" id="1O0-7b-0wG"/>
-                                                <constraint firstItem="Kcg-ep-oGI" firstAttribute="centerY" secondItem="alL-Kq-FVZ" secondAttribute="centerY" id="7kZ-Z1-b86"/>
-                                                <constraint firstItem="9lt-cp-kPE" firstAttribute="centerY" secondItem="alL-Kq-FVZ" secondAttribute="centerY" id="E0l-nK-JHT"/>
-                                                <constraint firstAttribute="trailing" secondItem="9lt-cp-kPE" secondAttribute="trailing" constant="16" id="F56-Fy-oz1"/>
-                                                <constraint firstItem="9lt-cp-kPE" firstAttribute="leading" secondItem="alL-Kq-FVZ" secondAttribute="leading" constant="10" id="Ra3-AL-y5a"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="professorImage" destination="Kcg-ep-oGI" id="yEC-iO-6Ac"/>
-                                            <outlet property="professorName" destination="9lt-cp-kPE" id="YcA-je-SRK"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Qx-6w-mXx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Qx-6w-mXx" firstAttribute="trailing" secondItem="yGP-8H-guV" secondAttribute="trailing" id="7bq-ej-HqT"/>
-                            <constraint firstItem="yGP-8H-guV" firstAttribute="leading" secondItem="6Qx-6w-mXx" secondAttribute="leading" id="955-1N-ktE"/>
-                            <constraint firstItem="yGP-8H-guV" firstAttribute="top" secondItem="6Qx-6w-mXx" secondAttribute="top" id="USI-IL-v9v"/>
-                            <constraint firstItem="6Qx-6w-mXx" firstAttribute="bottom" secondItem="yGP-8H-guV" secondAttribute="bottom" id="YE9-cQ-zKu"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="O8A-Ud-Leq"/>
-                    <connections>
-                        <outlet property="tableView" destination="yGP-8H-guV" id="dm7-7l-wQq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jrX-vO-fAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="280" y="1531"/>
-        </scene>
-        <!--Professor Detail-->
-        <scene sceneID="jVo-yl-ynY">
-            <objects>
-                <viewController storyboardIdentifier="ProfessorDetail" id="Erp-VX-AoT" customClass="ProfessorDetail" customModule="CampusKey" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BQl-RI-v0p">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="7j5-J2-HCO">
-                                <rect key="frame" x="16" y="124" width="382" height="320"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="SFm-cO-ZBs"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfD-Yu-SNs">
-                                <rect key="frame" x="16" y="84" width="382" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2yV-kU-mkp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1T-vO-hgc">
-                                <rect key="frame" x="179" y="452" width="56.5" height="24"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChR-Q3-0q3">
-                                <rect key="frame" x="192.5" y="613" width="29" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="QWd-6g-Twb"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="f1T-vO-hgc" firstAttribute="centerX" secondItem="BQl-RI-v0p" secondAttribute="centerX" id="0i8-sH-nsS"/>
-                            <constraint firstItem="QWd-6g-Twb" firstAttribute="trailing" secondItem="sfD-Yu-SNs" secondAttribute="trailing" constant="16" id="5Je-3W-MYL"/>
-                            <constraint firstItem="sfD-Yu-SNs" firstAttribute="leading" secondItem="QWd-6g-Twb" secondAttribute="leading" constant="16" id="9Ay-KZ-QuE"/>
-                            <constraint firstItem="QWd-6g-Twb" firstAttribute="trailing" secondItem="7j5-J2-HCO" secondAttribute="trailing" constant="16" id="Huy-On-4eK"/>
-                            <constraint firstItem="7j5-J2-HCO" firstAttribute="top" secondItem="sfD-Yu-SNs" secondAttribute="bottom" constant="10" id="Weu-T0-mOO"/>
-                            <constraint firstItem="f1T-vO-hgc" firstAttribute="top" secondItem="QWd-6g-Twb" secondAttribute="top" constant="408" id="bmd-la-eBJ"/>
-                            <constraint firstItem="7j5-J2-HCO" firstAttribute="leading" secondItem="QWd-6g-Twb" secondAttribute="leading" constant="16" id="c2a-hK-czK"/>
-                            <constraint firstItem="ChR-Q3-0q3" firstAttribute="centerX" secondItem="BQl-RI-v0p" secondAttribute="centerX" id="fAH-iO-Xdv"/>
-                            <constraint firstItem="sfD-Yu-SNs" firstAttribute="top" secondItem="QWd-6g-Twb" secondAttribute="top" constant="40" id="nBf-qn-xSy"/>
-                            <constraint firstItem="QWd-6g-Twb" firstAttribute="bottom" secondItem="ChR-Q3-0q3" secondAttribute="bottom" constant="228.5" id="v3c-fr-TW2"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="ProfessorInfo" destination="ChR-Q3-0q3" id="vSH-eT-g2t"/>
-                        <outlet property="professorImage" destination="7j5-J2-HCO" id="0L2-4G-1Qm"/>
-                        <outlet property="professorName" destination="sfD-Yu-SNs" id="WAM-Cr-hz8"/>
-                        <outlet property="professorRating" destination="f1T-vO-hgc" id="NMT-qg-Ua0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r3Q-ch-LQ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1195.6521739130435" y="1530.8035714285713"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Logo" width="612" height="792"/>
-        <image name="defaultPhoto" width="540" height="540"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="photo" catalog="system" width="128" height="93"/>
