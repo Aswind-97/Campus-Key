@@ -16,7 +16,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCH-Lg-yQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="781"/>
+            <point key="canvasLocation" x="959" y="697"/>
+        </scene>
+        <!--Directory-->
+        <scene sceneID="bkE-XW-VYd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Directory" id="cLM-44-KIA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="E9u-mR-4yk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kc0-Nl-UTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="867"/>
         </scene>
         <!--HomeScreen-->
         <scene sceneID="aAh-Ce-cNY">
@@ -67,6 +77,9 @@
                                 <state key="normal" title="EVENTS">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cLM-44-KIA" kind="show" id="z3e-Xe-vHs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGl-2J-B17">
                                 <rect key="frame" x="85" y="610" width="245" height="63"/>
