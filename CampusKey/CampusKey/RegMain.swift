@@ -128,7 +128,17 @@ class RegMain: UIViewController, UITextFieldDelegate {
     
     //Closes keyboard when return button is pushed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return lastNameInput.resignFirstResponder()
+        if textField == emailHolder
+            {return emailHolder.resignFirstResponder()}
+        else if textField == idNumber
+            {return idNumber.resignFirstResponder()}
+        else if textField == firstNameInput
+            {return firstNameInput.resignFirstResponder()}
+        else if textField == lastNameInput
+            {return lastNameInput.resignFirstResponder()}
+        
+        return true
+        
     }
     
     

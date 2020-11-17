@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cmc-5F-d5c">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +36,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="phP-CE-D2c" kind="show" id="8ng-IF-xjj"/>
+                                    <segue destination="phP-CE-D2c" kind="presentation" modalPresentationStyle="fullScreen" id="8ng-IF-xjj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zw-oU-iRl">
@@ -48,7 +48,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fEN-Vi-fU2" kind="show" id="qU8-M2-6PR"/>
+                                    <segue destination="fEN-Vi-fU2" kind="presentation" modalPresentationStyle="fullScreen" id="qU8-M2-6PR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,41 +65,35 @@
             <objects>
                 <viewController title="EnterStudentEmail" id="phP-CE-D2c" customClass="RegMain" customModule="CampusKey" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8OB-7q-7oq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID NUMBER" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dw0-66-AW5">
-                                <rect key="frame" x="66" y="437" width="282" height="39.5"/>
+                                <rect key="frame" x="66" y="491" width="282" height="39.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FIRST NAME" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bK0-RM-e3Q">
-                                <rect key="frame" x="66" y="494" width="282" height="39.5"/>
+                                <rect key="frame" x="66" y="548" width="282" height="39.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LAST NAME" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GhF-fQ-ibN">
-                                <rect key="frame" x="66" y="552" width="282" height="39.5"/>
+                                <rect key="frame" x="66" y="606" width="282" height="39.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="mZQ-kj-Mlg">
-                                <rect key="frame" x="332" y="225" width="82" height="93"/>
+                                <rect key="frame" x="332" y="269" width="82" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="m3W-uq-w7y"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CAMPUS KEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSa-yR-uE8">
-                                <rect key="frame" x="20" y="233" width="339" height="61"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="48"/>
-                                <color key="textColor" systemColor="systemGray6Color"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-xf-NAH">
-                                <rect key="frame" x="111" y="727" width="192" height="56"/>
+                                <rect key="frame" x="111" y="781" width="192" height="56"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="pZU-g0-qvL"/>
@@ -113,18 +107,24 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="STUDENT EMAIL" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2Sd-9m-o4K">
-                                <rect key="frame" x="66" y="381" width="282" height="39.5"/>
+                                <rect key="frame" x="66" y="435" width="282" height="39.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                             </textField>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="RWp-eP-W0t">
-                                <rect key="frame" x="186" y="314" width="42" height="42"/>
+                                <rect key="frame" x="186" y="368" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="BZV-b3-tG1"/>
                                 </constraints>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CAMPUS KEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSa-yR-uE8">
+                                <rect key="frame" x="20" y="269" width="339" height="61"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="48"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tma-OH-MzA"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -160,7 +160,7 @@
                         <outlet property="idNumber" destination="Dw0-66-AW5" id="wtJ-4R-bvO"/>
                         <outlet property="lastNameInput" destination="GhF-fQ-ibN" id="iqs-hF-LjW"/>
                         <outlet property="spinner" destination="RWp-eP-W0t" id="1cl-8r-hYj"/>
-                        <segue destination="vKX-VZ-BJi" kind="show" identifier="Verify info" id="hlp-7z-M6R"/>
+                        <segue destination="vKX-VZ-BJi" kind="presentation" identifier="Verify info" modalPresentationStyle="fullScreen" id="hlp-7z-M6R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLR-oT-cDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -172,7 +172,7 @@
             <objects>
                 <viewController storyboardIdentifier="CodeVerification" title="CodeVerification" id="vKX-VZ-BJi" customClass="RegSecond" customModule="CampusKey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TO6-0A-fTr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="wQ6-xx-Zck">
@@ -203,7 +203,7 @@
                                 </state>
                                 <connections>
                                     <action selector="VerifyButton:" destination="vKX-VZ-BJi" eventType="touchUpInside" id="k68-V7-cd3"/>
-                                    <segue destination="WVs-gB-NSZ" kind="show" id="kZk-co-Dmw"/>
+                                    <segue destination="WVs-gB-NSZ" kind="presentation" modalPresentationStyle="fullScreen" id="kZk-co-Dmw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verification code was sent to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pm-42-vno">
@@ -239,7 +239,7 @@
             <objects>
                 <viewController storyboardIdentifier="FinishStudentRegistration" title="FinishStudentRegistration" id="WVs-gB-NSZ" customClass="RegThird" customModule="CampusKey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="avX-eV-yCu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tey-Uq-Rsl">
@@ -276,7 +276,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6xp-M0-yxG" kind="presentation" id="bDO-jq-Qzx"/>
+                                    <segue destination="6xp-M0-yxG" kind="presentation" modalPresentationStyle="fullScreen" id="bDO-jq-Qzx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -298,7 +298,7 @@
             <objects>
                 <viewController storyboardIdentifier="GuestRegistration" title="GuestRegistration" id="fEN-Vi-fU2" customClass="RegGuest" customModule="CampusKey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lOq-tj-ypm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CAMPUS KEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4I-Mi-EFx">
@@ -336,7 +336,7 @@
                                 </state>
                                 <connections>
                                     <action selector="RegisterButton:" destination="fEN-Vi-fU2" eventType="touchUpInside" id="rGl-Pn-985"/>
-                                    <segue destination="6xp-M0-yxG" kind="presentation" id="3sz-o2-shp"/>
+                                    <segue destination="6xp-M0-yxG" kind="presentation" modalPresentationStyle="fullScreen" id="3sz-o2-shp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -365,7 +365,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3sz-o2-shp"/>
+        <segue reference="bDO-jq-Qzx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="612" height="792"/>

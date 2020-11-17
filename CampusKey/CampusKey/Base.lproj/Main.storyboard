@@ -52,7 +52,7 @@
                                 </state>
                                 <connections>
                                     <action selector="registerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZf-Vq-f5X"/>
-                                    <segue destination="ZtV-aa-zed" kind="show" id="rSh-XJ-36I"/>
+                                    <segue destination="ZtV-aa-zed" kind="presentation" modalPresentationStyle="fullScreen" id="rSh-XJ-36I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QM9-Eb-bl6">
@@ -65,7 +65,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nxo-zu-ghA"/>
-                                    <segue destination="sjq-XE-Mq1" kind="presentation" id="HdL-V5-Z7W"/>
+                                    <segue destination="sjq-XE-Mq1" kind="presentation" modalPresentationStyle="fullScreen" id="HdL-V5-Z7W"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CAMPUS KEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hex-U2-2cE">
