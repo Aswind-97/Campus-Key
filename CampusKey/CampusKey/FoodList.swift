@@ -37,6 +37,8 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         vc?.rating = ratings[indexPath.row]
     
     }
+
+
     
     //Determines how many cells appear
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

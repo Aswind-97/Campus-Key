@@ -11,19 +11,28 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
 
     
     @IBOutlet weak var foodName: UILabel!
-    
     @IBOutlet weak var foodImage: UIImageView!
-    
     @IBOutlet weak var foodInfo: UILabel!
-    
     @IBOutlet weak var foodRating: UILabel!
     
-    
-    
     var image = UIImage()
-     var name = ""
-     var rating = ""
-     
+    var name = ""
+    var rating = ""
+
+    @objc public func addReview(sender: UIBarButtonItem) {
+        //Creates a viewController to use data from FoodDetail view
+        let vc = storyboard?.instantiateViewController(identifier: "FoodReview") as? FoodReview
+    
+        //Allows for use of a navigation controller from List to Detail
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+        //allows for trasnferring data to next view
+        vc?.image = foodImage.image!
+        vc?.name = foodName.text!
+        //performSegue(withIdentifier: "Food Review", sender: vc!)
+
+        
+      }
      
      
      override func viewDidLoad() {
@@ -33,6 +42,11 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
          foodName.text = name
          foodImage.image = image
          foodRating.text = rating
+        
+        //Set up navigation bar item--add review btn
+        let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addReview))
+        self.navigationItem.rightBarButtonItem  = btn1
+
          
          
          // Do any additional setup after loading the view.

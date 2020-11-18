@@ -16,7 +16,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsk-sD-LFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="449" y="-125"/>
+            <point key="canvasLocation" x="448" y="-216"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lqT-EM-TNM">
@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="SEARCH" translatesAutoresizingMaskIntoConstraints="NO" id="zPi-H2-E7S">
-                                <rect key="frame" x="10" y="124" width="394" height="56"/>
+                                <rect key="frame" x="10" y="168" width="394" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SO-2w-9CR">
-                                <rect key="frame" x="60" y="282" width="68" height="42"/>
+                                <rect key="frame" x="60" y="326" width="68" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="FOOD">
@@ -41,7 +41,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teO-er-fOH">
-                                <rect key="frame" x="244" y="612" width="132" height="42"/>
+                                <rect key="frame" x="244" y="656" width="132" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="DIRECTORY">
@@ -49,7 +49,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYd-nu-MeB">
-                                <rect key="frame" x="53" y="444" width="92" height="42"/>
+                                <rect key="frame" x="53" y="488" width="92" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="HEALTH">
@@ -57,7 +57,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KX-Bj-tWn">
-                                <rect key="frame" x="53" y="612" width="111" height="42"/>
+                                <rect key="frame" x="53" y="656" width="111" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="SUPPLIES">
@@ -65,7 +65,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMU-NZ-ztX">
-                                <rect key="frame" x="264" y="444" width="102" height="42"/>
+                                <rect key="frame" x="264" y="488" width="102" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="PARKING">
@@ -73,11 +73,11 @@
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="TNa-h0-hPo">
-                                <rect key="frame" x="53" y="180" width="82" height="121"/>
+                                <rect key="frame" x="53" y="224" width="82" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbP-OI-xdJ">
-                                <rect key="frame" x="245" y="282" width="121" height="42"/>
+                                <rect key="frame" x="245" y="326" width="121" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="STUDYING">
@@ -85,44 +85,44 @@
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Health" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-Pe-NlS">
-                                <rect key="frame" x="61" y="367" width="77" height="92"/>
+                                <rect key="frame" x="61" y="411" width="77" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Directory" translatesAutoresizingMaskIntoConstraints="NO" id="s6Q-Xy-FEg">
-                                <rect key="frame" x="259" y="511" width="102" height="105"/>
+                                <rect key="frame" x="259" y="555" width="102" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Parking" translatesAutoresizingMaskIntoConstraints="NO" id="sIv-Pv-6wO">
-                                <rect key="frame" x="259" y="367" width="102" height="87"/>
+                                <rect key="frame" x="259" y="411" width="102" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Study" translatesAutoresizingMaskIntoConstraints="NO" id="ZGO-LJ-8xQ">
-                                <rect key="frame" x="262" y="208" width="97" height="81"/>
+                                <rect key="frame" x="262" y="252" width="97" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Supplies" translatesAutoresizingMaskIntoConstraints="NO" id="22g-fJ-uOo">
-                                <rect key="frame" x="56" y="510" width="104" height="107"/>
+                                <rect key="frame" x="56" y="554" width="104" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOCATIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zK-oI-vXj">
-                                <rect key="frame" x="113" y="61" width="189" height="42"/>
+                                <rect key="frame" x="113" y="105" width="189" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHz-Ov-ivY">
-                                <rect key="frame" x="41" y="183" width="104" height="106"/>
+                                <rect key="frame" x="41" y="227" width="104" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="odh-fK-0uE" kind="show" id="fJi-pQ-37f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sM-aT-GS8">
-                                <rect key="frame" x="253" y="510" width="104" height="106"/>
+                                <rect key="frame" x="253" y="554" width="104" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="lbi-Ez-cgV" kind="show" id="29s-az-oMu"/>
+                                    <segue destination="7xr-XC-pLx" kind="show" id="vai-Nl-2cV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,24 +134,15 @@
             </objects>
             <point key="canvasLocation" x="-65.217391304347828" y="75.669642857142847"/>
         </scene>
-        <!--MapVC-->
-        <scene sceneID="bqD-67-3iu">
+        <!--Directory-->
+        <scene sceneID="0lK-yh-bqd">
             <objects>
-                <viewController id="lbi-Ez-cgV" customClass="MapVC" customModule="CampusKey" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CZS-dS-Mw6" customClass="GMSMapView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <viewLayoutGuide key="safeArea" id="d8G-qk-KC7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="XNS-45-86D"/>
-                    <connections>
-                        <outlet property="mapView" destination="CZS-dS-Mw6" id="uVp-tF-738"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WM3-T9-OM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Directory" id="7xr-XC-pLx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pci-hp-wLs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kR8-7M-5Vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="76"/>
+            <point key="canvasLocation" x="467" y="367"/>
         </scene>
     </scenes>
     <resources>
@@ -163,9 +154,6 @@
         <image name="Supplies" width="512" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

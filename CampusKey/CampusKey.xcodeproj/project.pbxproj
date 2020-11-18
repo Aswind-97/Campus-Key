@@ -34,10 +34,13 @@
 		B949222425416EC30085D1E9 /* Home Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B949221F25416EC30085D1E9 /* Home Screen.storyboard */; };
 		B94D3A0E2551D7BE00BF84F8 /* Food.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D3A0D2551D7BE00BF84F8 /* Food.storyboard */; };
 		B962C5862561F48F007445B4 /* Professor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B962C5852561F48F007445B4 /* Professor.storyboard */; };
+		B97DBB162563F0860069E549 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97DBB152563F0860069E549 /* Profile.swift */; };
 		B9956F1F2557FBA600AE9562 /* ProfessorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F1E2557FBA600AE9562 /* ProfessorList.swift */; };
 		B9956F2625580A7A00AE9562 /* ProfessorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */; };
 		B9956F2B255812F700AE9562 /* ProfessorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2A255812F700AE9562 /* ProfessorCell.swift */; };
 		B9D973C35C60EB90AC27112F /* Pods_CampusKey_CampusKeyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BEEAADE45EE3782AB47A71 /* Pods_CampusKey_CampusKeyUITests.framework */; };
+		B9EAC5FE2564B16A0033D71B /* FoodReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EAC5FD2564B16A0033D71B /* FoodReview.swift */; };
+		B9EAC606256527B70033D71B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EAC605256527B70033D71B /* Home.swift */; };
 		B9F5F808255E0FD8002BC034 /* FAQS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F5F807255E0FD8002BC034 /* FAQS.storyboard */; };
 		F500F6414464D524DF77E5F3 /* Pods_CampusKeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E2274AFEB9B4AFBF577953 /* Pods_CampusKeyTests.framework */; };
 /* End PBXBuildFile section */
@@ -100,9 +103,12 @@
 		B949221F25416EC30085D1E9 /* Home Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Home Screen.storyboard"; sourceTree = "<group>"; };
 		B94D3A0D2551D7BE00BF84F8 /* Food.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Food.storyboard; sourceTree = "<group>"; };
 		B962C5852561F48F007445B4 /* Professor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Professor.storyboard; sourceTree = "<group>"; };
+		B97DBB152563F0860069E549 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B9956F1E2557FBA600AE9562 /* ProfessorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorList.swift; sourceTree = "<group>"; };
 		B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorDetail.swift; sourceTree = "<group>"; };
 		B9956F2A255812F700AE9562 /* ProfessorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorCell.swift; sourceTree = "<group>"; };
+		B9EAC5FD2564B16A0033D71B /* FoodReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodReview.swift; sourceTree = "<group>"; };
+		B9EAC605256527B70033D71B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		B9F5F807255E0FD8002BC034 /* FAQS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FAQS.storyboard; sourceTree = "<group>"; };
 		FC6A6451C833BBF2679ADE43 /* Pods-CampusKeyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusKeyTests.debug.xcconfig"; path = "Target Support Files/Pods-CampusKeyTests/Pods-CampusKeyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,19 +201,22 @@
 				B91742FE254AC6E2008A1715 /* RegThird.swift */,
 				B943D3CE2553C3A60054FE6D /* RegGuest.swift */,
 				B949221F25416EC30085D1E9 /* Home Screen.storyboard */,
-				B93EEDC02563C053001FBC06 /* Directory.storyboard */,
-				B93EEDC52563C070001FBC06 /* Directory.swift */,
+				B9EAC605256527B70033D71B /* Home.swift */,
+				B97DBB152563F0860069E549 /* Profile.swift */,
 				B962C5852561F48F007445B4 /* Professor.storyboard */,
 				B9956F1E2557FBA600AE9562 /* ProfessorList.swift */,
 				B9956F2A255812F700AE9562 /* ProfessorCell.swift */,
 				B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */,
+				B949221C25416EC20085D1E9 /* Locations.storyboard */,
 				59B52FA525552FC60026DA62 /* MapVC.swift */,
 				592BB5FD2556191200EC18FD /* PlacesVC.swift */,
+				B93EEDC02563C053001FBC06 /* Directory.storyboard */,
+				B93EEDC52563C070001FBC06 /* Directory.swift */,
 				B94D3A0D2551D7BE00BF84F8 /* Food.storyboard */,
 				B93EEDCA2563C6BA001FBC06 /* FoodList.swift */,
 				B93EEDDF2563D1D6001FBC06 /* FoodCell.swift */,
 				B93EEDD72563C6FB001FBC06 /* FoodDetail.swift */,
-				B949221C25416EC20085D1E9 /* Locations.storyboard */,
+				B9EAC5FD2564B16A0033D71B /* FoodReview.swift */,
 				B9F5F807255E0FD8002BC034 /* FAQS.storyboard */,
 				B94921F125416DB20085D1E9 /* Assets.xcassets */,
 				B94921F325416DB20085D1E9 /* LaunchScreen.storyboard */,
@@ -528,9 +537,12 @@
 				B94921EB25416DAD0085D1E9 /* SceneDelegate.swift in Sources */,
 				59B52FA625552FC60026DA62 /* MapVC.swift in Sources */,
 				B91742FA254AC466008A1715 /* RegSecond.swift in Sources */,
+				B9EAC606256527B70033D71B /* Home.swift in Sources */,
+				B9EAC5FE2564B16A0033D71B /* FoodReview.swift in Sources */,
 				B9956F1F2557FBA600AE9562 /* ProfessorList.swift in Sources */,
 				B943D3CF2553C3A60054FE6D /* RegGuest.swift in Sources */,
 				B93EEDCB2563C6BA001FBC06 /* FoodList.swift in Sources */,
+				B97DBB162563F0860069E549 /* Profile.swift in Sources */,
 				B91742F5254AC433008A1715 /* RegMain.swift in Sources */,
 				B93EEDC62563C070001FBC06 /* Directory.swift in Sources */,
 			);
