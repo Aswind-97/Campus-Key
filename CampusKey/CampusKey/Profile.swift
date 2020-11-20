@@ -21,7 +21,6 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     //Allows usr to choose pic from gallery to have as profile pic when btn is clicked
     @IBAction func profilePicBtn(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-            print("Button capture")
 
             imagePicker.delegate = self
             imagePicker.sourceType = .savedPhotosAlbum
@@ -43,7 +42,6 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         
         //Add a way to store profile pic with default photo from DB. Then capture usered entered pic if ever stored
 
-        // Do any additional setup after loading the view.
     }
     
 

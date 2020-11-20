@@ -19,8 +19,8 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     //Helps to allow pics to show properly
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
     }
     
     //Action for what happens when cell is clicked on

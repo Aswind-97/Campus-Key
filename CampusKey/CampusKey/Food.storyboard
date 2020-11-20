@@ -186,23 +186,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g71-c6-qFG">
-                                <rect key="frame" x="150" y="670" width="114" height="42"/>
+                                <rect key="frame" x="150" y="760" width="114" height="42"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="RATE!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="WRITE REVIEW" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ch9-Za-oiH">
+                                <rect key="frame" x="16" y="581" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q4q-LY-Ni1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VGJ-jr-fzr" firstAttribute="top" secondItem="SoZ-a2-plT" secondAttribute="bottom" constant="16" id="4rP-57-z0E"/>
                             <constraint firstItem="kIm-7S-c4J" firstAttribute="leading" secondItem="q4q-LY-Ni1" secondAttribute="leading" constant="16" id="5vC-sv-gjO"/>
+                            <constraint firstItem="ch9-Za-oiH" firstAttribute="top" secondItem="VGJ-jr-fzr" secondAttribute="bottom" constant="25" id="DMk-n7-vwo"/>
                             <constraint firstItem="TFm-CQ-bDo" firstAttribute="top" secondItem="q4q-LY-Ni1" secondAttribute="top" constant="35" id="Jz0-m3-vdr"/>
                             <constraint firstItem="g71-c6-qFG" firstAttribute="centerX" secondItem="Erq-wA-m1x" secondAttribute="centerX" id="KBa-Ir-HGK"/>
                             <constraint firstItem="SoZ-a2-plT" firstAttribute="top" secondItem="Xp7-2T-zVe" secondAttribute="bottom" constant="50" id="L3K-tK-Qlp"/>
+                            <constraint firstItem="ch9-Za-oiH" firstAttribute="leading" secondItem="q4q-LY-Ni1" secondAttribute="leading" constant="16" id="NSg-hl-1Kq"/>
                             <constraint firstItem="TFm-CQ-bDo" firstAttribute="leading" secondItem="Xp7-2T-zVe" secondAttribute="leading" id="NXa-er-TVL"/>
+                            <constraint firstItem="q4q-LY-Ni1" firstAttribute="trailing" secondItem="ch9-Za-oiH" secondAttribute="trailing" constant="16" id="Sab-po-suH"/>
                             <constraint firstItem="SoZ-a2-plT" firstAttribute="top" secondItem="kIm-7S-c4J" secondAttribute="bottom" constant="8" id="YTn-Gh-HIt"/>
                             <constraint firstItem="SoZ-a2-plT" firstAttribute="leading" secondItem="q4q-LY-Ni1" secondAttribute="leading" constant="16" id="Yzj-Xz-YQg"/>
                             <constraint firstItem="TFm-CQ-bDo" firstAttribute="leading" secondItem="q4q-LY-Ni1" secondAttribute="leading" constant="16" id="ayI-MM-0rI"/>
@@ -213,7 +221,7 @@
                             <constraint firstItem="q4q-LY-Ni1" firstAttribute="trailing" secondItem="kIm-7S-c4J" secondAttribute="trailing" constant="16" id="htH-Tc-JzA"/>
                             <constraint firstItem="q4q-LY-Ni1" firstAttribute="trailing" secondItem="g71-c6-qFG" secondAttribute="trailing" constant="150" id="lYv-5X-lDH"/>
                             <constraint firstItem="VGJ-jr-fzr" firstAttribute="centerX" secondItem="Erq-wA-m1x" secondAttribute="centerX" id="mau-2r-eX2"/>
-                            <constraint firstItem="q4q-LY-Ni1" firstAttribute="bottom" secondItem="g71-c6-qFG" secondAttribute="bottom" constant="150" id="mgV-lT-pdF"/>
+                            <constraint firstItem="q4q-LY-Ni1" firstAttribute="bottom" secondItem="g71-c6-qFG" secondAttribute="bottom" constant="60" id="mgV-lT-pdF"/>
                             <constraint firstItem="g71-c6-qFG" firstAttribute="leading" secondItem="q4q-LY-Ni1" secondAttribute="leading" constant="150" id="qzD-c0-n8K"/>
                             <constraint firstItem="Xp7-2T-zVe" firstAttribute="top" secondItem="TFm-CQ-bDo" secondAttribute="bottom" constant="10" id="zyH-kW-jxl"/>
                         </constraints>
@@ -226,6 +234,7 @@
                         <outlet property="ratingWord" destination="VGJ-jr-fzr" id="7N4-b7-752"/>
                         <outlet property="slider" destination="SoZ-a2-plT" id="R6j-Hr-nU1"/>
                         <outlet property="submitRateBtn" destination="g71-c6-qFG" id="d02-Cy-xFq"/>
+                        <outlet property="usrReviewTextField" destination="ch9-Za-oiH" id="NKr-Cz-GMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DeE-QP-7sw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
