@@ -7,18 +7,20 @@
 
 import UIKit
 
-class FoodReview: UIViewController, UITextFieldDelegate {
+class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var ratingWord: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var rating: UILabel!
-    @IBOutlet weak var usrReviewTextField: UITextField!
+    @IBOutlet weak var usrReviewTextView: UITextView!
     @IBOutlet weak var submitRateBtn: UIButton!
     
     var image = UIImage()
     var name = ""
+
+
  
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -37,7 +39,8 @@ class FoodReview: UIViewController, UITextFieldDelegate {
         
     }
     
-    //<KEYBOARD FUNCTIONS>
+    //<KEYBOARD FUNCTIONS>###############
+    //Called when keyboard is clicked on in order to scroll view to allow textView to be shown
     @objc func keyboardWillShow(notification: NSNotification) {
             
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
@@ -53,23 +56,46 @@ class FoodReview: UIViewController, UITextFieldDelegate {
       // move back the root view origin to zero
       self.view.frame.origin.y = 0
     }
-   
-    //Closes keyboard when return button is pushed
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == usrReviewTextField
-            {return usrReviewTextField.resignFirstResponder()}
+    
+    //Manages Placeholder in usrReviewTextView
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if usrReviewTextView.textColor == UIColor.lightGray {
+            usrReviewTextView.text = nil
+            usrReviewTextView.textColor = UIColor.black
+        }
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if usrReviewTextView.text.isEmpty {
+            usrReviewTextView.text = "WRITE A REVIEW"
+            usrReviewTextView.textColor = UIColor.lightGray
+        }
+    }
 
+
+    //Closes keyboard when return button is pushed
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            usrReviewTextView.resignFirstResponder()
+        }
         return true
-        
     }
     
-    //VIEW LOADER #################################################
+    //VIEW LOADER #########################
     override func viewDidLoad() {
         super.viewDidLoad()
         
         foodName.text = name
+        
         foodImage.image = image
-        usrReviewTextField.delegate = self
+        
+        //TextView Loader
+        usrReviewTextView.delegate = self
+        usrReviewTextView.layer.borderColor = UIColor.lightGray.cgColor
+        usrReviewTextView.layer.borderWidth = 1
+        usrReviewTextView.layer.cornerRadius = 5
+        usrReviewTextView.text = "WRITE A REVIEW"
+        usrReviewTextView.textColor = UIColor.lightGray
+        
         
         submitRateBtn.layer.cornerRadius = 4
         
