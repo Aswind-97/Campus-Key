@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28A1A7DB256D64DD00EAA645 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1A7DA256D64DD00EAA645 /* DBHelper.swift */; };
+		28A1A7E0256D650300EAA645 /* reviewDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1A7DF256D650300EAA645 /* reviewDB.swift */; };
 		592BB5FE2556191200EC18FD /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592BB5FD2556191200EC18FD /* PlacesVC.swift */; };
 		5996A3FC255A3C4E00D0F157 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996A3FB255A3C4E00D0F157 /* Members.swift */; };
 		5996A404255A3F9C00D0F157 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996A403255A3F9C00D0F157 /* People.swift */; };
@@ -64,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		18BEEAADE45EE3782AB47A71 /* Pods_CampusKey_CampusKeyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusKey_CampusKeyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28A1A7DA256D64DD00EAA645 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		28A1A7DF256D650300EAA645 /* reviewDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewDB.swift; sourceTree = "<group>"; };
 		369A5F2123A294E6CCFB0796 /* Pods-CampusKeyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusKeyTests.release.xcconfig"; path = "Target Support Files/Pods-CampusKeyTests/Pods-CampusKeyTests.release.xcconfig"; sourceTree = "<group>"; };
 		58224CB1702BA8663C54FF62 /* Pods-CampusKey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusKey.release.xcconfig"; path = "Target Support Files/Pods-CampusKey/Pods-CampusKey.release.xcconfig"; sourceTree = "<group>"; };
 		592BB5FD2556191200EC18FD /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
@@ -141,6 +145,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28A1A7CE256D648700EAA645 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				28A1A7DA256D64DD00EAA645 /* DBHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		2AD9C7DF4E9FF83E0A17D232 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +201,7 @@
 		B94921E725416DAD0085D1E9 /* CampusKey */ = {
 			isa = PBXGroup;
 			children = (
+				28A1A7CE256D648700EAA645 /* Helper */,
 				B94921E825416DAD0085D1E9 /* AppDelegate.swift */,
 				B94921EA25416DAD0085D1E9 /* SceneDelegate.swift */,
 				B94921EC25416DAD0085D1E9 /* ViewController.swift */,
@@ -221,6 +234,7 @@
 				B94921F125416DB20085D1E9 /* Assets.xcassets */,
 				B94921F325416DB20085D1E9 /* LaunchScreen.storyboard */,
 				B94921F625416DB20085D1E9 /* Info.plist */,
+				28A1A7DF256D650300EAA645 /* reviewDB.swift */,
 			);
 			path = CampusKey;
 			sourceTree = "<group>";
@@ -535,10 +549,12 @@
 				5996A3FC255A3C4E00D0F157 /* Members.swift in Sources */,
 				B93EEDD82563C6FB001FBC06 /* FoodDetail.swift in Sources */,
 				B94921EB25416DAD0085D1E9 /* SceneDelegate.swift in Sources */,
+				28A1A7DB256D64DD00EAA645 /* DBHelper.swift in Sources */,
 				59B52FA625552FC60026DA62 /* MapVC.swift in Sources */,
 				B91742FA254AC466008A1715 /* RegSecond.swift in Sources */,
 				B9EAC606256527B70033D71B /* Home.swift in Sources */,
 				B9EAC5FE2564B16A0033D71B /* FoodReview.swift in Sources */,
+				28A1A7E0256D650300EAA645 /* reviewDB.swift in Sources */,
 				B9956F1F2557FBA600AE9562 /* ProfessorList.swift in Sources */,
 				B943D3CF2553C3A60054FE6D /* RegGuest.swift in Sources */,
 				B93EEDCB2563C6BA001FBC06 /* FoodList.swift in Sources */,
