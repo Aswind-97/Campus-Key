@@ -30,3 +30,29 @@ features and creating a one-stop-shop for students to come and get familiarized
 with their campus. With Campus Key, being a stereotypical, confused freshman will
 be a thing of the past.
 Campus Key-Unlock Your Best College Experience
+
+# INSTALL Requirements: 
+
+## Intel Mac:
+
+Clone git repo
+
+$sudo gem install cocoapods 
+
+cd <path-to-project>
+  
+pod install (once in directory in which Pod file is visible)
+
+## M1 Mac: 
+
+Run terminal & Xcode in Rosetta
+
+Clone git repo 
+
+$sudo gem install cocoapods 
+
+$gem install ffi
+
+cd <path-to-project>
+  
+pod install (once in directory in which Pod file is visible)
