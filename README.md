@@ -39,7 +39,7 @@ Clone git repo
 
 $sudo gem install cocoapods 
 
-cd <path-to-project>
+cd < path-to-project >
   
 pod install (once in directory in which Pod file is visible)
 
@@ -53,6 +53,6 @@ $sudo gem install cocoapods
 
 $gem install ffi
 
-cd <path-to-project>
+cd < path-to-project >
   
 pod install (once in directory in which Pod file is visible)
