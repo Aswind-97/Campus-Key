@@ -31,7 +31,7 @@ with their campus. With Campus Key, being a stereotypical, confused freshman wil
 be a thing of the past.
 Campus Key-Unlock Your Best College Experience
 
-# INSTALL Requirements: 
+## Installation Process: 
 
 ## Intel Mac:
 
