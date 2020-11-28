@@ -49,12 +49,12 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         }
       
       // move the root view up by the distance of keyboard height
-      self.view.frame.origin.y = 0 - keyboardSize.height
+      self.view.frame.origin.y = 175 - keyboardSize.height
     }
 
     @objc func keyboardWillHide(notification: NSNotification) {
       // move back the root view origin to zero
-      self.view.frame.origin.y = 0
+      self.view.frame.origin.y = 75
     }
     
     //Manages Placeholder in usrReviewTextView

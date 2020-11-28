@@ -126,6 +126,24 @@ class RegMain: UIViewController, UITextFieldDelegate {
         self.verified = 1
     }
     
+    //<KEYBOARD FUNCTIONS>###############
+    //Called when keyboard is clicked on in order to scroll view to allow textView to be shown
+    @objc func keyboardWillShow(notification: NSNotification) {
+            
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+           // if keyboard size is not available for some reason, dont do anything
+           return
+        }
+      
+      // move the root view up by the distance of keyboard height
+      self.view.frame.origin.y = 125 - keyboardSize.height
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+      // move back the root view origin to zero
+      self.view.frame.origin.y = 0
+    }
+    
     //Closes keyboard when return button is pushed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailHolder
@@ -160,7 +178,12 @@ class RegMain: UIViewController, UITextFieldDelegate {
         self.firstNameInput.delegate = self
         self.lastNameInput.delegate = self
         self.idNumber.delegate = self
-        // Do any additional setup after loading the view.
+
+        // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
+        NotificationCenter.default.addObserver(self, selector: #selector(FoodReview.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+      
+          // call the 'keyboardWillHide' function when the view controlelr receive notification that keyboard is going to be hidden
+        NotificationCenter.default.addObserver(self, selector: #selector(FoodReview.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
     
