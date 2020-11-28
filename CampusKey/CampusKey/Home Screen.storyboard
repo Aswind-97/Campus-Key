@@ -98,6 +98,10 @@
                         <outlet property="faqsBtn" destination="CGl-2J-B17" id="l2y-c9-RVM"/>
                         <outlet property="locationsBtn" destination="kmj-Qq-wBQ" id="Gqx-Nt-RlV"/>
                         <outlet property="professorBtn" destination="Up2-bd-eWG" id="KZd-Xr-IRn"/>
+                        <outletCollection property="myButtons" destination="kmj-Qq-wBQ" collectionClass="NSMutableArray" id="EYy-xD-CJd"/>
+                        <outletCollection property="myButtons" destination="Up2-bd-eWG" collectionClass="NSMutableArray" id="abQ-JU-2lc"/>
+                        <outletCollection property="myButtons" destination="DcQ-el-YH1" collectionClass="NSMutableArray" id="4ko-wU-bVk"/>
+                        <outletCollection property="myButtons" destination="Gu8-74-HVU" collectionClass="NSMutableArray" id="yeR-g8-6UQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXV-AM-5C4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -303,6 +307,7 @@
                     <tabBarItem key="tabBarItem" title="PROFILE" image="person" catalog="system" id="sEr-O5-dEk"/>
                     <connections>
                         <outlet property="profilePic" destination="Whf-uE-V5z" id="hBs-DL-U6G"/>
+                        <outlet property="signOutBtn" destination="x1l-cj-rmU" id="QLj-ou-Lcf"/>
                         <outlet property="usrEmail" destination="rGR-Pc-eva" id="aoC-vk-ItM"/>
                         <outlet property="usrName" destination="Nv5-dY-fRd" id="aDJ-Rd-Dv3"/>
                     </connections>

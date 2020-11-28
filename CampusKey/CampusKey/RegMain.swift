@@ -23,6 +23,8 @@ class RegMain: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var idNumber: UITextField!
     @IBOutlet weak var firstNameInput: UITextField!
     @IBOutlet weak var lastNameInput: UITextField!
+    @IBOutlet var myTexts: [UITextField]!
+    @IBOutlet weak var continueBtn: UIButton!
     
     @IBAction func ContinueButton(_ sender: Any) {
         
@@ -178,6 +180,17 @@ class RegMain: UIViewController, UITextFieldDelegate {
         self.firstNameInput.delegate = self
         self.lastNameInput.delegate = self
         self.idNumber.delegate = self
+        
+        for text in self.myTexts{
+            text.layer.cornerRadius = 8
+            text.layer.shadowOpacity = 0.8
+            text.layer.shadowOffset = CGSize(width: 1, height: 1)
+        }
+        
+        continueBtn.layer.cornerRadius = 8
+        continueBtn.layer.shadowOpacity = 0.8
+        continueBtn.layer.shadowOffset = CGSize(width: 1, height: 1)
+    
 
         // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
         NotificationCenter.default.addObserver(self, selector: #selector(FoodReview.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)

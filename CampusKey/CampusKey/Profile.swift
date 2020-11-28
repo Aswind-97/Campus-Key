@@ -12,6 +12,7 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     @IBOutlet weak var usrName: UILabel!
     @IBOutlet weak var usrEmail: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var signOutBtn: UIButton!
     var imagePicker = UIImagePickerController()
 
     
@@ -39,6 +40,10 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signOutBtn.layer.cornerRadius = 8
+        signOutBtn.layer.shadowOpacity = 0.8
+        signOutBtn.layer.shadowOffset = CGSize(width: 1, height: 1)
         
         //Add a way to store profile pic with default photo from DB. Then capture usered entered pic if ever stored
 

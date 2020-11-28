@@ -13,8 +13,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let locationManager = CLLocationManager()
     
     @IBOutlet weak var emailHolder: UITextField!
-    
     @IBOutlet weak var passwordHolder: UITextField!
+    @IBOutlet var myButtons: [UIButton]!
+    @IBOutlet var myTexts: [UITextField]!
     
     @IBAction func signInButton(_ sender: Any) {
     }
@@ -46,7 +47,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
             //getCurrentLocation()
             self.emailHolder.delegate = self
             self.passwordHolder.delegate = self
+            
+            for button in self.myButtons{
+                button.layer.cornerRadius = 8
+                button.layer.shadowOpacity = 0.8
+                button.layer.shadowOffset = CGSize(width: 1, height: 1)
+            }
+            
+            for texts in self.myTexts{
+                texts.layer.cornerRadius = 8
+                texts.layer.shadowOpacity = 0.8
+                texts.layer.shadowOffset = CGSize(width: 1, height: 1)
+            }
+ 
         }
+    
+    
         
         func getCurrentLocation() {
             // Ask for Authorisation from the User.

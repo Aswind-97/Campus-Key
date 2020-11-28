@@ -11,8 +11,9 @@ class RegGuest: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var emailHolder: UITextField!
-    
     @IBOutlet weak var passwordHolder: UITextField!
+    @IBOutlet weak var registerBtn: UIButton!
+    @IBOutlet var myTexts: [UITextField]!
     
     @IBAction func RegisterButton(_ sender: Any) {
     }
@@ -36,7 +37,17 @@ class RegGuest: UIViewController, UITextFieldDelegate {
         self.emailHolder.delegate = self
         self.passwordHolder.delegate = self
         
-        // Do any additional setup after loading the view.
+        registerBtn.layer.cornerRadius = 8
+        registerBtn.layer.shadowOpacity = 0.8
+        registerBtn.layer.shadowOffset = CGSize(width: 1, height: 1)
+        
+        for text in self.myTexts{
+            text.layer.cornerRadius = 8
+            text.layer.shadowOpacity = 0.8
+            text.layer.shadowOffset = CGSize(width: 1, height: 1)
+        }
+        
+        
     }
     
 

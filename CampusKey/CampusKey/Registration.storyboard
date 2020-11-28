@@ -11,7 +11,7 @@
         <!--RegistrationHome-->
         <scene sceneID="jtH-t5-JZt">
             <objects>
-                <viewController storyboardIdentifier="RegistrationHome" title="RegistrationHome" id="cmc-5F-d5c" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationHome" title="RegistrationHome" id="cmc-5F-d5c" customClass="RegPathPicker" customModule="CampusKey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g4B-ra-Bae">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,6 +51,10 @@
                             <constraint firstItem="N5u-sD-iGp" firstAttribute="top" secondItem="cKQ-GI-pSN" secondAttribute="top" constant="50" id="qQk-Vn-a74"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="myButtons" destination="Gsf-mA-sup" collectionClass="NSMutableArray" id="uOm-Dx-Be1"/>
+                        <outletCollection property="myButtons" destination="2Zw-oU-iRl" collectionClass="NSMutableArray" id="htu-1y-nmU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIL-1u-Dce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,11 +144,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="eLf-T2-Xqn"/>
                     <connections>
+                        <outlet property="continueBtn" destination="8KB-xf-NAH" id="Vo4-i2-LhA"/>
                         <outlet property="emailHolder" destination="2Sd-9m-o4K" id="avc-TM-hOE"/>
                         <outlet property="firstNameInput" destination="bK0-RM-e3Q" id="bVh-1y-c7a"/>
                         <outlet property="idNumber" destination="Dw0-66-AW5" id="wtJ-4R-bvO"/>
                         <outlet property="lastNameInput" destination="GhF-fQ-ibN" id="iqs-hF-LjW"/>
                         <outlet property="spinner" destination="RWp-eP-W0t" id="1cl-8r-hYj"/>
+                        <outletCollection property="myTexts" destination="2Sd-9m-o4K" collectionClass="NSMutableArray" id="8Ei-ds-ASv"/>
+                        <outletCollection property="myTexts" destination="Dw0-66-AW5" collectionClass="NSMutableArray" id="Y2y-wq-F02"/>
+                        <outletCollection property="myTexts" destination="bK0-RM-e3Q" collectionClass="NSMutableArray" id="ydy-bU-lPr"/>
+                        <outletCollection property="myTexts" destination="GhF-fQ-ibN" collectionClass="NSMutableArray" id="VdE-P7-2ub"/>
                         <segue destination="vKX-VZ-BJi" kind="presentation" identifier="Verify info" modalPresentationStyle="fullScreen" id="hlp-7z-M6R"/>
                     </connections>
                 </viewController>
@@ -209,6 +218,7 @@
                     <connections>
                         <outlet property="codeInput" destination="peP-1b-Dpg" id="ZxG-5c-6HA"/>
                         <outlet property="showEmail" destination="rsM-2j-dma" id="bBF-Kw-06U"/>
+                        <outlet property="verifyBtn" destination="MSY-0t-950" id="9DD-NM-eYW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uni-0x-u0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -263,6 +273,7 @@
                     <navigationItem key="navigationItem" id="bwm-Ao-9GX"/>
                     <connections>
                         <outlet property="enterPassword" destination="Tey-Uq-Rsl" id="0c1-CM-AsT"/>
+                        <outlet property="registerBtn" destination="gac-lY-0Jt" id="4qX-Ha-70I"/>
                         <outlet property="showEmail" destination="reR-i9-LJp" id="65c-wU-oRn"/>
                     </connections>
                 </viewController>
@@ -320,6 +331,9 @@
                     <connections>
                         <outlet property="emailHolder" destination="hV5-XY-1Dc" id="T7k-WS-223"/>
                         <outlet property="passwordHolder" destination="Ek1-I4-nxn" id="Jek-Sg-5JQ"/>
+                        <outlet property="registerBtn" destination="fdp-Yr-uSi" id="3Rm-Y6-HFS"/>
+                        <outletCollection property="myTexts" destination="hV5-XY-1Dc" collectionClass="NSMutableArray" id="Llv-SY-qqc"/>
+                        <outletCollection property="myTexts" destination="Ek1-I4-nxn" collectionClass="NSMutableArray" id="sOT-8k-v1f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imi-FR-TgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -338,7 +352,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3sz-o2-shp"/>
+        <segue reference="bDO-jq-Qzx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Title" width="400" height="178"/>

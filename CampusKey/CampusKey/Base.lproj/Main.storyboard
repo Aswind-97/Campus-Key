@@ -78,6 +78,10 @@
                     <connections>
                         <outlet property="emailHolder" destination="JGl-1b-iXo" id="l36-sY-vTq"/>
                         <outlet property="passwordHolder" destination="ZXk-dG-fow" id="eNh-HX-cKl"/>
+                        <outletCollection property="myButtons" destination="QM9-Eb-bl6" collectionClass="NSMutableArray" id="gGO-oV-kew"/>
+                        <outletCollection property="myButtons" destination="jwy-7k-x35" collectionClass="NSMutableArray" id="9Re-Om-XBv"/>
+                        <outletCollection property="myTexts" destination="JGl-1b-iXo" collectionClass="NSMutableArray" id="ieo-eS-bF6"/>
+                        <outletCollection property="myTexts" destination="ZXk-dG-fow" collectionClass="NSMutableArray" id="cYv-aG-iJP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

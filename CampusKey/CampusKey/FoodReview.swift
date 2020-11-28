@@ -92,12 +92,17 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         usrReviewTextView.delegate = self
         usrReviewTextView.layer.borderColor = UIColor.lightGray.cgColor
         usrReviewTextView.layer.borderWidth = 1
-        usrReviewTextView.layer.cornerRadius = 5
         usrReviewTextView.text = "WRITE A REVIEW"
         usrReviewTextView.textColor = UIColor.lightGray
+        usrReviewTextView.layer.cornerRadius = 8
         
         
-        submitRateBtn.layer.cornerRadius = 4
+        
+        submitRateBtn.layer.cornerRadius = 8
+        submitRateBtn.layer.shadowOpacity = 0.8
+        submitRateBtn.layer.shadowOffset = CGSize(width: 1, height: 1)
+        
+        
         
         // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
         NotificationCenter.default.addObserver(self, selector: #selector(FoodReview.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)

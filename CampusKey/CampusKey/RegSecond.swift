@@ -12,8 +12,8 @@ class RegSecond: UIViewController{
     var email = ""
     
     @IBOutlet weak var showEmail: UILabel!
-    
     @IBOutlet weak var codeInput: UITextField!
+    @IBOutlet weak var verifyBtn: UIButton!
     
     @IBAction func VerifyButton(_ sender: Any) {
     }
@@ -36,7 +36,16 @@ class RegSecond: UIViewController{
 
         //Grabs info from previous view
         showEmail?.text = email
-        // Do any additional setup after loading the view.
+
+        codeInput.layer.cornerRadius = 8
+        codeInput.layer.shadowOpacity = 0.8
+        codeInput.layer.shadowOffset = CGSize(width: 1, height: 1)
+        
+        verifyBtn.layer.cornerRadius = 8
+        verifyBtn.layer.shadowOpacity = 0.8
+        verifyBtn.layer.shadowOffset = CGSize(width: 1, height: 1)
+        
+        
     }
     
 
