@@ -127,7 +127,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zf1-rL-80B"/>
-                        <color key="backgroundColor" red="0.0" green="0.58994328289999998" blue="0.83137254900000002" alpha="0.9399482616" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.5450980392" blue="0.80197047570000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLU-h1-hkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

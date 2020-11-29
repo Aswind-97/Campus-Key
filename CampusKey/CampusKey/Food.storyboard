@@ -116,7 +116,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8WH-Dr-i37"/>
-                        <color key="backgroundColor" red="0.0" green="0.58994328289999998" blue="0.83137254900000002" alpha="0.9399482616" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.5450980392" blue="0.80197047570000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8WH-Dr-i37" firstAttribute="trailing" secondItem="NQM-Q6-e1d" secondAttribute="trailing" constant="16" id="2kx-7Y-8Ik"/>
                             <constraint firstItem="NQM-Q6-e1d" firstAttribute="leading" secondItem="8WH-Dr-i37" secondAttribute="leading" constant="16" id="E1i-70-sY6"/>
@@ -204,7 +204,7 @@
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q4q-LY-Ni1"/>
-                        <color key="backgroundColor" red="0.0" green="0.58994328289999998" blue="0.83137254900000002" alpha="0.9399482616" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.5450980392" blue="0.80197047570000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="itm-vE-ONV" firstAttribute="leading" secondItem="q4q-LY-Ni1" secondAttribute="leading" constant="16" id="1Qu-76-q3D"/>
                             <constraint firstItem="VGJ-jr-fzr" firstAttribute="top" secondItem="SoZ-a2-plT" secondAttribute="bottom" constant="16" id="4rP-57-z0E"/>

@@ -40,15 +40,19 @@
                                     <segue destination="fEN-Vi-fU2" kind="presentation" modalPresentationStyle="fullScreen" id="qU8-M2-6PR"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="N5u-sD-iGp">
-                                <rect key="frame" x="7" y="94" width="400" height="178"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="xOj-WB-ssu">
+                                <rect key="frame" x="-18" y="94" width="450" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="h6W-X5-fCQ"/>
+                                    <constraint firstAttribute="width" constant="450" id="qO6-Rf-4d9"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cKQ-GI-pSN"/>
-                        <color key="backgroundColor" red="0.0" green="0.58994328289999998" blue="0.83137254900000002" alpha="0.9399482616" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.5450980392" blue="0.80197047570000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="N5u-sD-iGp" firstAttribute="centerX" secondItem="g4B-ra-Bae" secondAttribute="centerX" id="Kay-Iq-Leb"/>
-                            <constraint firstItem="N5u-sD-iGp" firstAttribute="top" secondItem="cKQ-GI-pSN" secondAttribute="top" constant="50" id="qQk-Vn-a74"/>
+                            <constraint firstItem="xOj-WB-ssu" firstAttribute="centerX" secondItem="g4B-ra-Bae" secondAttribute="centerX" id="B9Z-0S-QtR"/>
+                            <constraint firstItem="xOj-WB-ssu" firstAttribute="top" secondItem="cKQ-GI-pSN" secondAttribute="top" constant="50" id="KBi-BW-xRr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -99,9 +103,6 @@
                                 </constraints>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="3sl-27-41t">
-                                <rect key="frame" x="7" y="94" width="400" height="178"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-xf-NAH">
                                 <rect key="frame" x="111" y="667" width="192" height="56"/>
                                 <color key="backgroundColor" red="0.47106069" green="0.86342398629999995" blue="0.4661442261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,12 +117,19 @@
                                     <action selector="ContinueButton:" destination="phP-CE-D2c" eventType="touchUpInside" id="nEu-be-xqX"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="XNe-Ou-27n">
+                                <rect key="frame" x="-18" y="50" width="450" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="Q8q-CE-t33"/>
+                                    <constraint firstAttribute="width" constant="450" id="pRP-xb-YYO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tma-OH-MzA"/>
-                        <color key="backgroundColor" red="0.0" green="0.58994328289999998" blue="0.83137254900000002" alpha="0.9399482616" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.5450980392" blue="0.80197047570000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bK0-RM-e3Q" firstAttribute="top" secondItem="Dw0-66-AW5" secondAttribute="bottom" constant="34.5" id="18k-u8-h8g"/>
-                            <constraint firstItem="3sl-27-41t" firstAttribute="centerX" secondItem="8OB-7q-7oq" secondAttribute="centerX" id="226-D4-F7J"/>
+                            <constraint firstItem="XNe-Ou-27n" firstAttribute="top" secondItem="8OB-7q-7oq" secondAttribute="top" constant="50" id="1uC-zF-f1C"/>
                             <constraint firstItem="8KB-xf-NAH" firstAttribute="centerX" secondItem="GhF-fQ-ibN" secondAttribute="centerX" id="64K-fx-RQs"/>
                             <constraint firstItem="GhF-fQ-ibN" firstAttribute="leading" secondItem="Dw0-66-AW5" secondAttribute="leading" id="CTg-H6-ftp"/>
                             <constraint firstItem="RWp-eP-W0t" firstAttribute="centerX" secondItem="2Sd-9m-o4K" secondAttribute="centerX" id="OMh-xI-0mY"/>
@@ -136,10 +144,10 @@
                             <constraint firstItem="RWp-eP-W0t" firstAttribute="leading" secondItem="Tma-OH-MzA" secondAttribute="leading" constant="186" id="l8R-Im-N2Y"/>
                             <constraint firstItem="GhF-fQ-ibN" firstAttribute="leading" secondItem="bK0-RM-e3Q" secondAttribute="leading" id="n9T-5t-eGR"/>
                             <constraint firstItem="GhF-fQ-ibN" firstAttribute="leading" secondItem="Tma-OH-MzA" secondAttribute="leading" constant="66" id="oBg-rv-xWb"/>
-                            <constraint firstItem="3sl-27-41t" firstAttribute="top" secondItem="Tma-OH-MzA" secondAttribute="top" constant="50" id="pQb-NL-yf8"/>
                             <constraint firstItem="2Sd-9m-o4K" firstAttribute="top" secondItem="RWp-eP-W0t" secondAttribute="bottom" constant="25" id="piU-in-DjG"/>
                             <constraint firstAttribute="bottom" secondItem="GhF-fQ-ibN" secondAttribute="bottom" constant="287.5" id="py1-eD-0rf"/>
                             <constraint firstItem="8KB-xf-NAH" firstAttribute="leading" secondItem="Tma-OH-MzA" secondAttribute="leading" constant="111" id="uKc-Oq-ul0"/>
+                            <constraint firstItem="XNe-Ou-27n" firstAttribute="centerX" secondItem="8OB-7q-7oq" secondAttribute="centerX" id="ud7-9W-Ya6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eLf-T2-Xqn"/>
@@ -203,15 +211,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="s7J-mC-tmz">
-                                <rect key="frame" x="7" y="94" width="400" height="178"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="uz7-E7-yPp">
+                                <rect key="frame" x="-18" y="94" width="450" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="I8F-xW-0Vb"/>
+                                    <constraint firstAttribute="height" constant="230" id="q2q-gF-f1A"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ltA-xX-cRd"/>
-                        <color key="backgroundColor" red="0.0" green="0.58994328289999998" blue="0.83137254900000002" alpha="0.9399482616" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.5450980392" blue="0.80197047570000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="s7J-mC-tmz" firstAttribute="centerX" secondItem="TO6-0A-fTr" secondAttribute="centerX" id="j5m-R5-HMq"/>
-                            <constraint firstItem="s7J-mC-tmz" firstAttribute="top" secondItem="ltA-xX-cRd" secondAttribute="top" constant="50" id="oiD-nV-phV"/>
+                            <constraint firstItem="uz7-E7-yPp" firstAttribute="top" secondItem="ltA-xX-cRd" secondAttribute="top" constant="50" id="3eC-LC-xg9"/>
+                            <constraint firstItem="uz7-E7-yPp" firstAttribute="centerX" secondItem="TO6-0A-fTr" secondAttribute="centerX" id="p2B-Yd-Svx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rax-4p-y0h"/>
@@ -259,15 +271,19 @@
                                     <segue destination="6xp-M0-yxG" kind="presentation" modalPresentationStyle="fullScreen" id="bDO-jq-Qzx"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="nU9-gG-awL">
-                                <rect key="frame" x="7" y="94" width="400" height="178"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="3ep-tu-oeg">
+                                <rect key="frame" x="-18" y="94" width="450" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="6Ap-my-qQ9"/>
+                                    <constraint firstAttribute="height" constant="230" id="gDk-6A-Rae"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UKD-1k-ukX"/>
-                        <color key="backgroundColor" red="0.0" green="0.58994328289999998" blue="0.83137254900000002" alpha="0.9399482616" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.5450980392" blue="0.80197047570000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="nU9-gG-awL" firstAttribute="centerX" secondItem="avX-eV-yCu" secondAttribute="centerX" id="IhT-Bl-iTR"/>
-                            <constraint firstItem="nU9-gG-awL" firstAttribute="top" secondItem="UKD-1k-ukX" secondAttribute="top" constant="50" id="TR5-Cq-s7e"/>
+                            <constraint firstItem="3ep-tu-oeg" firstAttribute="centerX" secondItem="avX-eV-yCu" secondAttribute="centerX" id="K9K-V7-Rv9"/>
+                            <constraint firstItem="3ep-tu-oeg" firstAttribute="top" secondItem="UKD-1k-ukX" secondAttribute="top" constant="50" id="USW-nW-n1O"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bwm-Ao-9GX"/>
@@ -316,15 +332,19 @@
                                     <segue destination="6xp-M0-yxG" kind="presentation" modalPresentationStyle="fullScreen" id="3sz-o2-shp"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="n4X-T2-gEx">
-                                <rect key="frame" x="7" y="94" width="400" height="178"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="YWu-U0-XD4">
+                                <rect key="frame" x="-18" y="94" width="450" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="0jT-0n-vWx"/>
+                                    <constraint firstAttribute="width" constant="450" id="PHa-KP-7C9"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZU5-bR-Dhm"/>
-                        <color key="backgroundColor" red="0.0" green="0.58994328289999998" blue="0.83137254900000002" alpha="0.9399482616" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.5450980392" blue="0.80197047570000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="n4X-T2-gEx" firstAttribute="top" secondItem="ZU5-bR-Dhm" secondAttribute="top" constant="50" id="AZe-1k-a35"/>
-                            <constraint firstItem="n4X-T2-gEx" firstAttribute="centerX" secondItem="lOq-tj-ypm" secondAttribute="centerX" id="iIM-FK-pjE"/>
+                            <constraint firstItem="YWu-U0-XD4" firstAttribute="centerX" secondItem="lOq-tj-ypm" secondAttribute="centerX" id="91v-1w-W1H"/>
+                            <constraint firstItem="YWu-U0-XD4" firstAttribute="top" secondItem="ZU5-bR-Dhm" secondAttribute="top" constant="50" id="MSp-hw-ATm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bUC-7h-RvA"/>
@@ -352,10 +372,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bDO-jq-Qzx"/>
+        <segue reference="3sz-o2-shp"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Title" width="400" height="178"/>
+        <image name="Title" width="2360" height="1640"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

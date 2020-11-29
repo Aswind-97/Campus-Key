@@ -67,13 +67,20 @@
                                     <segue destination="sjq-XE-Mq1" kind="presentation" modalPresentationStyle="fullScreen" id="HdL-V5-Z7W"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="wZj-7a-Z4Z">
-                                <rect key="frame" x="20" y="158" width="374" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="wZj-7a-Z4Z">
+                                <rect key="frame" x="-18" y="94" width="450" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="5r4-TM-VXc"/>
+                                    <constraint firstAttribute="width" constant="450" id="Wte-Z2-t4p"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.0" green="0.58994328286372077" blue="0.83137254901960778" alpha="0.93994826158940392" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.59413546719999999" blue="0.81624821879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wZj-7a-Z4Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="dS6-JS-qzp"/>
+                            <constraint firstItem="wZj-7a-Z4Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tC8-op-S5J"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="emailHolder" destination="JGl-1b-iXo" id="l36-sY-vTq"/>
@@ -108,7 +115,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Title" width="400" height="178"/>
+        <image name="Title" width="2360" height="1640"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
