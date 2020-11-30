@@ -191,6 +191,9 @@
                                 <state key="normal" title="RATE!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitRateBtn:" destination="dJL-ng-51o" eventType="touchUpInside" id="Iik-cH-kb5"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="itm-vE-ONV">
                                 <rect key="frame" x="16" y="576" width="382" height="100"/>

@@ -20,9 +20,12 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     var image = UIImage()
     var name = ""
 
-
- 
+    //Should return to previous view with usr's updated review
+    @IBAction func submitRateBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
+    //Controls actions when slider is changed by usr
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         

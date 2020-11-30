@@ -44,7 +44,6 @@
 		B9D973C35C60EB90AC27112F /* Pods_CampusKey_CampusKeyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BEEAADE45EE3782AB47A71 /* Pods_CampusKey_CampusKeyUITests.framework */; };
 		B9EAC5FE2564B16A0033D71B /* FoodReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EAC5FD2564B16A0033D71B /* FoodReview.swift */; };
 		B9EAC606256527B70033D71B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EAC605256527B70033D71B /* Home.swift */; };
-		B9F5F808255E0FD8002BC034 /* FAQS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F5F807255E0FD8002BC034 /* FAQS.storyboard */; };
 		F500F6414464D524DF77E5F3 /* Pods_CampusKeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E2274AFEB9B4AFBF577953 /* Pods_CampusKeyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,7 +114,6 @@
 		B9956F2A255812F700AE9562 /* ProfessorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorCell.swift; sourceTree = "<group>"; };
 		B9EAC5FD2564B16A0033D71B /* FoodReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodReview.swift; sourceTree = "<group>"; };
 		B9EAC605256527B70033D71B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		B9F5F807255E0FD8002BC034 /* FAQS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FAQS.storyboard; sourceTree = "<group>"; };
 		FC6A6451C833BBF2679ADE43 /* Pods-CampusKeyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusKeyTests.debug.xcconfig"; path = "Target Support Files/Pods-CampusKeyTests/Pods-CampusKeyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,7 +231,6 @@
 				B93EEDDF2563D1D6001FBC06 /* FoodCell.swift */,
 				B93EEDD72563C6FB001FBC06 /* FoodDetail.swift */,
 				B9EAC5FD2564B16A0033D71B /* FoodReview.swift */,
-				B9F5F807255E0FD8002BC034 /* FAQS.storyboard */,
 				B94921F125416DB20085D1E9 /* Assets.xcassets */,
 				B94921F325416DB20085D1E9 /* LaunchScreen.storyboard */,
 				B94921F625416DB20085D1E9 /* Info.plist */,
@@ -371,7 +368,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94D3A0E2551D7BE00BF84F8 /* Food.storyboard in Resources */,
-				B9F5F808255E0FD8002BC034 /* FAQS.storyboard in Resources */,
 				B94921F525416DB20085D1E9 /* LaunchScreen.storyboard in Resources */,
 				B949222125416EC30085D1E9 /* Locations.storyboard in Resources */,
 				B949222325416EC30085D1E9 /* Registration.storyboard in Resources */,
