@@ -29,6 +29,7 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
         //allows for trasnferring data to next view
         vc?.image = foodImage.image!
         vc?.name = foodName.text!
+        
         //performSegue(withIdentifier: "Food Review", sender: vc!)
 
         
@@ -47,9 +48,7 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
         let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addReview))
         self.navigationItem.rightBarButtonItem  = btn1
 
-         
-         
-         // Do any additional setup after loading the view.
+     
      }
      
 

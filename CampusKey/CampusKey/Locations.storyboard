@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,78 +18,99 @@
             </objects>
             <point key="canvasLocation" x="448" y="-216"/>
         </scene>
-        <!--View Controller-->
+        <!--Locations Control-->
         <scene sceneID="lqT-EM-TNM">
             <objects>
-                <viewController id="ryd-dR-7Gg" sceneMemberID="viewController">
+                <viewController id="ryd-dR-7Gg" customClass="LocationsControl" customModule="CampusKey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eae-be-rAX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="SEARCH" translatesAutoresizingMaskIntoConstraints="NO" id="zPi-H2-E7S">
-                                <rect key="frame" x="10" y="55" width="394" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eq1-aw-aZ5">
-                                <rect key="frame" x="37" y="157" width="125" height="125"/>
+                                <rect key="frame" x="38" y="132" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="titleEdgeInsets" minX="-75" minY="75" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="25" maxY="50"/>
-                                <state key="normal" title="FOOD" image="Food"/>
+                                <inset key="titleEdgeInsets" minX="-85" minY="80" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="25" minY="5" maxX="25" maxY="50"/>
+                                <state key="normal" title="FOOD" image="Food">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="odh-fK-0uE" kind="show" id="9FI-h8-VbU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Os-SU-sSA">
-                                <rect key="frame" x="233" y="157" width="125" height="125"/>
+                                <rect key="frame" x="232" y="132" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="titleEdgeInsets" minX="-75" minY="75" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="25" maxY="50"/>
-                                <state key="normal" title="STUDYING" image="Study"/>
+                                <inset key="titleEdgeInsets" minX="-85" minY="80" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="25" minY="5" maxX="25" maxY="50"/>
+                                <state key="normal" title="STUDYING" image="Study">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huf-sD-enh">
-                                <rect key="frame" x="37" y="334" width="125" height="125"/>
+                                <rect key="frame" x="38" y="342" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="titleEdgeInsets" minX="-75" minY="75" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="25" maxY="50"/>
-                                <state key="normal" title="HEALTH" image="Health"/>
+                                <inset key="titleEdgeInsets" minX="-85" minY="80" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="25" minY="5" maxX="25" maxY="50"/>
+                                <state key="normal" title="HEALTH" image="Health">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwZ-0h-O71">
-                                <rect key="frame" x="233" y="334" width="125" height="125"/>
+                                <rect key="frame" x="232" y="342" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="titleEdgeInsets" minX="-75" minY="75" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="25" maxY="50"/>
-                                <state key="normal" title="PARKING" image="Parking"/>
+                                <inset key="titleEdgeInsets" minX="-85" minY="80" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="25" minY="5" maxX="25" maxY="50"/>
+                                <state key="normal" title="PARKING" image="Parking">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJV-p3-1bO">
-                                <rect key="frame" x="37" y="521" width="125" height="125"/>
+                                <rect key="frame" x="38" y="544" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="titleEdgeInsets" minX="-75" minY="75" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="25" maxY="50"/>
-                                <state key="normal" title="SUPPLIES" image="Supplies"/>
+                                <inset key="titleEdgeInsets" minX="-85" minY="80" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="25" minY="5" maxX="25" maxY="50"/>
+                                <state key="normal" title="SUPPLIES" image="Supplies">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouk-cF-kHC">
-                                <rect key="frame" x="233" y="521" width="125" height="125"/>
+                                <rect key="frame" x="232" y="544" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="titleEdgeInsets" minX="-75" minY="75" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="25" maxY="50"/>
-                                <state key="normal" title="3D MAP" image="Directory"/>
+                                <inset key="titleEdgeInsets" minX="-85" minY="80" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="25" minY="5" maxX="25" maxY="50"/>
+                                <state key="normal" title="3D MAP" image="Directory">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="7xr-XC-pLx" kind="show" id="dt1-L4-nUP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOCATIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnR-AY-DSo">
+                                <rect key="frame" x="87" y="44" width="241" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zf1-rL-80B"/>
                         <color key="backgroundColor" red="0.0" green="0.5450980392" blue="0.80197047570000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outletCollection property="myButtons" destination="Eq1-aw-aZ5" collectionClass="NSMutableArray" id="oh2-xy-ty4"/>
+                        <outletCollection property="myButtons" destination="3Os-SU-sSA" collectionClass="NSMutableArray" id="OH0-qw-bit"/>
+                        <outletCollection property="myButtons" destination="Huf-sD-enh" collectionClass="NSMutableArray" id="fpZ-Kz-md5"/>
+                        <outletCollection property="myButtons" destination="RwZ-0h-O71" collectionClass="NSMutableArray" id="jvl-11-Db9"/>
+                        <outletCollection property="myButtons" destination="WJV-p3-1bO" collectionClass="NSMutableArray" id="Igl-Sd-c0T"/>
+                        <outletCollection property="myButtons" destination="Ouk-cF-kHC" collectionClass="NSMutableArray" id="zXk-4q-zAe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLU-h1-hkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,5 +134,8 @@
         <image name="Parking" width="512" height="512"/>
         <image name="Study" width="512" height="512"/>
         <image name="Supplies" width="512" height="512"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

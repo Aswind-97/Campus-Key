@@ -98,19 +98,23 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qDz-vz-f07"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ope-nx-1Cl">
-                                <rect key="frame" x="179" y="452" width="56.5" height="24"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <rect key="frame" x="172" y="452" width="70" height="30"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3W-FO-61J">
-                                <rect key="frame" x="192.5" y="613" width="29" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3W-FO-61J">
+                                <rect key="frame" x="16" y="587" width="382" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fb2-uA-IT4"/>
+                                </constraints>
+                                <string key="text">A great place to grab a bite for some hearty delicious snacks. Wether first thing in the morning or after a hard workout at the gym. Shake Smart is here for you! </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -119,12 +123,13 @@
                         <color key="backgroundColor" red="0.0" green="0.5450980392" blue="0.80197047570000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8WH-Dr-i37" firstAttribute="trailing" secondItem="NQM-Q6-e1d" secondAttribute="trailing" constant="16" id="2kx-7Y-8Ik"/>
+                            <constraint firstItem="8WH-Dr-i37" firstAttribute="trailing" secondItem="G3W-FO-61J" secondAttribute="trailing" constant="16" id="98C-p4-RGr"/>
                             <constraint firstItem="NQM-Q6-e1d" firstAttribute="leading" secondItem="8WH-Dr-i37" secondAttribute="leading" constant="16" id="E1i-70-sY6"/>
-                            <constraint firstItem="G3W-FO-61J" firstAttribute="centerX" secondItem="aBk-kI-xKQ" secondAttribute="centerX" id="RzQ-V3-dRc"/>
+                            <constraint firstItem="G3W-FO-61J" firstAttribute="leading" secondItem="8WH-Dr-i37" secondAttribute="leading" constant="16" id="I6r-Lv-H1H"/>
                             <constraint firstItem="ope-nx-1Cl" firstAttribute="centerX" secondItem="aBk-kI-xKQ" secondAttribute="centerX" id="Vab-Mb-BMA"/>
                             <constraint firstItem="9ps-Xu-1ZL" firstAttribute="top" secondItem="NQM-Q6-e1d" secondAttribute="bottom" constant="10" id="VgI-ME-qP2"/>
-                            <constraint firstItem="8WH-Dr-i37" firstAttribute="bottom" secondItem="G3W-FO-61J" secondAttribute="bottom" constant="228.5" id="ViH-2V-tWi"/>
                             <constraint firstItem="ope-nx-1Cl" firstAttribute="top" secondItem="8WH-Dr-i37" secondAttribute="top" constant="408" id="WgJ-bP-vNu"/>
+                            <constraint firstItem="8WH-Dr-i37" firstAttribute="bottom" secondItem="G3W-FO-61J" secondAttribute="bottom" constant="75" id="ZCI-ud-6HK"/>
                             <constraint firstItem="9ps-Xu-1ZL" firstAttribute="leading" secondItem="8WH-Dr-i37" secondAttribute="leading" constant="16" id="bce-gT-R56"/>
                             <constraint firstItem="NQM-Q6-e1d" firstAttribute="top" secondItem="8WH-Dr-i37" secondAttribute="top" constant="40" id="e80-fF-sCN"/>
                             <constraint firstItem="8WH-Dr-i37" firstAttribute="trailing" secondItem="9ps-Xu-1ZL" secondAttribute="trailing" constant="16" id="o1z-Mb-c9e"/>
@@ -140,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4un-uY-2gT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="1531"/>
+            <point key="canvasLocation" x="1169.5652173913045" y="1530.8035714285713"/>
         </scene>
         <!--Food Review-->
         <scene sceneID="6u4-nm-wPT">
@@ -162,7 +167,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Vev-Ba-Lem"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -174,13 +179,13 @@
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIm-7S-c4J">
                                 <rect key="frame" x="16" y="447" width="382" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGJ-jr-fzr">
-                                <rect key="frame" x="184" y="535" width="46.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="180" y="535" width="54" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -196,7 +201,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="itm-vE-ONV">
-                                <rect key="frame" x="16" y="576" width="382" height="100"/>
+                                <rect key="frame" x="16" y="579" width="382" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="sni-2V-ZcK"/>

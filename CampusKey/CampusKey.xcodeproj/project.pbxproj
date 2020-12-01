@@ -37,6 +37,7 @@
 		B949222425416EC30085D1E9 /* Home Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B949221F25416EC30085D1E9 /* Home Screen.storyboard */; };
 		B94D3A0E2551D7BE00BF84F8 /* Food.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D3A0D2551D7BE00BF84F8 /* Food.storyboard */; };
 		B962C5862561F48F007445B4 /* Professor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B962C5852561F48F007445B4 /* Professor.storyboard */; };
+		B9678A4D2574EEA000FB107C /* LocationsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9678A4C2574EEA000FB107C /* LocationsControl.swift */; };
 		B97DBB162563F0860069E549 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97DBB152563F0860069E549 /* Profile.swift */; };
 		B9956F1F2557FBA600AE9562 /* ProfessorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F1E2557FBA600AE9562 /* ProfessorList.swift */; };
 		B9956F2625580A7A00AE9562 /* ProfessorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */; };
@@ -108,6 +109,7 @@
 		B949221F25416EC30085D1E9 /* Home Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Home Screen.storyboard"; sourceTree = "<group>"; };
 		B94D3A0D2551D7BE00BF84F8 /* Food.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Food.storyboard; sourceTree = "<group>"; };
 		B962C5852561F48F007445B4 /* Professor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Professor.storyboard; sourceTree = "<group>"; };
+		B9678A4C2574EEA000FB107C /* LocationsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsControl.swift; sourceTree = "<group>"; };
 		B97DBB152563F0860069E549 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B9956F1E2557FBA600AE9562 /* ProfessorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorList.swift; sourceTree = "<group>"; };
 		B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorDetail.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				B9956F2A255812F700AE9562 /* ProfessorCell.swift */,
 				B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */,
 				B949221C25416EC20085D1E9 /* Locations.storyboard */,
+				B9678A4C2574EEA000FB107C /* LocationsControl.swift */,
 				59B52FA525552FC60026DA62 /* MapVC.swift */,
 				592BB5FD2556191200EC18FD /* PlacesVC.swift */,
 				B93EEDC02563C053001FBC06 /* Directory.storyboard */,
@@ -546,6 +549,7 @@
 				592BB5FE2556191200EC18FD /* PlacesVC.swift in Sources */,
 				B92B5E892572B26000DBAC5E /* RegPathPicker.swift in Sources */,
 				B93EEDE02563D1D6001FBC06 /* FoodCell.swift in Sources */,
+				B9678A4D2574EEA000FB107C /* LocationsControl.swift in Sources */,
 				5996A3FC255A3C4E00D0F157 /* Members.swift in Sources */,
 				B93EEDD82563C6FB001FBC06 /* FoodDetail.swift in Sources */,
 				B94921EB25416DAD0085D1E9 /* SceneDelegate.swift in Sources */,

@@ -31,14 +31,14 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         
         rating.text = "\(currentValue)"
         
-        if currentValue <= 4
+        if currentValue <= 3
             {ratingWord.text = "POOR"}
-        else if currentValue == 5 || currentValue == 6
+        else if currentValue == 4 || currentValue == 5 || currentValue == 6
             {ratingWord.text = "AVERAGE"}
         else if currentValue == 7 || currentValue == 8
-            {ratingWord.text = "GREAT"}
+            {ratingWord.text = "GREAT!"}
         else if currentValue >= 9
-            {ratingWord.text = "AMAZING"}
+            {ratingWord.text = "AMAZING!!!"}
         
     }
     
