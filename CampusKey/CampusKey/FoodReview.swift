@@ -27,7 +27,7 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         self.navigationController?.popViewController(animated: true)
         
         let ref = Database.database().reference()
-        ref.child("Food/Burger King").setValue(rated)
+        ref.child("Food/\(name)").setValue(rated)
     }
     
     //Controls actions when slider is changed by usr

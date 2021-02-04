@@ -6,11 +6,25 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    let userID = Auth.auth().currentUser?.uid
+    
+    ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+      // Get user value
+      let value = snapshot.value as? NSDictionary
+      let username = value?["username"] as? String ?? ""
+      let user = User(username: username)
+
+      // ...
+      }) { (error) in
+        print(error.localizedDescription)
+    }
     
     let food = ["Arbor Grill", "Burger King", "El Pollo Loco", "Geronimo's", "Panda Express", "Pub Sports Grill", "Shake Smart"]
     let ratings = ["8", "6", "5.5", "7", "8", "9", "9.2"]
