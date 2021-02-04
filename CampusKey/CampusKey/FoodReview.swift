@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
@@ -19,24 +20,29 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     var image = UIImage()
     var name = ""
+    var rated = 0
 
     //Should return to previous view with usr's updated review
     @IBAction func submitRateBtn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+        
+        let ref = Database.database().reference()
+        ref.child("Food/Burger King").setValue(rated)
     }
     
     //Controls actions when slider is changed by usr
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let currentValue = Int(sender.value)
+        rated = currentValue
         
         rating.text = "\(currentValue)"
         
         if currentValue <= 3
-            {ratingWord.text = "POOR"}
+            {ratingWord.text = "MEH"}
         else if currentValue == 4 || currentValue == 5 || currentValue == 6
-            {ratingWord.text = "AVERAGE"}
+            {ratingWord.text = "It's Alright"}
         else if currentValue == 7 || currentValue == 8
-            {ratingWord.text = "GREAT!"}
+            {ratingWord.text = "It's good!"}
         else if currentValue >= 9
             {ratingWord.text = "AMAZING!!!"}
         
@@ -99,7 +105,7 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         usrReviewTextView.textColor = UIColor.lightGray
         usrReviewTextView.layer.cornerRadius = 8
         
-        
+
         
         submitRateBtn.layer.cornerRadius = 8
         submitRateBtn.layer.shadowOpacity = 0.8

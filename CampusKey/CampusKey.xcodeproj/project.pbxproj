@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28483CE325CA2EEA005ED1CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28483CE225CA2EEA005ED1CB /* GoogleService-Info.plist */; };
 		28A1A7DB256D64DD00EAA645 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1A7DA256D64DD00EAA645 /* DBHelper.swift */; };
 		28A1A7E0256D650300EAA645 /* reviewDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1A7DF256D650300EAA645 /* reviewDB.swift */; };
 		592BB5FE2556191200EC18FD /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592BB5FD2556191200EC18FD /* PlacesVC.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		18BEEAADE45EE3782AB47A71 /* Pods_CampusKey_CampusKeyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusKey_CampusKeyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28483CE225CA2EEA005ED1CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		28A1A7DA256D64DD00EAA645 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		28A1A7DF256D650300EAA645 /* reviewDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewDB.swift; sourceTree = "<group>"; };
 		369A5F2123A294E6CCFB0796 /* Pods-CampusKeyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusKeyTests.release.xcconfig"; path = "Target Support Files/Pods-CampusKeyTests/Pods-CampusKeyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				B9EAC5FD2564B16A0033D71B /* FoodReview.swift */,
 				B94921F125416DB20085D1E9 /* Assets.xcassets */,
 				B94921F325416DB20085D1E9 /* LaunchScreen.storyboard */,
+				28483CE225CA2EEA005ED1CB /* GoogleService-Info.plist */,
 				B94921F625416DB20085D1E9 /* Info.plist */,
 				28A1A7DF256D650300EAA645 /* reviewDB.swift */,
 			);
@@ -377,6 +380,7 @@
 				B94921F225416DB20085D1E9 /* Assets.xcassets in Resources */,
 				B93EEDC12563C053001FBC06 /* Directory.storyboard in Resources */,
 				B94921F025416DAD0085D1E9 /* Main.storyboard in Resources */,
+				28483CE325CA2EEA005ED1CB /* GoogleService-Info.plist in Resources */,
 				B962C5862561F48F007445B4 /* Professor.storyboard in Resources */,
 				B949222425416EC30085D1E9 /* Home Screen.storyboard in Resources */,
 			);

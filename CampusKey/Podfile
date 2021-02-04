@@ -9,6 +9,9 @@ target 'CampusKey' do
   pod "GoogleMaps"
   pod "GooglePlaces"
   pod "RealmSwift"
+  pod "Firebase/Core"
+  pod "Firebase/Analytics"
+  pod "Firebase/Database"
   
   target 'CampusKeyTests' do
     inherit! :search_paths
