@@ -6,16 +6,48 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBOutlet weak var tableView: UITableView!
     
-    let professors = ["John Doe", "Jane Doe", "Alex Smith", "Eliza Holmes", "Jack Nichols", "Chuck Finley", "Sarah Marshall", "Louis Stern", "Karina Wo", "Amanda Taylor"]
-    let ratings = ["9.5", "9.8", "8.2", "10", "4.3", "7.4", "9.1", "6.9", "9.6", "5.6"]
+    var professors = [String]()
+    var ratings = [String]()
+    
+    var refProfs: DatabaseReference!
     
     
+//    let professors = ["John Doe", "Jane Doe", "Alex Smith", "Eliza Holmes", "Jack Nichols", "Chuck Finley", "Sarah Marshall", "Louis Stern", "Karina Wo", "Amanda Taylor"]
+//    let ratings = ["9.5", "9.8", "8.2", "10", "4.3", "7.4", "9.1", "6.9", "9.6", "5.6"]
+    
+    func readAllProfs() {
+        
+        refProfs = Database.database().reference().child("professors/people");
+        
+        refProfs.observeSingleEvent(of: .value, with: { snapshot in
+            let allFacultySnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+            for profSnap in allFacultySnap { //iterate over each restaurant node
+                let profID = profSnap.key //arborGrill, burgerKing etc
+                let profName = profSnap.childSnapshot(forPath: "display_name").value as? String ?? "No food name"
+                //let ratingAvg = profSnap.childSnapshot(forPath: "ratingAvg").value as? Int ?? 0
+                
+                print(profID)
+                print(profName)
+                
+                //let stringAvg = String(ratingAvg)
+                
+                //self.ratings.append(stringAvg)
+                //self.food.append(foodName)
+            }
+            
+            //print(self.ratings)
+            // print(self.food)
+        })
+    }
     
     
     //Helps to allow pics to show properly
@@ -61,6 +93,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        readAllProfs()
         
         tableView.delegate = self
         tableView.dataSource = self

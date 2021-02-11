@@ -10,6 +10,7 @@
 		28483CE325CA2EEA005ED1CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28483CE225CA2EEA005ED1CB /* GoogleService-Info.plist */; };
 		28A1A7DB256D64DD00EAA645 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1A7DA256D64DD00EAA645 /* DBHelper.swift */; };
 		28A1A7E0256D650300EAA645 /* reviewDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1A7DF256D650300EAA645 /* reviewDB.swift */; };
+		28EA7FB825D3114300D02840 /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA7FB725D3114300D02840 /* Foods.swift */; };
 		592BB5FE2556191200EC18FD /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592BB5FD2556191200EC18FD /* PlacesVC.swift */; };
 		5996A3FC255A3C4E00D0F157 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996A3FB255A3C4E00D0F157 /* Members.swift */; };
 		5996A404255A3F9C00D0F157 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996A403255A3F9C00D0F157 /* People.swift */; };
@@ -71,6 +72,7 @@
 		28483CE225CA2EEA005ED1CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		28A1A7DA256D64DD00EAA645 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		28A1A7DF256D650300EAA645 /* reviewDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewDB.swift; sourceTree = "<group>"; };
+		28EA7FB725D3114300D02840 /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
 		369A5F2123A294E6CCFB0796 /* Pods-CampusKeyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusKeyTests.release.xcconfig"; path = "Target Support Files/Pods-CampusKeyTests/Pods-CampusKeyTests.release.xcconfig"; sourceTree = "<group>"; };
 		58224CB1702BA8663C54FF62 /* Pods-CampusKey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusKey.release.xcconfig"; path = "Target Support Files/Pods-CampusKey/Pods-CampusKey.release.xcconfig"; sourceTree = "<group>"; };
 		592BB5FD2556191200EC18FD /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				592BB5FD2556191200EC18FD /* PlacesVC.swift */,
 				B93EEDC02563C053001FBC06 /* Directory.storyboard */,
 				B93EEDC52563C070001FBC06 /* Directory.swift */,
+				28EA7FB725D3114300D02840 /* Foods.swift */,
 				B94D3A0D2551D7BE00BF84F8 /* Food.storyboard */,
 				B93EEDCA2563C6BA001FBC06 /* FoodList.swift */,
 				B93EEDDF2563D1D6001FBC06 /* FoodCell.swift */,
@@ -555,6 +558,7 @@
 				B93EEDE02563D1D6001FBC06 /* FoodCell.swift in Sources */,
 				B9678A4D2574EEA000FB107C /* LocationsControl.swift in Sources */,
 				5996A3FC255A3C4E00D0F157 /* Members.swift in Sources */,
+				28EA7FB825D3114300D02840 /* Foods.swift in Sources */,
 				B93EEDD82563C6FB001FBC06 /* FoodDetail.swift in Sources */,
 				B94921EB25416DAD0085D1E9 /* SceneDelegate.swift in Sources */,
 				28A1A7DB256D64DD00EAA645 /* DBHelper.swift in Sources */,
@@ -747,6 +751,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4M6TC68B6;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = CampusKey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -767,6 +772,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4M6TC68B6;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = CampusKey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
