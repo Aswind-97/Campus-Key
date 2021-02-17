@@ -45,6 +45,7 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         signOutBtn.layer.shadowOpacity = 0.8
         signOutBtn.layer.shadowOffset = CGSize(width: 1, height: 1)
         
+        
         //Add a way to store profile pic with default photo from DB. Then capture usered entered pic if ever stored
 
     }

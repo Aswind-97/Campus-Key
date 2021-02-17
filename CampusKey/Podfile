@@ -9,11 +9,7 @@ target 'CampusKey' do
   pod "GoogleMaps"
   pod "GooglePlaces"
   pod "RealmSwift"
-  pod "Firebase/Core"
-  pod "Firebase/Analytics"
-  pod "Firebase/Database"
-  pod "Firebase/Auth"
-  pod "Firebase/Firestore"
+  pod 'FSCalendar'
   
   target 'CampusKeyTests' do
     inherit! :search_paths
@@ -24,4 +20,10 @@ target 'CampusKey' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+  end
 end

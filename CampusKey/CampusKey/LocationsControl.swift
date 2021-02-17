@@ -22,8 +22,10 @@ class LocationsControl: UIViewController {
             button.layer.cornerRadius = 8
             button.layer.shadowOpacity = 0.8
             button.layer.shadowOffset = CGSize(width: 1, height: 1)
-            //button.backgroundColor = UIColor.lightGray
-            button.backgroundColor = UIColor(red: 66.0/255, green: 236.0/255, blue: 245.0/255, alpha: 1.0)
+            button.backgroundColor = UIColor.systemRed
+            button.layer.opacity = (0.95)
+
+            self.title = "LOCATIONS"
         }
  
  }

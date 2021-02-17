@@ -6,60 +6,37 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseDatabase
-import FirebaseAuth
 
 class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var ref: DatabaseReference! = Database.database().reference()
-
-//    refHandle = postRef.observe(DataEventType.value, with: { (snapshot) in
-//      let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-//      // ...
-//    })
-    
-    var i = 0
-    
-    var food = [String]()
-    var ratings = [String]()
-    
-    var refFoods: DatabaseReference!
+    let food = ["Arbor Grill", "Burger King", "El Pollo Loco", "Geronimo's", "Panda Express", "Pub Sports Grill", "Shake Smart"]
+    let ratings = ["8", "6", "5.5", "7", "8", "9", "9.2"]
     
     
-    // let ref = self.ref.child("foods") //self.ref points to MY firebase.
-    func readAllFoods() {
-        
-        refFoods = Database.database().reference().child("food");
-        
-        refFoods.observeSingleEvent(of: .value, with: { snapshot in
-            let allRestaurantsSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
-            for foodSnap in allRestaurantsSnap { //iterate over each restaurant node
-                let restaurantName = foodSnap.key //arborGrill, burgerKing etc
-                let foodName = foodSnap.childSnapshot(forPath: "foodName").value as? String ?? "No food name"
-                let ratingAvg = foodSnap.childSnapshot(forPath: "ratingAvg").value as? Int ?? 0
-                
-                print(foodName)
-                print(restaurantName)
-                
-                let stringAvg = String(ratingAvg)
-                
-                self.ratings.append(stringAvg)
-                self.food.append(foodName)
-            }
-            
-            print(self.ratings)
-            print(self.food)
-        })
+    //Provides height for image and functionality to add an image to the TableView Header
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 200
     }
-    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+             
+            
+        let imageView: UIImageView = UIImageView()
+        imageView.image =  UIImage(named: "Food Page Logo")!
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        
+        return imageView
+        
+    }
+
     
     
     //Helps to allow pics to show properly
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75
+        return 85
     }
     
     //Action for what happens when cell is clicked on
@@ -74,6 +51,8 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         vc?.image = UIImage(named: food[indexPath.row])!
         vc?.name = food[indexPath.row]
         vc?.rating = ratings[indexPath.row]
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 
@@ -85,7 +64,6 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Fills cells with proper data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as? FoodCell
         
         cell?.foodName.text = food[indexPath.row]
@@ -96,42 +74,18 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     
-//    var refFoods: DatabaseReference!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        readAllFoods()
 
         
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.title = "FOOD"
         // Do any additional setup after loading the view.
-        
-//        refFoods = Database.database().reference().child("food");
-//
-//        // let ref = self.ref.child("foods") //self.ref points to MY firebase.
-//            refFoods.observeSingleEvent(of: .value, with: { snapshot in
-//                let allRestaurantsSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
-//                for foodSnap in allRestaurantsSnap { //iterate over each restaurant node
-//                    let restaurantName = foodSnap.key //arborGrill, burgerKing etc
-//                    let foodName = foodSnap.childSnapshot(forPath: "foodName").value as? String ?? "No food name"
-//                    let ratingAvg = foodSnap.childSnapshot(forPath: "ratingAvg").value as? Int ?? 0
-//
-//                    print(foodName)
-//                    print(restaurantName)
-//
-//                    let stringAvg = String(ratingAvg)
-//
-//                    self.ratings.append(stringAvg)
-//                    self.food.append(foodName)
-//                }
-//
-//                print(self.ratings)
-//                print(self.food)
-//            })
     }
     
 

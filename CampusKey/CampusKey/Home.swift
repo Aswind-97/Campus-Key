@@ -12,7 +12,6 @@ class Home: UIViewController {
     
     @IBOutlet weak var locationsBtn: UIButton!
     @IBOutlet weak var professorBtn: UIButton!
-    @IBOutlet weak var departmentBtn: UIButton!
     @IBOutlet weak var eventsBtn: UIButton!
     @IBOutlet weak var faqsBtn: UIButton!
     @IBOutlet var myButtons: [UIButton]!
@@ -24,6 +23,8 @@ class Home: UIViewController {
             button.layer.cornerRadius = 8
             button.layer.shadowOpacity = 0.8
             button.layer.shadowOffset = CGSize(width: 1, height: 1)
+            button.layer.opacity = (0.95)
+            button.titleLabel?.font = UIFont(name: "Copperplate", size: 30)
         }
         
         

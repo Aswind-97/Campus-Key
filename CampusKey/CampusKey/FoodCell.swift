@@ -15,6 +15,12 @@ class FoodCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        foodImage.layer.borderWidth = 1
+        foodImage.layer.masksToBounds = false
+        foodImage.layer.borderColor = UIColor.black.cgColor
+        foodImage.layer.cornerRadius=foodImage.frame.height/2
+        foodImage.clipsToBounds = true
         // Initialization code
     }
 

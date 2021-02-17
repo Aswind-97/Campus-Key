@@ -14,8 +14,16 @@ class ProfessorCell: UITableViewCell {
     
     @IBOutlet weak var professorName: UILabel!
     
+    @IBOutlet weak var professorRole: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        professorImage.layer.borderWidth = 1
+        professorImage.layer.masksToBounds = false
+        professorImage.layer.borderColor = UIColor.black.cgColor
+        professorImage.layer.cornerRadius=professorImage.frame.height/2
+        professorImage.clipsToBounds = true
         // Initialization code
     }
 
