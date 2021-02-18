@@ -6,9 +6,6 @@ target 'CampusKey' do
   use_frameworks!
 
   # Pods for CampusKey
-  pod "GoogleMaps"
-  pod "GooglePlaces"
-  pod "RealmSwift"
   pod 'FSCalendar'
   
   target 'CampusKeyTests' do

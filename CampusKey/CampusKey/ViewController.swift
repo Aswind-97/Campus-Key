@@ -26,8 +26,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func registerButton(_ sender: Any) {
     }
     
-    let db = DBHelper()
-    
     //Closes keyboard when return button is pushed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
