@@ -21,7 +21,21 @@ class ProfessorDetail: UIViewController, UITextFieldDelegate, UIImagePickerContr
     var name = ""
     var rating = ""
     
+    @objc public func addReview(sender: UIBarButtonItem) {
+        //Creates a viewController to use data from FoodDetail view
+        let vc = storyboard?.instantiateViewController(identifier: "ProfessorReview") as? ProfessorReview
     
+        //Allows for use of a navigation controller from List to Detail
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+        //allows for trasnferring data to next view
+        vc?.image = professorImage.image!
+        vc?.name = professorName.text!
+        
+        //performSegue(withIdentifier: "Food Review", sender: vc!)
+
+        
+      }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +46,9 @@ class ProfessorDetail: UIViewController, UITextFieldDelegate, UIImagePickerContr
         professorRating.text = rating
         
         
-        // Do any additional setup after loading the view.
+        //Set up navigation bar item--add review btn
+        let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addReview))
+        self.navigationItem.rightBarButtonItem  = btn1
     }
     
 
