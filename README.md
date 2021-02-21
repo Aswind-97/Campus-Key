@@ -45,7 +45,7 @@ pod install (once in directory in which Pod file is visible)
 
 ## M1 Mac: 
 
-Run terminal & Xcode in Rosetta
+Run terminal in Rosetta
 
 Clone git repo 
 
