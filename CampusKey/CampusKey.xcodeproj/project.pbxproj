@@ -42,6 +42,8 @@
 		B9956F1F2557FBA600AE9562 /* ProfessorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F1E2557FBA600AE9562 /* ProfessorList.swift */; };
 		B9956F2625580A7A00AE9562 /* ProfessorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */; };
 		B9956F2B255812F700AE9562 /* ProfessorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2A255812F700AE9562 /* ProfessorCell.swift */; };
+		B9C1FD5425E21A2300B5F46A /* EventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C1FD5325E21A2300B5F46A /* EventsCell.swift */; };
+		B9C1FD6125E21C4D00B5F46A /* EventsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C1FD6025E21C4D00B5F46A /* EventsDetail.swift */; };
 		B9D973C35C60EB90AC27112F /* Pods_CampusKey_CampusKeyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BEEAADE45EE3782AB47A71 /* Pods_CampusKey_CampusKeyUITests.framework */; };
 		B9EAC5FE2564B16A0033D71B /* FoodReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EAC5FD2564B16A0033D71B /* FoodReview.swift */; };
 		B9EAC606256527B70033D71B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EAC605256527B70033D71B /* Home.swift */; };
@@ -114,6 +116,8 @@
 		B9956F1E2557FBA600AE9562 /* ProfessorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorList.swift; sourceTree = "<group>"; };
 		B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorDetail.swift; sourceTree = "<group>"; };
 		B9956F2A255812F700AE9562 /* ProfessorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorCell.swift; sourceTree = "<group>"; };
+		B9C1FD5325E21A2300B5F46A /* EventsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCell.swift; sourceTree = "<group>"; };
+		B9C1FD6025E21C4D00B5F46A /* EventsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetail.swift; sourceTree = "<group>"; };
 		B9EAC5FD2564B16A0033D71B /* FoodReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodReview.swift; sourceTree = "<group>"; };
 		B9EAC605256527B70033D71B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		FC6A6451C833BBF2679ADE43 /* Pods-CampusKeyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusKeyTests.debug.xcconfig"; path = "Target Support Files/Pods-CampusKeyTests/Pods-CampusKeyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				B91BFF0425CC7538006AD68E /* FAQS.swift */,
 				B91776D525D3D67A00D9660C /* Events.storyboard */,
 				B91776DA25D3D95E00D9660C /* EventsControl.swift */,
+				B9C1FD5325E21A2300B5F46A /* EventsCell.swift */,
+				B9C1FD6025E21C4D00B5F46A /* EventsDetail.swift */,
 				B962C5852561F48F007445B4 /* Professor.storyboard */,
 				B9956F1E2557FBA600AE9562 /* ProfessorList.swift */,
 				B9956F2A255812F700AE9562 /* ProfessorCell.swift */,
@@ -500,9 +506,11 @@
 				B91BFF0525CC7538006AD68E /* FAQS.swift in Sources */,
 				5996A404255A3F9C00D0F157 /* People.swift in Sources */,
 				B9956F2625580A7A00AE9562 /* ProfessorDetail.swift in Sources */,
+				B9C1FD5425E21A2300B5F46A /* EventsCell.swift in Sources */,
 				B963B2DC25CB5B0500E04609 /* FoodDetail.swift in Sources */,
 				B9956F2B255812F700AE9562 /* ProfessorCell.swift in Sources */,
 				B930EB7825DEEBC4006CE935 /* ProfessorReview.swift in Sources */,
+				B9C1FD6125E21C4D00B5F46A /* EventsDetail.swift in Sources */,
 				B91742FF254AC6E2008A1715 /* RegThird.swift in Sources */,
 				B94921ED25416DAD0085D1E9 /* ViewController.swift in Sources */,
 				B94921E925416DAD0085D1E9 /* AppDelegate.swift in Sources */,

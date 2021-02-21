@@ -13,9 +13,7 @@ class ProfessorCell: UITableViewCell {
     @IBOutlet weak var professorImage: UIImageView!
     
     @IBOutlet weak var professorName: UILabel!
-    
-    @IBOutlet weak var professorRole: UILabel!
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         
