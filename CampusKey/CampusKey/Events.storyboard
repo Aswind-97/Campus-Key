@@ -138,9 +138,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="eventImage" destination="78G-9L-DJR" id="LEv-Ci-taq"/>
-                        <outlet property="eventInfo" destination="59o-rP-IhK" id="jSp-tv-5jh"/>
-                        <outlet property="eventName" destination="iTC-3r-XoD" id="LQ4-4L-326"/>
+                        <outlet property="eventImage" destination="78G-9L-DJR" id="0xo-Sm-mR5"/>
+                        <outlet property="eventInfo" destination="59o-rP-IhK" id="dFc-Rh-aaQ"/>
+                        <outlet property="eventName" destination="iTC-3r-XoD" id="uia-kP-Phi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4c-pV-Ti2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
