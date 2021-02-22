@@ -88,6 +88,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ena-Pu-Wi8"/>
                     <connections>
+                        <outlet property="calendar" destination="SUt-zn-2Ib" id="dhC-iz-3o4"/>
                         <outlet property="tableView" destination="uGR-90-TQv" id="LTr-2k-DUO"/>
                     </connections>
                 </viewController>

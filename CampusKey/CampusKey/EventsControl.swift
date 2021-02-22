@@ -10,30 +10,23 @@ import UIKit
 
 class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, UITableViewDataSource {
   
+    @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
     
     let events = ["John Doe", "Jane Doe", "Alex Smith", "Eliza Holmes", "Jack Nichols", "Chuck Finley", "Sarah Marshall", "Louis Stern", "Karina Wo", "Amanda Taylor"]
 
     
-    /*
-    //Provides height for image and functionality to add an image to the TableView Header
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 200
+    //Action for what happens when a date is selected
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "MM-dd-YYYY"
+        let date = formatter.string(from: date)
+        print("This is the date: \(date)")
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-             
-            
-        let imageView: UIImageView = UIImageView()
-        imageView.image =  UIImage(named: "Professors Page Logo")!
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFill
-        
-        return imageView
-        
-    }
-*/
     
+
     //Helps to allow pics to show properly by adjusting height of rows
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
@@ -80,6 +73,8 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        calendar.delegate = self
         
         self.title = "Events Calendar"
 
