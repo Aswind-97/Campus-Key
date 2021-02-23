@@ -18,6 +18,7 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
     var image = UIImage()
     var name = ""
     var rating = ""
+    var foodIdent = ""
 
     @objc public func addReview(sender: UIBarButtonItem) {
         //Creates a viewController to use data from FoodDetail view
@@ -29,6 +30,7 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
         //allows for trasnferring data to next view
         vc?.image = foodImage.image!
         vc?.name = foodName.text!
+        vc?.foodIdent = foodIdent
         
         //performSegue(withIdentifier: "Food Review", sender: vc!)
 

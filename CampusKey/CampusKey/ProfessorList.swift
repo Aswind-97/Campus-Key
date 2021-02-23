@@ -6,16 +6,77 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBOutlet weak var tableView: UITableView!
     
-    let professors = ["John Doe", "Jane Doe", "Alex Smith", "Eliza Holmes", "Jack Nichols", "Chuck Finley", "Sarah Marshall", "Louis Stern", "Karina Wo", "Amanda Taylor"]
-
-    let ratings = ["9.5", "9.8", "8.2", "10", "4.3", "7.4", "9.1", "6.9", "9.6", "5.6"]
+    var professors = [String]()
+    var ratings = [String]()
     
+    var profsImage = [String]()
+    var imageData = [UIImage]()
+    
+    var refProfs: DatabaseReference!
+    
+    func readAllProfs() {
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        refProfs = Database.database().reference().child("professors/people");
+        
+        refProfs.observeSingleEvent(of: .value, with: { snapshot in
+            let allFacultySnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+            for profSnap in allFacultySnap { //iterate over each restaurant node
+                let profID = profSnap.key //arborGrill, burgerKing etc
+                let profName = profSnap.childSnapshot(forPath: "display_name").value as? String ?? "No food name"
+                let profImage = profSnap.childSnapshot(forPath: "profile_image").value as? String ?? "We broke it here"
+                
+                
+                if let url = URL(string: profImage){
+
+                    let task = session.dataTask(with: url, completionHandler: {data, response, error in
+
+                        if let err = error {
+                            print("Error: \(err)")
+                            return
+                        }
+
+                        if let http = response as? HTTPURLResponse {
+                            if http.statusCode == 200 {
+                                let downloadedImage = UIImage(data: data!)
+                                DispatchQueue.main.async {
+                                    self.imageData.append(downloadedImage!)
+                                    print(profID)
+                                }
+                            }
+                        }
+                   })
+                   task.resume()
+                }
+                
+                self.ratings.append("5")
+                self.profsImage.append(profImage)
+                self.professors.append(profName)
+            }
+        })
+    }
+    func refresh(){
+        DispatchQueue.main.async {
+            self.readAllProfs()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(7)) {
+            print("refreshed")
+            self.tableView.reloadData()
+        }
+    }
+    func delay(interval: TimeInterval, closure: @escaping () -> Void) {
+         DispatchQueue.main.asyncAfter(deadline: .now() + interval) {
+              closure()
+         }
+    }
     
     //Provides height for image and functionality to add an image to the TableView Header
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -49,7 +110,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         self.navigationController?.pushViewController(vc!, animated: true)
         
         //allows for trasnferring data to next view
-        vc?.image = UIImage(named: professors[indexPath.row])!
+        vc?.image = imageData[indexPath.row]
         vc?.name = professors[indexPath.row]
         vc?.rating = ratings[indexPath.row]
     
@@ -66,7 +127,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ProfessorCell
         
         cell?.professorName.text = professors[indexPath.row]
-        cell?.professorImage.image = UIImage(named: professors[indexPath.row])
+        cell?.professorImage.image = imageData[indexPath.row]
                 
         return cell!
     }
@@ -76,6 +137,8 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     
     override func viewDidLoad() {
+        refresh()
+        
         super.viewDidLoad()
 
         

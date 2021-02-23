@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
@@ -19,10 +20,36 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     var image = UIImage()
     var name = ""
+    var rated = 0
+    var foodIdent = ""
+    var newRatingStrings = [String]()
+    
+    var refFoods: DatabaseReference!
+    
+    func addReview(){
+        refFoods = Database.database().reference().child("food/\(foodIdent)/reviewStrings");
+        
+        refFoods.observeSingleEvent(of: .value, with: { snapshot in
+            let allRestaurantsSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+            for arrNum in allRestaurantsSnap { //iterate over each restaurant node
+                let reviewComments = arrNum.key //arborGrill, burgerKing etc
+                let reviewString = arrNum.value as? String ?? ""
+                
+                self.newRatingStrings.append(reviewString + "... did it work")
+                
+                
+            }
+            self.newRatingStrings.append("This is the review in the text box")
+            
+        })
+    }
 
     //Should return to previous view with usr's updated review
     @IBAction func submitRateBtn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+        
+        print(newRatingStrings)
+        refFoods.setValue(newRatingStrings)
     }
     
     //Controls actions when slider is changed by usr
@@ -99,7 +126,7 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         usrReviewTextView.textColor = UIColor.lightGray
         usrReviewTextView.layer.cornerRadius = 8
         
-        
+        addReview()
         
         submitRateBtn.layer.cornerRadius = 8
         submitRateBtn.layer.shadowOpacity = 0.8

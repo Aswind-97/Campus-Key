@@ -6,14 +6,60 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBOutlet weak var tableView: UITableView!
     
-    let food = ["Arbor Grill", "Burger King", "El Pollo Loco", "Geronimo's", "Panda Express", "Pub Sports Grill", "Shake Smart"]
-    let ratings = ["8", "6", "5.5", "7", "8", "9", "9.2"]
+    var food = [String]()
+    var ratings = [String]()
+    var foodIdent = [String]()
+    
+    var refFoods: DatabaseReference!
+    
+    
+    func readAllFoods() {
+        
+        refFoods = Database.database().reference().child("food");
+        
+        refFoods.observeSingleEvent(of: .value, with: { snapshot in
+            let allRestaurantsSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+            for foodSnap in allRestaurantsSnap { //iterate over each restaurant node
+                let restaurantName = foodSnap.key //arborGrill, burgerKing etc
+                let foodName = foodSnap.childSnapshot(forPath: "foodName").value as? String ?? "No food name"
+                let ratingAvg = foodSnap.childSnapshot(forPath: "ratingAvg").value as? Int ?? 0
+                
+                print(foodName)
+                print(restaurantName)
+                
+                let stringAvg = String(ratingAvg)
+                
+                self.foodIdent.append(restaurantName)
+                self.ratings.append(stringAvg)
+                self.food.append(foodName)
+            }
+            
+            print(self.ratings)
+            print(self.food)
+        })
+    }
+    
+    func refresh(){
+        DispatchQueue.main.async {
+            self.readAllFoods()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            print("refreshed")
+            self.tableView.reloadData()
+        }
+    }
+    func delay(interval: TimeInterval, closure: @escaping () -> Void) {
+         DispatchQueue.main.asyncAfter(deadline: .now() + interval) {
+              closure()
+         }
+    }
     
     
     //Provides height for image and functionality to add an image to the TableView Header
@@ -51,6 +97,7 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         vc?.image = UIImage(named: food[indexPath.row])!
         vc?.name = food[indexPath.row]
         vc?.rating = ratings[indexPath.row]
+        vc?.foodIdent = foodIdent[indexPath.row]
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -78,9 +125,11 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         
+        refresh()
+        
+        super.viewDidLoad()
+               
         tableView.delegate = self
         tableView.dataSource = self
         
