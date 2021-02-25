@@ -8,6 +8,78 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Add Event-->
+        <scene sceneID="UEc-zU-6PF">
+            <objects>
+                <viewController storyboardIdentifier="AddEvent" title="Add Event" id="rBE-wP-ePb" customClass="AddEvent" customModule="CampusKey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vXt-8Q-1Ic">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0s-xO-dvp">
+                                <rect key="frame" x="65" y="81" width="284" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cuf-zf-jd3">
+                                <rect key="frame" x="45" y="166" width="324" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="w9A-Ce-glc"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQ4-gX-ac0">
+                                <rect key="frame" x="115" y="744" width="184" height="65"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="8l4-AJ-AvE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="eventSubmitBtn:" destination="rBE-wP-ePb" eventType="touchUpInside" id="bnU-wN-iUG"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="aTt-6k-5zl">
+                                <rect key="frame" x="45" y="562" width="324" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="aSz-0W-yc7"/>
+                                </constraints>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eAB-zK-dwq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aTt-6k-5zl" firstAttribute="leading" secondItem="eAB-zK-dwq" secondAttribute="leading" constant="45" id="33c-GO-Sok"/>
+                            <constraint firstItem="eAB-zK-dwq" firstAttribute="trailing" secondItem="aTt-6k-5zl" secondAttribute="trailing" constant="45" id="Ixt-My-kf0"/>
+                            <constraint firstItem="eAB-zK-dwq" firstAttribute="bottom" secondItem="iQ4-gX-ac0" secondAttribute="bottom" constant="53" id="McD-uu-qzH"/>
+                            <constraint firstItem="I0s-xO-dvp" firstAttribute="top" secondItem="eAB-zK-dwq" secondAttribute="top" constant="37" id="OID-Rv-U5G"/>
+                            <constraint firstItem="I0s-xO-dvp" firstAttribute="leading" secondItem="eAB-zK-dwq" secondAttribute="leading" constant="65" id="Vpw-EO-GtW"/>
+                            <constraint firstItem="eAB-zK-dwq" firstAttribute="trailing" secondItem="I0s-xO-dvp" secondAttribute="trailing" constant="65" id="YK2-gZ-piO"/>
+                            <constraint firstItem="eAB-zK-dwq" firstAttribute="trailing" secondItem="Cuf-zf-jd3" secondAttribute="trailing" constant="45" id="hsy-in-sDA"/>
+                            <constraint firstItem="iQ4-gX-ac0" firstAttribute="leading" secondItem="eAB-zK-dwq" secondAttribute="leading" constant="115" id="jtP-PW-gd6"/>
+                            <constraint firstItem="Cuf-zf-jd3" firstAttribute="top" secondItem="I0s-xO-dvp" secondAttribute="bottom" constant="51" id="kiq-9i-fS3"/>
+                            <constraint firstItem="iQ4-gX-ac0" firstAttribute="top" secondItem="aTt-6k-5zl" secondAttribute="bottom" constant="32" id="kxl-JB-ch6"/>
+                            <constraint firstItem="Cuf-zf-jd3" firstAttribute="leading" secondItem="eAB-zK-dwq" secondAttribute="leading" constant="45" id="oEy-Bf-dBC"/>
+                            <constraint firstItem="eAB-zK-dwq" firstAttribute="trailing" secondItem="iQ4-gX-ac0" secondAttribute="trailing" constant="115" id="xxc-9H-gcb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eventSubmitBtn" destination="iQ4-gX-ac0" id="b9D-Ow-GWl"/>
+                        <outlet property="eventTextView" destination="Cuf-zf-jd3" id="sFW-Av-OcR"/>
+                        <outlet property="eventTitle" destination="I0s-xO-dvp" id="zmc-02-VwO"/>
+                        <outlet property="eventdatePicker" destination="aTt-6k-5zl" id="XuN-2u-ECq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gS-Rr-Zka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-671.01449275362324" y="778.79464285714278"/>
+        </scene>
         <!--Events List-->
         <scene sceneID="d2d-g0-yGv">
             <objects>
@@ -24,7 +96,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
-                                        <integer key="value" value="0"/>
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -151,8 +223,14 @@
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

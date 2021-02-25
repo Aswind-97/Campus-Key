@@ -32,9 +32,6 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
         vc?.name = foodName.text!
         vc?.foodIdent = foodIdent
         
-        //performSegue(withIdentifier: "Food Review", sender: vc!)
-
-        
       }
      
      
