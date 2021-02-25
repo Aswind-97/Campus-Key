@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AddEvent: UIViewController, UITextFieldDelegate, UITextViewDelegate   {
 
@@ -20,6 +21,10 @@ class AddEvent: UIViewController, UITextFieldDelegate, UITextViewDelegate   {
     var image = UIImage()
     var name = ""
     var date = ""
+    var dateSelected = ""
+    var timeSelected = ""
+    
+    var refEvent: DatabaseReference!
 
     //saves datePicker info when changed. If picker is not touched, "date" will be empty string
     @IBAction func datePicked(_ sender: UIDatePicker) {
@@ -28,6 +33,8 @@ class AddEvent: UIViewController, UITextFieldDelegate, UITextViewDelegate   {
 
         formatter.dateFormat = "MM-dd-yyyy HH:mm"
         date = formatter.string(from: sender.date)
+        dateSelected = String(date.prefix(10))
+        timeSelected = String(date.suffix(5))
     }
     
     
@@ -36,8 +43,16 @@ class AddEvent: UIViewController, UITextFieldDelegate, UITextViewDelegate   {
         
         self.navigationController?.popViewController(animated: true)
         
-        print(date)//to show date is save in a string from time wheel when submit is clicked on
+        refEvent = Database.database().reference().child("Events/\(dateSelected)/");
         
+        let eventInfo = ["Description": eventTextView.text!, "Time": timeSelected, "Title": eventTitle.text!]
+
+        refEvent.childByAutoId().setValue(eventInfo)
+
+        
+        let childautoID = refEvent.key
+        print(childautoID ?? "its broken")
+                
         //add what else happens to user data inputted
     }
     
