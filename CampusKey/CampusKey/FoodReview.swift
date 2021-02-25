@@ -23,6 +23,7 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     var rated = 0
     var foodIdent = ""
     var newRatingStrings = [String]()
+    var newReview = ""
     
     var refFoods: DatabaseReference!
     
@@ -35,7 +36,7 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
                 let reviewComments = arrNum.key //arborGrill, burgerKing etc
                 let reviewString = arrNum.value as? String ?? ""
                 
-                self.newRatingStrings.append(reviewString + "... did it work")
+                self.newRatingStrings.append(reviewString)
                 
                 
             }

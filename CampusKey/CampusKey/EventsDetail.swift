@@ -15,6 +15,9 @@ class EventsDetail: UIViewController, UITextFieldDelegate, UIImagePickerControll
     
     var image = UIImage()
     var name = ""
+    var identifier = ""
+    var time = ""
+    var info = ""
 
 
      
@@ -24,6 +27,7 @@ class EventsDetail: UIViewController, UITextFieldDelegate, UIImagePickerControll
          //Gets images and names from previous view
          eventName.text = name
          eventImage.image = image
+         eventInfo.text = info
         
 
      

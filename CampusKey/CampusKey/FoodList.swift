@@ -50,7 +50,7 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         DispatchQueue.main.async {
             self.readAllFoods()
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             print("refreshed")
             self.tableView.reloadData()
         }

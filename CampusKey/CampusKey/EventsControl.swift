@@ -7,13 +7,21 @@
 
 import FSCalendar
 import UIKit
+import FirebaseDatabase
 
 class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, UITableViewDataSource {
   
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
     
-    let events = ["John Doe", "Jane Doe", "Alex Smith", "Eliza Holmes", "Jack Nichols", "Chuck Finley", "Sarah Marshall", "Louis Stern", "Karina Wo", "Amanda Taylor"]
+    var events = [String]()
+    var eventTime = [String]()
+    var eventDesc = [String]()
+    var eventIden = [String]()
+    //let events = ["John Doe", "Jane Doe", "Alex Smith", "Eliza Holmes", "Jack Nichols", "Chuck Finley", "Sarah Marshall", "Louis Stern", "Karina Wo", "Amanda Taylor"]
+    var dateSelected = "MM-dd-YYYY"
+    
+    var refEvent: DatabaseReference!
 
     
     //Action for what happens when a date is selected
@@ -21,10 +29,52 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         let formatter = DateFormatter()
         
         formatter.dateFormat = "MM-dd-YYYY"
-        let date = formatter.string(from: date)
-        print("This is the date: \(date)")
+        self.dateSelected = formatter.string(from: date)
+        print("This is the date: \(dateSelected)")
+        events = [String]()
+        eventTime = [String]()
+        eventDesc = [String]()
+        eventIden = [String]()
+        refresh()
     }
-    
+    func readAllEvents(){
+        refEvent = Database.database().reference().child("Events/\(dateSelected)/");
+        
+        refEvent.observeSingleEvent(of: .value, with: { snapshot in
+            let allEventSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+            for eventSnap in allEventSnap { //iterate over each restaurant node
+                let eventKey = eventSnap.key //uniqueId random gen
+                
+                let eventTitle = eventSnap.childSnapshot(forPath: "Title").value as? String ?? "No event title"
+                let eventTime = eventSnap.childSnapshot(forPath: "Time").value as? String ?? "no time"
+                let eventDes = eventSnap.childSnapshot(forPath: "Description").value as? String ?? "no info entered"
+                //let stringAvg = String(ratingAvg)
+                    
+                self.events.append(eventTitle)
+                self.eventTime.append(eventTime)
+                self.eventDesc.append(eventDes)
+                self.eventIden.append(eventKey)
+
+            }
+            
+            print(self.events)
+            //print(self.e)
+        })
+    }
+    func refresh(){
+        DispatchQueue.main.async {
+            self.readAllEvents()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            print("refreshed")
+            self.tableView.reloadData()
+        }
+    }
+    func delay(interval: TimeInterval, closure: @escaping () -> Void) {
+         DispatchQueue.main.asyncAfter(deadline: .now() + interval) {
+              closure()
+         }
+    }
     
 
     //Helps to allow pics to show properly by adjusting height of rows
@@ -41,8 +91,12 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         self.navigationController?.pushViewController(vc!, animated: true)
         
         //allows for trasnferring data to next view
-        vc?.image = UIImage(named: events[indexPath.row])!
+        vc?.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "Burger King")!
+        vc?.identifier = eventIden[indexPath.row]
         vc?.name = events[indexPath.row]
+        vc?.info = eventDesc[indexPath.row]
+        vc?.time = eventTime[indexPath.row]
+        
     
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -57,7 +111,7 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? EventsCell
         
         cell?.eventName.text = events[indexPath.row]
-        cell?.eventImage.image = UIImage(named: events[indexPath.row])
+        cell?.eventImage.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "Burger King")!
                 
         return cell!
     }

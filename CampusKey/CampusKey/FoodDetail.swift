@@ -46,6 +46,7 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
          foodImage.image = image
          foodRating.text = rating
         
+        
         //Set up navigation bar item--add review btn
         let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addReview))
         self.navigationItem.rightBarButtonItem  = btn1
