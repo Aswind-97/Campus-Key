@@ -50,6 +50,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="aSz-0W-yc7"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="datePicked:" destination="rBE-wP-ePb" eventType="valueChanged" id="1xz-wo-Ux4"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eAB-zK-dwq"/>
@@ -70,10 +73,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="eventDatePicker" destination="aTt-6k-5zl" id="XuN-2u-ECq"/>
                         <outlet property="eventSubmitBtn" destination="iQ4-gX-ac0" id="b9D-Ow-GWl"/>
                         <outlet property="eventTextView" destination="Cuf-zf-jd3" id="sFW-Av-OcR"/>
                         <outlet property="eventTitle" destination="I0s-xO-dvp" id="zmc-02-VwO"/>
-                        <outlet property="eventdatePicker" destination="aTt-6k-5zl" id="XuN-2u-ECq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gS-Rr-Zka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
