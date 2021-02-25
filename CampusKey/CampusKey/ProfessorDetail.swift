@@ -32,9 +32,6 @@ class ProfessorDetail: UIViewController, UITextFieldDelegate, UIImagePickerContr
         vc?.image = professorImage.image!
         vc?.name = professorName.text!
         
-        //performSegue(withIdentifier: "Food Review", sender: vc!)
-
-        
       }
     
     override func viewDidLoad() {

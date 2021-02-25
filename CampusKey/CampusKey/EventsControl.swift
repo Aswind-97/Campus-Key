@@ -75,7 +75,17 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
               closure()
          }
     }
+
     
+    @objc public func addEvent(sender: UIBarButtonItem) {
+        //Creates a viewController to use data from FoodDetail view
+        let vc = storyboard?.instantiateViewController(identifier: "AddEvent") as? AddEvent
+
+    
+        //Allows for use of a navigation controller from List to Detail
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+      }
 
     //Helps to allow pics to show properly by adjusting height of rows
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -131,6 +141,10 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         calendar.delegate = self
         
         self.title = "Events Calendar"
+        
+        //Set up navigation bar item--add review btn
+        let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addEvent))
+        self.navigationItem.rightBarButtonItem  = btn1
 
     }
     
