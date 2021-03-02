@@ -194,8 +194,12 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59o-rP-IhK" userLabel="Event Info">
-                                <rect key="frame" x="192.5" y="613" width="29" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59o-rP-IhK" userLabel="Event Info">
+                                <rect key="frame" x="57" y="527" width="300" height="305"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="DK2-im-GMa"/>
+                                    <constraint firstAttribute="height" constant="305" id="jwx-uk-cO0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -208,7 +212,7 @@
                             <constraint firstItem="iTC-3r-XoD" firstAttribute="leading" secondItem="3Un-51-AbA" secondAttribute="leading" constant="16" id="VJ1-Qp-UQm"/>
                             <constraint firstItem="78G-9L-DJR" firstAttribute="top" secondItem="iTC-3r-XoD" secondAttribute="bottom" constant="10" id="de4-ee-Jek"/>
                             <constraint firstItem="59o-rP-IhK" firstAttribute="centerX" secondItem="HZz-MC-e2e" secondAttribute="centerX" id="l7q-yW-0Iu"/>
-                            <constraint firstItem="3Un-51-AbA" firstAttribute="bottom" secondItem="59o-rP-IhK" secondAttribute="bottom" constant="228.5" id="oiQ-ma-ixu"/>
+                            <constraint firstItem="3Un-51-AbA" firstAttribute="bottom" secondItem="59o-rP-IhK" secondAttribute="bottom" constant="30" id="oiQ-ma-ixu"/>
                             <constraint firstItem="3Un-51-AbA" firstAttribute="trailing" secondItem="78G-9L-DJR" secondAttribute="trailing" constant="16" id="tuL-Rs-rNJ"/>
                             <constraint firstItem="iTC-3r-XoD" firstAttribute="top" secondItem="3Un-51-AbA" secondAttribute="top" constant="40" id="w3Y-fX-1tQ"/>
                         </constraints>
@@ -221,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4c-pV-Ti2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419" y="43"/>
+            <point key="canvasLocation" x="418.84057971014494" y="42.857142857142854"/>
         </scene>
     </scenes>
     <resources>

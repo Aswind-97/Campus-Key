@@ -69,22 +69,27 @@ class AddEvent: UIViewController, UITextFieldDelegate, UITextViewDelegate   {
     }
     func textViewDidEndEditing(_ textView: UITextView) {
         if eventTextView.text.isEmpty {
-            eventTextView.text = "WRITE ABOUT THE EVENT"
+            eventTextView.text = "WRITE ABOUT THE EVENT(MAX 250 Characters)"
             eventTextView.textColor = UIColor.lightGray
         }
     }
+    //Restricts Add Event Title length
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return range.location < 15
+    }
+    
 
     //Closes keyboard when return button is pushed on textField
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return eventTitle.resignFirstResponder()
     }
     
-    //Closes keyboard when return button is pushed on textView
+    //Closes keyboard when return button is pushed on textView & Restricts Add Event Description Text Length
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if(text == "\n") {
             eventTextView.resignFirstResponder()
         }
-        return true
+        return range.location < 250
     }
     
     
@@ -99,7 +104,7 @@ class AddEvent: UIViewController, UITextFieldDelegate, UITextViewDelegate   {
         eventTextView.delegate = self
         eventTextView.layer.borderColor = UIColor.lightGray.cgColor
         eventTextView.layer.borderWidth = 1
-        eventTextView.text = "WRITE ABOUT THE EVENT"
+        eventTextView.text = "WRITE ABOUT THE EVENT(MAX 250 Characters)"
         eventTextView.textColor = UIColor.lightGray
         eventTextView.layer.cornerRadius = 8
         
