@@ -302,7 +302,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultPhoto" width="540" height="540"/>
+        <image name="defaultPhoto" width="1080" height="1080"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

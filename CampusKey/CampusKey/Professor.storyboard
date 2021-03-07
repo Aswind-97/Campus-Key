@@ -88,10 +88,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="LK5-Rh-i3q">
-                                <rect key="frame" x="16" y="124" width="382" height="320"/>
+                                <rect key="frame" x="25" y="139" width="364" height="225"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="izr-N2-obG"/>
+                                    <constraint firstAttribute="height" constant="225" id="izr-N2-obG"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqU-Ff-n8C">
@@ -107,8 +107,55 @@
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rna-rI-gwq">
+                                <rect key="frame" x="0.0" y="712" width="414" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="gl2-5J-Ibf"/>
+                                    <constraint firstAttribute="height" constant="150" id="ilG-BQ-oLp"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="professorReviewCell" rowHeight="116" id="jrv-cX-vi0" userLabel="professorReviewCell" customClass="ProfessorReviewCell" customModule="CampusKey" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="116"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jrv-cX-vi0" id="XcB-mr-Neq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYW-3h-cKT">
+                                                    <rect key="frame" x="100" y="20.5" width="289" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="kKt-oP-AXl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSQ-B1-gWV">
+                                                    <rect key="frame" x="36" y="42.5" width="119" height="31"/>
+                                                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YYW-3h-cKT" firstAttribute="leading" secondItem="XcB-mr-Neq" secondAttribute="leading" constant="100" id="Enp-qH-W9c"/>
+                                                <constraint firstItem="sSQ-B1-gWV" firstAttribute="centerY" secondItem="XcB-mr-Neq" secondAttribute="centerY" id="HtJ-pr-alp"/>
+                                                <constraint firstItem="YYW-3h-cKT" firstAttribute="centerY" secondItem="XcB-mr-Neq" secondAttribute="centerY" id="I5Z-2o-PF3"/>
+                                                <constraint firstItem="sSQ-B1-gWV" firstAttribute="leading" secondItem="XcB-mr-Neq" secondAttribute="leadingMargin" constant="16" id="Z8W-7j-NPs"/>
+                                                <constraint firstAttribute="trailing" secondItem="sSQ-B1-gWV" secondAttribute="trailing" constant="259" id="ZkC-ta-5nm"/>
+                                                <constraint firstAttribute="trailing" secondItem="YYW-3h-cKT" secondAttribute="trailing" constant="25" id="e2Q-3J-AUF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rating" destination="sSQ-B1-gWV" id="NGY-sI-4yr"/>
+                                            <outlet property="review" destination="YYW-3h-cKT" id="9O6-ci-FBr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSp-b9-mci">
-                                <rect key="frame" x="192.5" y="613" width="29" height="20.5"/>
+                                <rect key="frame" x="192.5" y="581.5" width="29" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -116,16 +163,19 @@
                         <viewLayoutGuide key="safeArea" id="2tV-Rw-WMD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="rna-rI-gwq" firstAttribute="bottom" secondItem="2tV-Rw-WMD" secondAttribute="bottom" id="0x2-hQ-8nT"/>
+                            <constraint firstItem="rna-rI-gwq" firstAttribute="trailing" secondItem="2tV-Rw-WMD" secondAttribute="trailing" id="6Jk-kz-MJe"/>
                             <constraint firstItem="jqU-Ff-n8C" firstAttribute="top" secondItem="2tV-Rw-WMD" secondAttribute="top" constant="40" id="8Dz-Y5-npW"/>
-                            <constraint firstItem="LK5-Rh-i3q" firstAttribute="top" secondItem="jqU-Ff-n8C" secondAttribute="bottom" constant="10" id="EEP-sF-UA9"/>
-                            <constraint firstItem="LK5-Rh-i3q" firstAttribute="leading" secondItem="2tV-Rw-WMD" secondAttribute="leading" constant="16" id="Nnu-zq-CKw"/>
-                            <constraint firstItem="2tV-Rw-WMD" firstAttribute="bottom" secondItem="WSp-b9-mci" secondAttribute="bottom" constant="228.5" id="YvE-iF-aqL"/>
+                            <constraint firstItem="rna-rI-gwq" firstAttribute="top" secondItem="WSp-b9-mci" secondAttribute="bottom" constant="110" id="8YG-F5-H9X"/>
+                            <constraint firstItem="LK5-Rh-i3q" firstAttribute="top" secondItem="jqU-Ff-n8C" secondAttribute="bottom" constant="25" id="EEP-sF-UA9"/>
+                            <constraint firstItem="LK5-Rh-i3q" firstAttribute="leading" secondItem="2tV-Rw-WMD" secondAttribute="leading" constant="25" id="Nnu-zq-CKw"/>
+                            <constraint firstItem="rna-rI-gwq" firstAttribute="leading" secondItem="2tV-Rw-WMD" secondAttribute="leading" id="Qv5-ND-bAf"/>
                             <constraint firstItem="mdf-ZT-8ZV" firstAttribute="centerX" secondItem="P5v-i7-OYT" secondAttribute="centerX" id="cn5-zT-47f"/>
                             <constraint firstItem="2tV-Rw-WMD" firstAttribute="trailing" secondItem="jqU-Ff-n8C" secondAttribute="trailing" constant="16" id="dDC-ak-xwd"/>
                             <constraint firstItem="jqU-Ff-n8C" firstAttribute="leading" secondItem="2tV-Rw-WMD" secondAttribute="leading" constant="16" id="j5C-ms-qS8"/>
                             <constraint firstItem="mdf-ZT-8ZV" firstAttribute="top" secondItem="2tV-Rw-WMD" secondAttribute="top" constant="408" id="pd5-H2-G3b"/>
                             <constraint firstItem="WSp-b9-mci" firstAttribute="centerX" secondItem="P5v-i7-OYT" secondAttribute="centerX" id="zMx-7g-GHL"/>
-                            <constraint firstItem="2tV-Rw-WMD" firstAttribute="trailing" secondItem="LK5-Rh-i3q" secondAttribute="trailing" constant="16" id="zUR-bT-HMh"/>
+                            <constraint firstItem="2tV-Rw-WMD" firstAttribute="trailing" secondItem="LK5-Rh-i3q" secondAttribute="trailing" constant="25" id="zUR-bT-HMh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -133,6 +183,7 @@
                         <outlet property="professorImage" destination="LK5-Rh-i3q" id="Ozn-m4-VPD"/>
                         <outlet property="professorName" destination="jqU-Ff-n8C" id="gOQ-cw-aMs"/>
                         <outlet property="professorRating" destination="mdf-ZT-8ZV" id="Mnc-Jj-sTa"/>
+                        <outlet property="tableView" destination="rna-rI-gwq" id="gNL-OU-t2n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sk9-DP-lmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -246,7 +297,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultPhoto" width="540" height="540"/>
+        <image name="defaultPhoto" width="1080" height="1080"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
