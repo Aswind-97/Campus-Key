@@ -43,6 +43,7 @@
 		B9956F2625580A7A00AE9562 /* ProfessorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */; };
 		B9956F2B255812F700AE9562 /* ProfessorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2A255812F700AE9562 /* ProfessorCell.swift */; };
 		B9A5BAF925E739E800A632BE /* AddEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5BAF825E739E800A632BE /* AddEvent.swift */; };
+		B9BE3AA825F2D156006C3F6D /* FoodReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE3AA725F2D156006C3F6D /* FoodReviewCell.swift */; };
 		B9C1FD5425E21A2300B5F46A /* EventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C1FD5325E21A2300B5F46A /* EventsCell.swift */; };
 		B9D31F0825E5A27A00866787 /* EventsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D31F0725E5A27A00866787 /* EventsDetail.swift */; };
 		B9D973C35C60EB90AC27112F /* Pods_CampusKey_CampusKeyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BEEAADE45EE3782AB47A71 /* Pods_CampusKey_CampusKeyUITests.framework */; };
@@ -119,6 +120,7 @@
 		B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorDetail.swift; sourceTree = "<group>"; };
 		B9956F2A255812F700AE9562 /* ProfessorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorCell.swift; sourceTree = "<group>"; };
 		B9A5BAF825E739E800A632BE /* AddEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent.swift; sourceTree = "<group>"; };
+		B9BE3AA725F2D156006C3F6D /* FoodReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodReviewCell.swift; sourceTree = "<group>"; };
 		B9C1FD5325E21A2300B5F46A /* EventsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCell.swift; sourceTree = "<group>"; };
 		B9D31F0725E5A27A00866787 /* EventsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetail.swift; sourceTree = "<group>"; };
 		B9EAC5FD2564B16A0033D71B /* FoodReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodReview.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				B93EEDCA2563C6BA001FBC06 /* FoodList.swift */,
 				B93EEDDF2563D1D6001FBC06 /* FoodCell.swift */,
 				B93EEDD72563C6FB001FBC06 /* FoodDetail.swift */,
+				B9BE3AA725F2D156006C3F6D /* FoodReviewCell.swift */,
 				B9EAC5FD2564B16A0033D71B /* FoodReview.swift */,
 				B94921F125416DB20085D1E9 /* Assets.xcassets */,
 				B94921F325416DB20085D1E9 /* LaunchScreen.storyboard */,
@@ -531,6 +534,7 @@
 				B9EAC606256527B70033D71B /* Home.swift in Sources */,
 				B9EAC5FE2564B16A0033D71B /* FoodReview.swift in Sources */,
 				B91776DB25D3D95E00D9660C /* EventsControl.swift in Sources */,
+				B9BE3AA825F2D156006C3F6D /* FoodReviewCell.swift in Sources */,
 				B9956F1F2557FBA600AE9562 /* ProfessorList.swift in Sources */,
 				B943D3CF2553C3A60054FE6D /* RegGuest.swift in Sources */,
 				B93EEDCB2563C6BA001FBC06 /* FoodList.swift in Sources */,

@@ -18,7 +18,7 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
     var eventTime = [String]()
     var eventDesc = [String]()
     var eventIden = [String]()
-    //let events = ["John Doe", "Jane Doe", "Alex Smith", "Eliza Holmes", "Jack Nichols", "Chuck Finley", "Sarah Marshall", "Louis Stern", "Karina Wo", "Amanda Taylor"]
+
     var dateSelected = "MM-dd-YYYY"
     
     var refEvent: DatabaseReference!
@@ -41,8 +41,8 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         refEvent = Database.database().reference().child("Events/\(dateSelected)/");
         
         refEvent.observeSingleEvent(of: .value, with: { snapshot in
-            let allEventSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
-            for eventSnap in allEventSnap { //iterate over each restaurant node
+            let allEventSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes
+            for eventSnap in allEventSnap { //iterate over each  node
                 let eventKey = eventSnap.key //uniqueId random gen
                 
                 let eventTitle = eventSnap.childSnapshot(forPath: "Title").value as? String ?? "No event title"
@@ -78,11 +78,11 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
 
     
     @objc public func addEvent(sender: UIBarButtonItem) {
-        //Creates a viewController to use data from FoodDetail view
+        //Creates a viewController to add a review
         let vc = storyboard?.instantiateViewController(identifier: "AddEvent") as? AddEvent
 
     
-        //Allows for use of a navigation controller from List to Detail
+        //Allows for use of a navigation controller from List to AddEvent
         self.navigationController?.pushViewController(vc!, animated: true)
         
       }
@@ -94,14 +94,14 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
     
     //Action for what happens when cell is clicked on
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Creates a viewController to use data from ProfessorDetail view
+        //Creates a viewController to use data from EventsDetail view
         let vc = storyboard?.instantiateViewController(identifier: "EventsDetail") as? EventsDetail
     
         //Allows for use of a navigation controller from List to Detail
         self.navigationController?.pushViewController(vc!, animated: true)
         
         //allows for trasnferring data to next view
-        vc?.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "Burger King")!
+        vc?.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "defaultPhoto")!
         vc?.identifier = eventIden[indexPath.row]
         vc?.name = events[indexPath.row]
         vc?.info = eventDesc[indexPath.row]
@@ -121,7 +121,7 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? EventsCell
         
         cell?.eventName.text = events[indexPath.row]
-        cell?.eventImage.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "Burger King")!
+        cell?.eventImage.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "defaultPhoto")!
                 
         return cell!
     }
@@ -142,7 +142,7 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         
         self.title = "Events Calendar"
         
-        //Set up navigation bar item--add review btn
+        //Set up navigation bar item--add event btn
         let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addEvent))
         self.navigationItem.rightBarButtonItem  = btn1
 
