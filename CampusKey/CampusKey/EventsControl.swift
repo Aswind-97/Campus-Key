@@ -118,7 +118,7 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
     
     //Fills cells with proper data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? EventsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventsCell", for: indexPath) as? EventsCell
         
         cell?.eventName.text = events[indexPath.row]
         cell?.eventImage.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "defaultPhoto")!

@@ -7,12 +7,12 @@
 
 import UIKit
 
-class FAQS: UIViewController {
-    
-    var index = 0
-    
-    @IBOutlet weak var faqsLabel: UILabel!
+class FAQS: UIViewController, UITableViewDelegate, UITableViewDataSource {
+        
   
+    @IBOutlet weak var tableView: UITableView!
+    
+//START FAQS TEXT
     let arrayOfQuestions = ["Q: How do I reset my password?",
                             
                             "Q: I am a CSUN Student, but am unable to create a student account, why is that?",
@@ -30,6 +30,10 @@ class FAQS: UIViewController {
                             "Q: How long does a suspension last for suspended accounts?",
                             
                             "Q: Is this application only available on CSUN’s campus?",
+                            
+                            "Support Team:",
+                            
+                            "CSUN Admissions & Records:"
     
     ]
     let arrayOfFaqs = [
@@ -50,28 +54,57 @@ class FAQS: UIViewController {
                         "A: Based upon the severity of the incident, suspensions range anywhere from a week to an entire semester.",
 
 
-                        "A: Currently yes; our home/CSUN’s campus is the guinea pig for us at ‘Campus Key’!"
+                        "A: Currently yes; our home/CSUN’s campus is the guinea pig for us at ‘Campus Key’!",
+        
+                        "Email: *******@******.com",
+        
+                        "https://www.csun.edu/current-students/contact-page"
     ]
     
+
     
-   // "Support Team:",
+//END FAQS TEXT
+    
+    //Provides height for image and functionality to add an image to the TableView Header
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 200
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+             
+            
+        let imageView: UIImageView = UIImageView()
+        imageView.image =  UIImage(named: "Faqs Page Logo")!
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        
+        return imageView
+        
+    }
 
-    //"Email: *******@******.com",
+    
+    //Number of cells in table view to appear
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayOfQuestions.count
+    }
+    
+    //How to populate cells
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "faqsCell", for: indexPath) as? FAQSCell
+        
+        cell?.questionLabel.text = arrayOfQuestions[indexPath.row]
+        cell?.faqsLabel.text = arrayOfFaqs[indexPath.row]
+                
+        return cell!
+    }
 
-   // "CSUN Admissions & Records:",
-
-   // "https://www.csun.edu/current-students/contact-page",
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for n in 0...8
-        {
-            faqsLabel.text = faqsLabel.text! + arrayOfQuestions[n] + "\n"
-            faqsLabel.text = faqsLabel.text! + arrayOfFaqs[n] + "\n\n"
-            
-        }
+        tableView.delegate = self
+        tableView.dataSource = self
         
+
     }
     
 }

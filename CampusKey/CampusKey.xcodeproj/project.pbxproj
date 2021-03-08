@@ -40,6 +40,7 @@
 		B9678A4D2574EEA000FB107C /* LocationsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9678A4C2574EEA000FB107C /* LocationsControl.swift */; };
 		B96B5E6E25D4C1DF00B90E45 /* Pods_CampusKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0224FEB094E2646A66AC625 /* Pods_CampusKey.framework */; };
 		B97DBB162563F0860069E549 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97DBB152563F0860069E549 /* Profile.swift */; };
+		B980422025F620A90008D0D0 /* FAQSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980421F25F620A90008D0D0 /* FAQSCell.swift */; };
 		B9956F1F2557FBA600AE9562 /* ProfessorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F1E2557FBA600AE9562 /* ProfessorList.swift */; };
 		B9956F2625580A7A00AE9562 /* ProfessorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */; };
 		B9956F2B255812F700AE9562 /* ProfessorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9956F2A255812F700AE9562 /* ProfessorCell.swift */; };
@@ -118,6 +119,7 @@
 		B962C5852561F48F007445B4 /* Professor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Professor.storyboard; sourceTree = "<group>"; };
 		B9678A4C2574EEA000FB107C /* LocationsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsControl.swift; sourceTree = "<group>"; };
 		B97DBB152563F0860069E549 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		B980421F25F620A90008D0D0 /* FAQSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQSCell.swift; sourceTree = "<group>"; };
 		B9956F1E2557FBA600AE9562 /* ProfessorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorList.swift; sourceTree = "<group>"; };
 		B9956F2525580A7A00AE9562 /* ProfessorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorDetail.swift; sourceTree = "<group>"; };
 		B9956F2A255812F700AE9562 /* ProfessorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorCell.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				B9EAC605256527B70033D71B /* Home.swift */,
 				B97DBB152563F0860069E549 /* Profile.swift */,
 				B91BFF0425CC7538006AD68E /* FAQS.swift */,
+				B980421F25F620A90008D0D0 /* FAQSCell.swift */,
 				B91776D525D3D67A00D9660C /* Events.storyboard */,
 				B91776DA25D3D95E00D9660C /* EventsControl.swift */,
 				B9C1FD5325E21A2300B5F46A /* EventsCell.swift */,
@@ -516,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B980422025F620A90008D0D0 /* FAQSCell.swift in Sources */,
 				B91BFF0525CC7538006AD68E /* FAQS.swift in Sources */,
 				5996A404255A3F9C00D0F157 /* People.swift in Sources */,
 				B9956F2625580A7A00AE9562 /* ProfessorDetail.swift in Sources */,
