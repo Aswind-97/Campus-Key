@@ -102,6 +102,25 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    //Action for what happens when cell is swiped left at
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { (action, view, completion) in
+            print(self.food[indexPath.row] + "\n", action)
+            //Add what else happens when favorite is clicked on
+            completion(true)
+        }
+        //Configure the look of the swipe
+        favoriteAction.backgroundColor =  UIColor.systemYellow
+        favoriteAction.image = UIImage(systemName: "star")
+        
+        
+        let config = UISwipeActionsConfiguration(actions: [favoriteAction])
+        //Prevents action taking place without usr clicking on the new swipe btn again
+        config.performsFirstActionWithFullSwipe = false
+        
+        return config
+    }
 
     
     //Determines how many cells appear

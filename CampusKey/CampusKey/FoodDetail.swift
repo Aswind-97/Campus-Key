@@ -11,7 +11,6 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
 
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var foodInfo: UILabel!
     @IBOutlet weak var foodRating: UILabel!
@@ -67,7 +66,6 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
         
         //allows for trasnferring data to next view
         vc?.image = foodImage.image!
-        vc?.name = foodName.text!
         vc?.foodIdent = foodIdent
         
       }
@@ -77,7 +75,6 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
          super.viewDidLoad()
 
          //Gets images and names from previous view
-         foodName.text = name
          foodImage.image = image
          foodRating.text = rating
         
