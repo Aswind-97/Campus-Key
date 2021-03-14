@@ -52,7 +52,7 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
         //Configure the look of the swipe
         deleteAction.backgroundColor =  UIColor.systemRed
-        deleteAction.image = UIImage(systemName: "star")
+        deleteAction.image = UIImage(systemName: "delete.left")
         
         
         let config = UISwipeActionsConfiguration(actions: [deleteAction])
