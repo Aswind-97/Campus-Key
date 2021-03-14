@@ -11,6 +11,7 @@ class FAQSCell: UITableViewCell {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var faqsLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
