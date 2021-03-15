@@ -16,6 +16,7 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var food = [String]()
     var ratings = [String]()
     var foodIdent = [String]()
+    var favFoods = [String]()
     
     var refFoods: DatabaseReference!
     
@@ -59,6 +60,9 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
          DispatchQueue.main.asyncAfter(deadline: .now() + interval) {
               closure()
          }
+    }
+    func clearFav(){
+        self.favFoods = []
     }
     
     
@@ -106,7 +110,22 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { (action, view, completion) in
-            print(self.food[indexPath.row] + "\n", action)
+            self.favFoods.append(self.food[indexPath.row])
+            let addFav = self.food[indexPath.row]
+            self.refFoods = Database.database().reference().child("favorites/admin");
+            self.refFoods.observeSingleEvent(of: .value, with: { snapshot in
+                let allRestaurantsSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+                for foodSnap in allRestaurantsSnap {
+                    let favoriteFoods = foodSnap.value as? String ?? "No food name"
+                    if addFav != favoriteFoods {
+                        self.favFoods.append(favoriteFoods)
+                    }
+                }
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)){
+                self.refFoods.setValue(self.favFoods)
+                self.clearFav()
+            }
             //Add what else happens when favorite is clicked on
             completion(true)
         }

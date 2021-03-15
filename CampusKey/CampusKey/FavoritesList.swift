@@ -14,8 +14,10 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     
     //The bottom was added for testing purposes
-    var food = ["Arbor Grill", "Burger King", "Campus Cuisine To Go", "El Pollo Loco", "Freudian Sip", "Geronimos", "Juice It Up!", "Panda Express", "Sierra Marketplace", "The Mercado", "The Orange Grove Bistro", "The Pub Sports Grill"]
-   
+    //var food = ["Arbor Grill", "Burger King", "Campus Cuisine To Go", "El Pollo Loco", "Freudian Sip", "Geronimos", "Juice It Up!", "Panda Express", "Sierra Marketplace", "The Mercado", "The Orange Grove Bistro", "The Pub Sports Grill"]
+    var food = [String]()
+    var favFoods = [String]()
+    var refFav: DatabaseReference!
     //^Added for testing purposes
     
     //Provides height for image and functionality to add an image to the TableView Header
@@ -46,6 +48,26 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
         let deleteAction = UIContextualAction(style: .normal, title: "Delete") { (action, view, completion) in
+            let deleted = self.food[indexPath.row]
+            self.refFav = Database.database().reference().child("favorites/admin");
+            self.refFav.observeSingleEvent(of: .value, with: { snapshot in
+                let allRestaurantsSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+                for foodSnap in allRestaurantsSnap {
+                    let testKey = foodSnap.key
+                    let favoriteFoods = foodSnap.value as? String ?? "No food name"
+                    
+                    print(testKey + favoriteFoods + " FIND ME EASIER")
+                    
+                    if favoriteFoods != deleted {
+                        self.favFoods.append(favoriteFoods)
+                    }
+                }
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)){
+                self.refFav.setValue(self.favFoods)
+                self.clear()
+                self.refresh()
+            }
             print(self.food[indexPath.row] + "\n", action)
             //Add what else happens when delete is clicked on
             completion(true)
@@ -58,7 +80,6 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let config = UISwipeActionsConfiguration(actions: [deleteAction])
         //Prevents action taking place without usr clicking on the new swipe btn again
         config.performsFirstActionWithFullSwipe = false
-        
         return config
     }
 
@@ -79,11 +100,31 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return cell!
     }
     
+    func clear(){
+        favFoods = []
+        food = []
+    }
     
+    func loadFav(){
+        self.refFav = Database.database().reference().child("favorites/admin");
+        self.refFav.observeSingleEvent(of: .value, with: { snapshot in
+            let allRestaurantsSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+            for foodSnap in allRestaurantsSnap {
+                let favoriteFoods = foodSnap.value as? String ?? "No food name"
+                self.food.append(favoriteFoods)
+            }
+        })
+    }
     
-    
-    
-    
+    func refresh(){
+        DispatchQueue.main.async {
+            self.loadFav()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            print("refreshed")
+            self.tableView.reloadData()
+        }
+    }
     
     
     
@@ -91,7 +132,7 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        refresh()
         tableView.delegate = self
         tableView.dataSource = self
         

@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class Home: UIViewController {
 
+    var refDeals: DatabaseReference!
+    var deal:String = ""
+    var fav = "Arbor Grill"
     
     @IBOutlet weak var locationsBtn: UIButton!
     @IBOutlet weak var professorBtn: UIButton!
@@ -16,9 +20,37 @@ class Home: UIViewController {
     @IBOutlet weak var faqsBtn: UIButton!
     @IBOutlet var myButtons: [UIButton]!
     
+    func getDeal(){
+        refDeals = Database.database().reference().child("deals/\(fav)");
+        refDeals.observeSingleEvent(of: .value, with: { snapshot in
+            let allDealsSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+            for dealSnap in allDealsSnap {
+                let testKey = dealSnap.key
+                let foodDeal = dealSnap.value as? String ?? "this broke"
+                print(foodDeal)
+                self.deal = foodDeal
+            }
+        })
+    }
+    
+    func pushNoti(){
+        let dealsAlert = UIAlertController(title: "Your deals are here!", message: "\(deal)", preferredStyle: .alert)
+        dealsAlert.addAction(UIAlertAction(title: NSLocalizedString("Thanks", comment: "Default action"), style: .default, handler: { _ in
+        NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(dealsAlert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        DispatchQueue.main.async {
+            self.getDeal()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)){
+            self.pushNoti()
+        }
+        
         for button in self.myButtons{
             button.layer.cornerRadius = 8
             button.layer.shadowOpacity = 0.8
@@ -30,6 +62,7 @@ class Home: UIViewController {
         
         
     }
+    
     
 
 
