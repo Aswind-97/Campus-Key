@@ -24,33 +24,30 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     var foodIdent = ""
     var newRatingStrings = [String]()
     var newReview = ""
+    var testDate = ""
     
     var refFoods: DatabaseReference!
     
-    func addReview(){
-        refFoods = Database.database().reference().child("food/\(foodIdent)/reviewStrings");
-        
-        refFoods.observeSingleEvent(of: .value, with: { snapshot in
-            let allRestaurantsSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
-            for arrNum in allRestaurantsSnap { //iterate over each restaurant node
-                let reviewComments = arrNum.key //arborGrill, burgerKing etc
-                let reviewString = arrNum.value as? String ?? ""
-                
-                self.newRatingStrings.append(reviewString)
-                
-                
-            }
-            self.newRatingStrings.append("This is the review in the text box")
-            
-        })
+    //This date function does not work but also does not break code
+    func createDate(){
+        let dateComponents = DateComponents()
+        //dateComponents.year = 1980
+        //dateComponents.month = 7
+        //dateComponents.day = 11
+        self.testDate = "\( dateComponents.month)-\( dateComponents.day)-\( dateComponents.year)"
     }
 
     //Should return to previous view with usr's updated review
     @IBAction func submitRateBtn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-        
-        print(newRatingStrings)
-        refFoods.setValue(newRatingStrings)
+        refFoods = Database.database().reference().child("food/\(foodIdent)/reviews");
+        insertNewReview()
+    }
+    func insertNewReview(){
+        let tempRate = rating.text!
+        let intRate = Int(tempRate)
+        let userReview = ["byUser": "admin", "date": testDate, "rating": intRate ?? 0, "review": usrReviewTextView.text!] as [String : Any]
+        refFoods.childByAutoId().setValue(userReview)
     }
     
     //Controls actions when slider is changed by usr
@@ -127,7 +124,7 @@ class FoodReview: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         usrReviewTextView.textColor = UIColor.lightGray
         usrReviewTextView.layer.cornerRadius = 8
         
-        addReview()
+        //createDate()
         
         submitRateBtn.layer.cornerRadius = 8
         submitRateBtn.layer.shadowOpacity = 0.8

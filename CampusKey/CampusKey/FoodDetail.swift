@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource  {
 
@@ -19,12 +20,45 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
     var name = ""
     var rating = ""
     var foodIdent = ""
+    var user = ""
+    var refFoods: DatabaseReference!
 
-    let reviews = ["I love to eat here but it gives me the shits dejidje iji jfei jife jfiejfi ejfi ej fijei fj ifjierfjiej iojwoi jweioj fioewfj ewiojfeqoiwfoew jfoiwe fiefoiwfew wofwejfoef enfdeqjdnhwfdwh here here here", "OK", "I do not like eating here since they always get my order wrong", "Eliza Holmes is always kind to me here", "I enjoy eating here once a week", "Chuck Finley, the manager, loves to stare at me, weirdo!"]
-    let ratings = ["7", "4", "2", "8", "9", "3"]
+    var reviews = [String]()  //["I love to eat here but it gives me the shits dejidje iji jfei jife jfiejfi ejfi ej fijei fj ifjierfjiej iojwoi jweioj fioewfj ewiojfeqoiwfoew jfoiwe fiefoiwfew wofwejfoef enfdeqjdnhwfdwh here here here", "OK", "I do not like eating here since they always get my order wrong", "Eliza Holmes is always kind to me here", "I enjoy eating here once a week", "Chuck Finley, the manager, loves to stare at me, weirdo!"]
+    var ratings = [String]()
+    
+
+    func getReviews(){
+        refFoods = Database.database().reference().child("food/\(foodIdent)/reviews");
+        
+        refFoods.observeSingleEvent(of: .value, with: { snapshot in
+            let allReviewsSnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+            for review in allReviewsSnap {
+                let revRate = review.childSnapshot(forPath: "rating").value as? Int ?? 0
+                let stringRevRate = String(revRate)
+                let revText = review.childSnapshot(forPath: "review").value as? String ?? ""
+                
+                self.ratings.append(stringRevRate)
+                self.reviews.append(revText)
+            }//iterate over each restaurant node
+    })
+    }
+    
+    func refresh(){
+        DispatchQueue.main.async {
+            self.getReviews()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            print("refreshed")
+            self.tableView.reloadData()
+        }
+    }
+    func delay(interval: TimeInterval, closure: @escaping () -> Void) {
+         DispatchQueue.main.asyncAfter(deadline: .now() + interval) {
+              closure()
+         }
+    }
     
     //Provides functionality in the TableView Header
-
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             
         let header: UILabel = UILabel()
@@ -72,11 +106,13 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
      
      
      override func viewDidLoad() {
-         super.viewDidLoad()
+        super.viewDidLoad()
 
-         //Gets images and names from previous view
-         foodImage.image = image
-         foodRating.text = rating
+        //Gets images and names from previous view
+        foodImage.image = image
+        foodRating.text = rating
+        
+        refresh()
         
         tableView.delegate = self
         tableView.dataSource = self
