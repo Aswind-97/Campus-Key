@@ -13,12 +13,10 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var tableView: UITableView!
     
-    //The bottom was added for testing purposes
-    //var food = ["Arbor Grill", "Burger King", "Campus Cuisine To Go", "El Pollo Loco", "Freudian Sip", "Geronimos", "Juice It Up!", "Panda Express", "Sierra Marketplace", "The Mercado", "The Orange Grove Bistro", "The Pub Sports Grill"]
     var food = [String]()
     var favFoods = [String]()
     var refFav: DatabaseReference!
-    //^Added for testing purposes
+    
     
     //Provides height for image and functionality to add an image to the TableView Header
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -38,7 +36,7 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     
     
-    //Helps to allow pics to show properly
+    //Helps to adjust cell height to allow pics to show properly
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
     }
@@ -69,9 +67,9 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
                 self.refresh()
             }
             print(self.food[indexPath.row] + "\n", action)
-            //Add what else happens when delete is clicked on
             completion(true)
         }
+        
         //Configure the look of the swipe
         deleteAction.backgroundColor =  UIColor.systemRed
         deleteAction.image = UIImage(systemName: "delete.left")

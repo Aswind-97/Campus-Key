@@ -44,16 +44,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Outdoor Dining Logo" translatesAutoresizingMaskIntoConstraints="NO" id="KSZ-RW-cC1">
+                                                    <rect key="frame" x="316" y="-642" width="42" height="1400"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Bvo-kr-r2c" firstAttribute="leading" secondItem="U9C-PR-oeS" secondAttribute="leading" constant="16" id="EYb-J2-Bho"/>
                                                 <constraint firstItem="yVK-F3-Pam" firstAttribute="leading" secondItem="U9C-PR-oeS" secondAttribute="leading" constant="10" id="Jz1-V1-Ncg"/>
+                                                <constraint firstAttribute="trailing" secondItem="KSZ-RW-cC1" secondAttribute="trailing" constant="25" id="KGq-Yg-QUL"/>
+                                                <constraint firstItem="KSZ-RW-cC1" firstAttribute="leading" secondItem="Bvo-kr-r2c" secondAttribute="trailing" constant="225" id="VAR-A0-00e"/>
                                                 <constraint firstItem="yVK-F3-Pam" firstAttribute="centerY" secondItem="U9C-PR-oeS" secondAttribute="centerY" id="bN1-37-g9S"/>
                                                 <constraint firstItem="Bvo-kr-r2c" firstAttribute="centerY" secondItem="yVK-F3-Pam" secondAttribute="centerY" id="cer-OZ-FH2"/>
                                                 <constraint firstAttribute="trailing" secondItem="yVK-F3-Pam" secondAttribute="trailing" constant="16" id="gON-2g-nmC"/>
+                                                <constraint firstItem="KSZ-RW-cC1" firstAttribute="centerY" secondItem="U9C-PR-oeS" secondAttribute="centerY" id="qkU-FG-xS5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="diningLogo" destination="KSZ-RW-cC1" id="Led-qp-7FM"/>
                                             <outlet property="foodImage" destination="Bvo-kr-r2c" id="FKF-9a-vNH"/>
                                             <outlet property="foodName" destination="yVK-F3-Pam" id="GVj-18-Izk"/>
                                         </connections>
@@ -77,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5D-DP-rvI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="1531"/>
+            <point key="canvasLocation" x="279.71014492753625" y="1530.8035714285713"/>
         </scene>
         <!--Food Detail-->
         <scene sceneID="Wns-9V-H4U">
@@ -290,6 +297,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Outdoor Dining Logo" width="1400" height="1400"/>
         <image name="defaultPhoto" width="1080" height="1080"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

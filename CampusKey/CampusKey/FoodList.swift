@@ -154,6 +154,13 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell?.foodName.text = food[indexPath.row]
         cell?.foodImage.image = UIImage(named: food[indexPath.row])
         
+        if(food[indexPath.row] != "The Orange Grove Bistro") {
+            cell?.diningLogo.image = UIImage(named: "Outdoor Dining Logo")
+        }
+        else{
+            cell?.diningLogo.image = UIImage(named: "empty")
+        }
+        
         
         return cell!
     }
