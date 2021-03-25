@@ -11,9 +11,17 @@ class LocationsControl: UIViewController {
 
     @IBOutlet var myButtons: [UIButton]!
     
+    var usrAccess = ""
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is FoodList
+        {
+            let vc = segue.destination as? FoodList
+            vc?.usrAccess = usrAccess
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

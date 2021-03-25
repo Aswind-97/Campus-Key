@@ -129,8 +129,9 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         refresh()
+        super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         

@@ -15,6 +15,7 @@ class ProfessorDetail: UIViewController, UITextFieldDelegate, UIImagePickerContr
     @IBOutlet weak var professorRating: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var usrAccess = ""
     var image = UIImage()
     var name = ""
     var rating = ""
@@ -82,8 +83,10 @@ class ProfessorDetail: UIViewController, UITextFieldDelegate, UIImagePickerContr
         tableView.layer.borderWidth = 0.5
 
         //Set up navigation bar item--add review btn
-        let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addReview))
-        self.navigationItem.rightBarButtonItem  = btn1
+        if usrAccess == "yes"{
+            let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addReview))
+            self.navigationItem.rightBarButtonItem  = btn1
+        }
     }
     
 

@@ -18,6 +18,7 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
     var eventTime = [String]()
     var eventDesc = [String]()
     var eventIden = [String]()
+    var usrAccess = ""
 
     var dateSelected = "MM-dd-YYYY"
     
@@ -141,10 +142,13 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         calendar.delegate = self
         
         self.title = "Events Calendar"
+        print(usrAccess)
         
         //Set up navigation bar item--add event btn
-        let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addEvent))
-        self.navigationItem.rightBarButtonItem  = btn1
+        if usrAccess == "yes"{
+            let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addEvent))
+            self.navigationItem.rightBarButtonItem  = btn1
+        }
 
     }
     

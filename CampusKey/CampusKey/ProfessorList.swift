@@ -13,6 +13,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var tableView: UITableView!
     
+    var usrAccess = ""
     var professors = [String]()
     var ratings = [String]()
     
@@ -29,6 +30,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         refProfs.observeSingleEvent(of: .value, with: { snapshot in
             let allFacultySnap = snapshot.children.allObjects as! [DataSnapshot] //contains all child nodes of food
+            DispatchQueue.main.async {
             for profSnap in allFacultySnap { //iterate over each restaurant node
                 let profID = profSnap.key //arborGrill, burgerKing etc
                 let profName = profSnap.childSnapshot(forPath: "display_name").value as? String ?? "No food name"
@@ -47,10 +49,10 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
                         if let http = response as? HTTPURLResponse {
                             if http.statusCode == 200 {
                                 let downloadedImage = UIImage(data: data!)
-                                DispatchQueue.main.async {
+                                
                                     self.imageData.append(downloadedImage!)
                                     print(profID)
-                                }
+                                
                             }
                         }
                    })
@@ -60,6 +62,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
                 self.ratings.append("5")
                 self.profsImage.append(profImage)
                 self.professors.append(profName)
+            }
             }
         })
     }
@@ -113,6 +116,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         vc?.image = imageData[indexPath.row]
         vc?.name = professors[indexPath.row]
         vc?.rating = ratings[indexPath.row]
+        vc?.usrAccess = usrAccess
     
         tableView.deselectRow(at: indexPath, animated: true)
     }

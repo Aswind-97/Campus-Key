@@ -13,6 +13,7 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var usrAccess = ""
     var food = [String]()
     var ratings = [String]()
     var foodIdent = [String]()
@@ -102,6 +103,7 @@ class FoodList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         vc?.name = food[indexPath.row]
         vc?.rating = ratings[indexPath.row]
         vc?.foodIdent = foodIdent[indexPath.row]
+        vc?.usrAccess = usrAccess
         
         tableView.deselectRow(at: indexPath, animated: true)
     }

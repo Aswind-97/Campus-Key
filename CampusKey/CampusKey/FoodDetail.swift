@@ -16,11 +16,14 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
     @IBOutlet weak var foodInfo: UILabel!
     @IBOutlet weak var foodRating: UILabel!
     
+    var usrAccess = ""
     var image = UIImage()
     var name = ""
     var rating = ""
     var foodIdent = ""
     var user = ""
+    var avgHolder = Double()
+    var takeAvg = [Int]()
     var refFoods: DatabaseReference!
 
     var reviews = [String]()  //["I love to eat here but it gives me the shits dejidje iji jfei jife jfiejfi ejfi ej fijei fj ifjierfjiej iojwoi jweioj fioewfj ewiojfeqoiwfoew jfoiwe fiefoiwfew wofwejfoef enfdeqjdnhwfdwh here here here", "OK", "I do not like eating here since they always get my order wrong", "Eliza Holmes is always kind to me here", "I enjoy eating here once a week", "Chuck Finley, the manager, loves to stare at me, weirdo!"]
@@ -36,10 +39,12 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
                 let revRate = review.childSnapshot(forPath: "rating").value as? Int ?? 0
                 let stringRevRate = String(revRate)
                 let revText = review.childSnapshot(forPath: "review").value as? String ?? ""
-                
+                self.takeAvg.append(revRate)
                 self.ratings.append(stringRevRate)
                 self.reviews.append(revText)
             }//iterate over each restaurant node
+            self.avgHolder = self.getAvg(numbers: self.takeAvg)
+            self.foodRating.text = String(self.avgHolder)
     })
     }
     
@@ -56,6 +61,15 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
          DispatchQueue.main.asyncAfter(deadline: .now() + interval) {
               closure()
          }
+    }
+    
+    func getAvg(numbers: [Int]) -> Double{
+        var sum = 0
+        for number in numbers {
+            sum += number
+        }
+        var  ave : Double = Double(sum) / Double(numbers.count)
+        return ave
     }
     
     //Provides functionality in the TableView Header
@@ -102,6 +116,7 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
         vc?.image = foodImage.image!
         vc?.foodIdent = foodIdent
         
+        
       }
      
      
@@ -119,10 +134,10 @@ class FoodDetail: UIViewController, UITextFieldDelegate, UIImagePickerController
         tableView.layer.borderWidth = 0.5
         
         //Set up navigation bar item--add review btn
-        let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addReview))
-        self.navigationItem.rightBarButtonItem  = btn1
-
-     
+        if usrAccess == "yes"{
+            let btn1 = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addReview))
+            self.navigationItem.rightBarButtonItem  = btn1
+        }
      }
      
 

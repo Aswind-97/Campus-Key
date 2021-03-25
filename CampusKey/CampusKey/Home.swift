@@ -13,6 +13,7 @@ class Home: UIViewController {
     var refDeals: DatabaseReference!
     var deal:String = ""
     var fav = "Arbor Grill"
+    var usrAccess = "no"
     
     @IBOutlet weak var locationsBtn: UIButton!
     @IBOutlet weak var professorBtn: UIButton!
@@ -39,6 +40,26 @@ class Home: UIViewController {
         NSLog("The \"OK\" alert occured.")
         }))
         self.present(dealsAlert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is EventsControl
+        {
+            let vc = segue.destination as? EventsControl
+            vc?.usrAccess = usrAccess
+        }
+        if segue.destination is LocationsControl
+        {
+            let vc = segue.destination as? LocationsControl
+            vc?.usrAccess = usrAccess
+        }
+        if segue.destination is ProfessorList
+        {
+            let vc = segue.destination as? ProfessorList
+            vc?.usrAccess = usrAccess
+        }
+        
     }
     
     override func viewDidLoad() {
