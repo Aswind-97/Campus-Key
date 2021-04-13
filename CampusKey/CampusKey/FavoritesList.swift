@@ -16,6 +16,7 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var food = [String]()
     var favFoods = [String]()
     var refFav: DatabaseReference!
+    var refreshControl: UIRefreshControl!
     
     
     //Provides height for image and functionality to add an image to the TableView Header
@@ -124,8 +125,11 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
     }
     
-    
-    
+    @objc func pullToRefreshPage(_ refreshControl: UIRefreshControl) {
+        clear()
+        refresh()
+        refreshControl.endRefreshing()
+    }
     
     
     override func viewDidLoad() {
@@ -134,6 +138,12 @@ class FavoritesList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //Add pull to refresh implementation
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(pullToRefreshPage), for: .valueChanged)
+        tableView.addSubview(refreshControl)
         
     }
 
