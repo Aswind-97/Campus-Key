@@ -102,7 +102,7 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         self.navigationController?.pushViewController(vc!, animated: true)
         
         //allows for trasnferring data to next view
-        vc?.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "defaultPhoto")!
+        //vc?.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "defaultPhoto")!
         vc?.identifier = eventIden[indexPath.row]
         vc?.name = events[indexPath.row]
         vc?.info = eventDesc[indexPath.row]
@@ -122,7 +122,12 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventsCell", for: indexPath) as? EventsCell
         
         cell?.eventName.text = events[indexPath.row]
-        cell?.eventImage.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "defaultPhoto")!
+        cell?.eventTime.text = eventTime[indexPath.row]
+        
+        cell?.eventTime.layer.cornerRadius = 5.0
+        cell?.eventTime.clipsToBounds = true
+
+        //cell?.eventImage.image = UIImage(named: events[indexPath.row]) ?? UIImage(named: "defaultPhoto")!
                 
         return cell!
     }
@@ -142,7 +147,7 @@ class EventsControl: UIViewController, FSCalendarDelegate, UITableViewDelegate, 
         calendar.delegate = self
         
         self.title = "Events Calendar"
-        print(usrAccess)
+        print("User Access " + usrAccess)
         
         //Set up navigation bar item--add event btn
         if usrAccess == "yes"{

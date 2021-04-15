@@ -10,18 +10,19 @@ import UIKit
 class EventsCell: UITableViewCell {
 
     
-    @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var eventTime: UILabel!
     @IBOutlet weak var eventName: UILabel!
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+    /*
         eventImage.layer.borderWidth = 1
         eventImage.layer.masksToBounds = false
         eventImage.layer.borderColor = UIColor.black.cgColor
         eventImage.layer.cornerRadius=eventImage.frame.height/2
         eventImage.clipsToBounds = true
+ */
         // Initialization code
     }
 
