@@ -113,7 +113,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         self.navigationController?.pushViewController(vc!, animated: true)
         
         //allows for trasnferring data to next view
-        vc?.image = imageData[indexPath.row]
+        vc?.image = UIImage(named: professors[indexPath.row])!
         vc?.name = professors[indexPath.row]
         vc?.rating = ratings[indexPath.row]
         vc?.usrAccess = usrAccess
@@ -131,7 +131,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ProfessorCell
         
         cell?.professorName.text = professors[indexPath.row]
-        cell?.professorImage.image = imageData[indexPath.row]
+        cell?.professorImage.image = UIImage(named: professors[indexPath.row])
                 
         return cell!
     }
