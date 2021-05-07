@@ -44,7 +44,7 @@ class RegMain: UIViewController, UITextFieldDelegate {
 
             self.fetchMemberData{ (members) in
 
-            print(members.people?.individuals_id ?? "")
+            //print(members.people?.individuals_id ?? "")
             print(members.people?.first_name ?? "")
             print(members.people?.last_name ?? "")
             }
@@ -77,7 +77,7 @@ class RegMain: UIViewController, UITextFieldDelegate {
     }
     func fetchMemberData(completionHandler: @escaping (Members) -> Void){
         
-        let urlString = "https://api.metalab.csun.edu/directory/api/members?email=" + email //javier.aguayo.882@my.csun.edu
+        let urlString = "https://api.metalab.csun.edu/directory/api/members/email/" + email //javier.aguayo.882@my.csun.edu
 
         let url = URL(string: urlString)
 
@@ -98,7 +98,7 @@ class RegMain: UIViewController, UITextFieldDelegate {
                     print(members.people?.first_name ?? "")//.people?.first_name ?? ""
                     
                     //while self.verified == 0{
-                        if(members.people?.first_name == self.firstName && members.people?.last_name == self.lastName && members.people?.individuals_id == self.idNum){
+                        if(members.people?.first_name == self.firstName && members.people?.last_name == self.lastName /*&& members.people?.individuals_id == self.idNum*/){
                             DispatchQueue.main.async {
                             self.updateVerified()
                             }

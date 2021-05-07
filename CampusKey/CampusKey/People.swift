@@ -9,7 +9,7 @@ import Foundation
 
 struct People: Codable{
     
-    var individuals_id:String = ""
+    //var individuals_id:String = ""
     var first_name:String = ""
     var last_name:String = ""
     var email:String = ""

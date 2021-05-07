@@ -101,7 +101,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="BZV-b3-tG1"/>
                                 </constraints>
-                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-xf-NAH">
                                 <rect key="frame" x="111" y="667" width="192" height="56"/>

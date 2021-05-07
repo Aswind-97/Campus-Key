@@ -13,7 +13,7 @@ class Home: UIViewController {
     var refDeals: DatabaseReference!
     var deal:String = ""
     var fav = "Arbor Grill"
-    var usrAccess = "no"
+    var usrAccess = "yes"
     
     @IBOutlet weak var locationsBtn: UIButton!
     @IBOutlet weak var professorBtn: UIButton!
