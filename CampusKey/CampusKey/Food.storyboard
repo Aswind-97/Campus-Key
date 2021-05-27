@@ -99,12 +99,11 @@
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3W-FO-61J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A great place to sit down and unwind from the stress of college life. Join us today at the Orange Grove Bistro. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3W-FO-61J">
                                 <rect key="frame" x="25" y="338" width="364" height="145"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="fb2-uA-IT4"/>
                                 </constraints>
-                                <string key="text">A great place to grab a bite for some hearty delicious snacks. Wether first thing in the morning or after a hard workout at the gym. Shake Smart is here for you! </string>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>

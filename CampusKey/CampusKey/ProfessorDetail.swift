@@ -20,8 +20,8 @@ class ProfessorDetail: UIViewController, UITextFieldDelegate, UIImagePickerContr
     var name = ""
     var rating = ""
     
-    let reviews = ["I love to eat here but it gives me the shits dejidje iji jfei jife jfiejfi ejfi ej fijei fj ifjierfjiej iojwoi jweioj fioewfj ewiojfeqoiwfoew jfoiwe fiefoiwfew wofwejfoef enfdeqjdnhwfdwh here here here", "OK", "I do not like eating here since they always get my order wrong", "Eliza Holmes is always kind to me here", "I enjoy eating here once a week", "Chuck Finley, the manager, loves to stare at me, weirdo!"]
-    let ratings = ["7", "4", "2", "8", "9", "3"]
+    let reviews = ["Great Professor", "OK", "You focus alot on making a great project with him", "Be prepared for lots of contructive critisim"]
+    let ratings = ["9", "7", "10", "8"]
     
     //Provides functionality in the TableView Header
 

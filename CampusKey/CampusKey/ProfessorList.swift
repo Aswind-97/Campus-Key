@@ -59,7 +59,7 @@ class ProfessorList: UIViewController, UITableViewDelegate, UITableViewDataSourc
                    task.resume()
                 }
                 
-                self.ratings.append("5")
+                self.ratings.append("9")
                 self.profsImage.append(profImage)
                 self.professors.append(profName)
             }

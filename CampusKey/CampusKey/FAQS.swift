@@ -56,7 +56,7 @@ class FAQS: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
                         "A: Currently yes; our home/CSUN’s campus is the guinea pig for us at ‘Campus Key’!",
         
-                        "Email: *******@******.com",
+                        "Email: campusKey@gmail.com",
         
                         "https://www.csun.edu/current-students/contact-page"
     ]
